@@ -1,0 +1,50 @@
+\begin{thebibliography}{1}
+
+\bibitem{abdo2006nonlinear}
+Baleegh Abdo, Eran Segev, Oleg Shtempluck, and Eyal Buks.
+\newblock Nonlinear dynamics in the resonance line shape of nbn superconducting
+  resonators.
+\newblock {\em Physical Review B}, 73(13):134513, 2006.
+
+\bibitem{Barends}
+Rami Barends.
+\newblock {\em Photon-detecting superconducting resonators}.
+\newblock PhD thesis, Delft University of Technology, 2009.
+
+\bibitem{burnett2013evidence}
+J~Burnett, L~Faoro, I~Wisby, VL~Gurtovoi, AV~Chernykh, GM~Mikhailov, VA~Tulin,
+  R~Shaikhaidarov, V~Antonov, PJ~Meeson, et~al.
+\newblock Evidence for interacting two-level systems from the 1/f noise of a
+  superconducting resonator.
+\newblock {\em arXiv preprint arXiv:1311.1655}, 2013.
+
+\bibitem{Gao}
+Jiansong Gao.
+\newblock {\em The Physics of Superconducting Microwave Resonators}.
+\newblock PhD thesis, California Institute of Technology, 2008.
+
+\bibitem{gao2008experimental}
+Jiansong Gao, Miguel Daal, Anastasios Vayonakis, Shwetank Kumar, Jonas
+  Zmuidzinas, Bernard Sadoulet, Benjamin~A Mazin, Peter~K Day, and Henry~G
+  Leduc.
+\newblock Experimental evidence for a surface distribution of two-level systems
+  in superconducting lithographed microwave resonators.
+\newblock {\em Applied Physics Letters}, 92(15):152505--152505, 2008.
+
+\bibitem{Geerlings}
+Kurtis~L. Geerlings.
+\newblock {\em Improving Coherence of Superconducting Qubits and Resonators}.
+\newblock PhD thesis, Yale University, 2013.
+
+\bibitem{martinis2014ucsb}
+John~M Martinis and A~Megrant.
+\newblock Ucsb final report for the csq program: Review of decoherence and
+  materials physics for superconducting qubits.
+\newblock {\em arXiv preprint arXiv:1410.5793}, 2014.
+
+\bibitem{Mazin}
+Benjamin~A. Mazin.
+\newblock {\em Microwave Kinetic Inductance Detectors}.
+\newblock PhD thesis, California Institute of Technology, 2004.
+
+\end{thebibliography}

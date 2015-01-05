@@ -1,0 +1,401 @@
+% Todo:
+% Change all the variables such that they are not in italics
+
+\documentclass[12pt]{report}
+\usepackage[a4paper]{geometry}
+\usepackage[myheadings]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx, wrapfig, subcaption, setspace, booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{fourier}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage[english]{babel}
+\usepackage{sectsty}
+\usepackage{url, lipsum}
+\usepackage{siunitx}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+% \onehalfspacing
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+%-------------------------------------------------------------------------------
+% HEADER & FOOTER
+%-------------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\setlength\headheight{15pt}
+\fancyhead[L]{Serwan Asaad}
+\fancyhead[R]{Delft University of Technology}
+\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+%-------------------------------------------------------------------------------
+% TITLE PAGE
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+~\\ [4.0cm]
+\textsc{\LARGE Delft University of Technology}
+\\ [3.0cm]
+\textsc{\Large Master Thesis}
+\HRule{0.5pt} \\
+\LARGE \textbf{\uppercase{Three month report}}
+\HRule{2pt} \\ [0.5cm]
+
+% Author and supervisor
+\noindent
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Serwan Asaad
+\end{flushleft}
+\end{minipage}%
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisor:} \\
+Dr.~Alessandro Bruno
+\end{flushright}
+\end{minipage}
+\\ [3.0cm]
+{\large \today}
+\end{center}
+
+\end{titlepage}
+
+
+\author{
+        Serwan Asaad
+        Student ID: 4323475 \\
+        Delft University of Technology \\
+        Kavli Institute of Nanoschience\\
+        Quantum Nanoscience Department\\
+        Quantum Transport Group\\
+        DiCarlo Lab}
+
+\tableofcontents
+\newpage
+
+%-------------------------------------------------------------------------------
+% Section title formatting
+\sectionfont{\scshape}
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+% BODY
+%-------------------------------------------------------------------------------
+
+\section*{Introduction}
+The subject of my Master's thesis will be on ways of improving T1 and T2 coherence times for qubits. The past few months I have been learning about superconducting cirquit quantum electrodynamics. I have learned what set-ups are used for performing measurements on cQED samples, and about the types of measurements that are performed.
+
+Traditionally the measurements were performed using Labview software. However, in the months that I have been working in the DiCarlo lab, a transition in measurement software has taken place from Labview to the Python-based QTLab. I have been very involved in this transition, as an important part of my research will be to characterize a sample quickly and accurately. This will enable a fast cycle from sample fabrication to characterization, hopefully leading to rapid progress in the development of quantum computing using cQED.
+
+The past few weeks the focus of my measurements has shifted towards the characterization of resonators. This is largely due to the fact that two of my colleagues, Alessandro Bruno and Gijs de Lange, are working on a paper on ways of improving the quality factor of resonators. A large part of the data was already obtained before I joined the group, but a last set of measurements was required at the dilution refrigerator I most often operate at. The reason is that its base temperature is at \SI{15}{\milli \kelvin}, which is considerably lower than the base temperature of the refrigerator at which the other measurements were performed, namely \SI{250}{\milli \kelvin}. Because my focus so far has been more on resonators than of qubits, the main topic of this report will be on resonators, and will include the topic of qubits in my final thesis.
+
+As I have spent a large part of my time at the lab performing measurements, I would also like to discuss this topic in my three month report. I will treat the types of set-up I have used so far, and the techniques used for measuring resonators.
+
+Because the relevant regime where resonators interact with qubits is the single-photon regime, a very weak signal must must be applied to determine its properties in that regime. At this point noise becomes a relevant issue. I will therefore also devote a section of this report on the subject of noise.
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Resonators}
+
+% TODO:
+% Add picture of resonator connected to central feedline (CPW)
+% Mention that a resonator can be seen as an LC-cirquit
+% Check if node/antinode is correct
+
+Topics:
+\begin{itemize}
+    \item Center frequency
+    \item Temperature dependence
+    \item Kinetic inductance
+    \item shift of resonance frequency due to trapped vortices
+    \begin{itemize}
+        \item Trapped vortices cause parts to be non-superconducting
+        \item Combatting trapped vortices with grid-like structure
+    \end{itemize}
+    \item photon number
+    \item Material (Silicon, sapphire)
+    \item Superconducting material NbTiN
+    \item Asymmetry (can refer to \cite[p.~192]{Geerlings})
+\end{itemize}
+
+Types of resonators studied:
+\begin{itemize}
+    \item Halfmon
+    \item DRIE resonators
+\end{itemize}
+
+
+When a signal enters a fridge it is attenuated in several stages and eventually enters the sample being measured. In the sample the signal travels through a feedline. One or more resonators can then be capacitively coupled to the feedline. Qubits can then also be capacitively coupled to the resonators, and a resonator can even be used to connect qubits, a so-called 'bus'. However in this report only discuss the resonators connected to a central feedline will be discussed.
+
+
+
+
+
+
+
+
+
+\section{Coplanar waveguide}
+% Todo:
+% Talk a little about why the geometry of a coplanar waveguide is the way it is
+
+In the context of cirquit QED, one of the most common types of resonators are coplanar waveguides (CPW). Coplanar waveguides consist of a long central conducting track, with on both sides a neighbouring grounded track. The conducting track is seperated from the grounded tracks by a fixed distance.
+
+One end is usually capacitively coupled to a feedline and has an open end, while the other end can either be open or shorted. This determines whether the resonant frequencies have a node or an antinode at that end. In the case of a shorted end, the resonant frequencies have a node at that end, resulting in a  $1/4 - \lambda$ resonator. This means that the wavelength fundamental mode fits $1/4$ times into the resonator. In the case of an open end, the resonant frequencies have an antinode at that end, resulting in a $1/2 \lambda$ resonator.
+
+
+
+
+
+
+
+
+
+\section{Quality factor}
+\label{sec:Quality factor}
+% TODO
+% Find where it says that loss tangents can be added to each other
+% Include the fact that participation ratios are needed for adding quality factors of loss channels
+% Explain why one wants a quality factor that is as high as possible
+% Find place for equation FWHM
+One important property of a resonator is its quality factor. Generally speaking, the quality factor of a resonator determines the ratio between energy stored in a resonator and the energy leaking away from the resonator. For cQED resonators this corresponds to the rate at which photons dissipate from the resonator. A high quality factor corresponds to a low dissipation rate.
+
+The quality factor can also be defined as \cite[p.~23]{Mazin}:
+
+\begin{equation}
+    Q = \omega_0 \tau_1
+\end{equation}
+Here $\omega_0$ is the resonance frequency of the resonator, and $\tau_1$ is the decay time of the resonator. The decay time is the time taken by a resonator to dissipate its energy to $1/e$ of its original energy. One can see that this definition is in accordance with the first definition, as the energy is related to frequency through the Planck-Einstein relation: $E = \hbar \nu$, and therefore increases with increasing frequency.
+
+\begin{equation}
+    Q = \omega_0 / \Delta \omega
+    \label{eq:FWHM}
+\end{equation}
+
+Photons can dissipate from the resonator through its different loss channels. Each of these loss channels has a corresponding quality factor. One such loss channel is due to resonators in cQED being capacitively coupled to a feedline. The quality factor associated to this loss channel is known as the coupling quality factor $Q_c$. This coupling quality factor depends on the amount of capacitive coupling between the resonator and the feedline. It can therefore be engineered to have a certain value, depending on the amount of interaction wanted between resonator and feedline.
+
+The other loss channels are usually unwanted, and therefore desired to be as low as possible. These individual channels are usually lumped together, resulting in a combined quality factor, known as the intrinsic quality factor $Q_i$.
+
+The total quality factor of the resonator is known as the loaded quality factor $Q_l$. It is related to $Q_c$ and $Q_i$ through:
+
+\begin{equation}
+    \frac{1}{Q_l} = \frac{1}{Q_c} + \frac{1}{Q_i}
+    \label{eq:Q_l}
+\end{equation}
+
+From equation \ref{eq:Q_l} it can be seen that if the difference between $Q_c$ and $Q_i$ is large, then the loaded quality factor $Q_l$ will be approximately equal to the minimum of the two.
+
+
+For a $1/4 - \lambda$ resonator the amplitude of transmission has a minimum $S_{21}^{min}$, given by \cite[p.~29]{Mazin}:
+\begin{equation}
+    S_{21}^{min} = \frac{Q_c}{Q_c + Q_i}
+    \label{eq:S21min}
+\end{equation}
+
+With knowledge of the resonant frequency $\omega_0$, the resonant width $\Delta \omega$, and the transmitted signal at resonance $S_{21}^{min}$, it is possible through equations \ref{eq:FWHM} and \ref{eq:S21min} to determine both the coupling quality facto $Q_c$ and the intrinsic quality factor $Q_i$. Note that as equation~\ref{eq:S21min} depends on the ratio of the two quality factors,to get an accurate estimate of both quality factors, they should have a comparable value.
+
+\begin{itemize}
+    \item tan delta: loss channels, sum?
+    \item Photon number dependence
+    \item nonlinear effects (can refer to \cite{abdo2006nonlinear})
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\section{Losses}
+
+When a resonator is being driven at its resonance frequency, it is absorbing photons from the external source. When this external driving stops, the resonator slowly loses its photons through its different loss channels.
+
+One loss channel was already discussed in section~\ref{sec:Quality factor}, namely through the coupling to the feedline. This loss channel is not unwanted, as the amount of coupling to the feedline determines how fast the resonator and feedline can interact with each other. The other loss channels, however, are unwanted. They cause dissipation of information. Some of the main causes of loss will be discussed in this section.
+
+
+\subsection{Causes of loss}
+
+\subsubsection{Two-level systems}
+
+Two-level systems (TLS) are systems which can be in a ground state or an excited state. In some cases they can be useful, such as in the case of a qubit. In other cases, however, TLS can also be a source of dissipation. In cQED TLS which cause dissipation are most often oxides residing in amorphous materials (TODO: ref). In fact, study suggests that most TLS reside in a thin oxide layer at the interface between two substances (TODO: ref).
+
+Resonators are surrounded by a large quantity of TLS, each of which has its own resonance frequency, depending on its energy landscape. When the resonance frequency of a TLS is close to that of the resonator, it can absorb a photon from the resonator, upon which it tunnels to an excited meta-stable state. TLS have a finite lifetime in their excited state, after which they decay back to their ground state.
+
+In the low power, low temperature regime, TLS reside mostly in their ground state, and only occasionally tunnel to the excited state, upon absorption of a photon. It is theorized that, in this regime, TLS are the main source of dissipation for resonators \cite{gao2008experimental}. At higher powers and/or temperatures, TLS will tunnel to an excited state at a higher rate. Due to their finite lifetime they become saturated at a certain point. Since the quality factor depends on the ratio between energy stored and energy dissipated, when the TLS are saturated the amount of dissipation is limited, while the energy stored can still increase. Therefore, in the low power, low temperature regime, increasing either of the two parameters results in an increase in quality factor. At a certain point, however, further increasing either of the two will not improve the quality factor. This is due to other effects dominating in these regimes.
+
+\begin{itemize}
+    \item To our knowledge, dielectric loss at low temperature
+        arises from the presence of two-level states (TLS) formed
+        by random bonds that tunnel between two sites. \cite{martinis2014ucsb}
+    \item 1/f noise \cite{burnett2013evidence}
+    \item Dielectric materials (Table \cite{martinis2014ucsb})
+\end{itemize}
+
+
+
+\subsubsection{Quasiparticles}
+
+Another source of dissipation for resonators is due to quasiparticles being present in the superconducting layer. When a Cooper-pair is broken up, Bogoliubov quasiparticles are formed. These can either have electron-like or hole-like properties.
+
+Quasiparticles are Cooper-pairs that are excited to form an electron-hole pair. (TODO: what happens to other electron?)
+
+\begin{itemize}
+    \item Excitation of a Cooper-pair to an electron-hole pair
+    \item Quasiparticle excitation energy $E = \xi^2 + \Delta ^2$,
+        where $\xi$ is the energy of the single particle in the normal state relative to the Fermi energy \cite{Barends}
+    \item Known as Bogoliubov quasiparticle
+    \item Increases with increasing frequency
+    \item ?Non-superconducting, thereby causing dissipation
+    \item removal by infrared filter
+    \item Decreases exponentially as the temperature decreases \cite{Mazin}
+    \item Quasiparticles are created through thermal excitation, but can also be excited by photons with $h \nu > 2 \Delta$\cite{Gao}
+    \item Quasiparticles change the surface impedance of resonators, which can be measured.
+        This technique is used to create MKID detectors \cite{Gao}
+    \item "[Surface impedance] change is caused by quasiparticles blocking
+        the Cooper pairs from occupying some of the electron states (through the exclusion principle), which
+        modifies the effective pairing energy and reduces the density of pairs."\cite[p.~3]{Mazin}
+\end{itemize}
+
+
+
+
+\subsubsection{Radiation}
+
+
+
+
+\subsection{Loss channels}
+
+
+
+
+
+
+\subsection{Combatting losses}
+
+\subsubsection{Surface treatment}
+
+\subsubsection{Deep-reactive ion etching}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Results}
+\begin{itemize}
+    \item Power dependence
+    \item Temperature dependence
+    \begin{itemize}
+        \item Quality factor
+        \item Center frequency
+        \begin{itemize}
+            \item Shift at lowest temperature could be due to TLS \cite[p.~91]{Geerlings}
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Measurements}
+
+\section{Heterodyne detection}
+\begin{itemize}
+    \item Idea to also obtain complex signal
+\end{itemize}
+
+\section{Vector network analyzer}
+\begin{itemize}
+    \item Complex signal
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Noise}
+
+\section{Noise sources}
+
+\subsection{Johnson noise}
+
+\subsection{Shot noise}
+
+\subsection{1/f noise}
+\begin{itemize}
+    \item Two-level systems
+\end{itemize}
+
+
+\section{Noise temperature}
+
+\begin{itemize}
+    \item Formula for noise temperature
+    \item Show plot of noise temperature
+    \item Explain why first amplifier is most important
+\end{itemize}
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
