@@ -256,18 +256,14 @@ In the low power, low temperature regime, TLS reside mostly in their ground stat
 
 \subsubsection{Quasiparticles}
 
-Another source of dissipation for resonators is due to quasiparticles being present in the superconducting layer. When a Cooper-pair is broken up, Bogoliubov quasiparticles are formed. These can either have electron-like or hole-like properties.
+Another source of dissipation for resonators is due to quasiparticles being present in the superconducting layer. When a Cooper-pair is broken up, Bogoliubov quasiparticles are formed. These quasiparticles can have either electron-like or hole-like properties. Quasiparticles are a source of dissipation for resonators, since they are non-superconducting and therefore cause the surface impedance to be slightly resistive \cite[p.~18]{Mazin}.
 
-Quasiparticles are Cooper-pairs that are excited to form an electron-hole pair. (TODO: what happens to other electron?)
+The breaking up of Cooper-pairs is due to excitations. These excitations can either be thermal, or due to photon absorption. Therefore an increase in temperature or an increase in photon density will result in a higher density of quasiparticles.
 
 \begin{itemize}
-    \item Excitation of a Cooper-pair to an electron-hole pair
     \item Quasiparticle excitation energy $E = \xi^2 + \Delta ^2$,
         where $\xi$ is the energy of the single particle in the normal state relative to the Fermi energy \cite{Barends}
-    \item Known as Bogoliubov quasiparticle
     \item Increases with increasing frequency
-    \item ?Non-superconducting, thereby causing dissipation
-    \item removal by infrared filter
     \item Decreases exponentially as the temperature decreases \cite{Mazin}
     \item Quasiparticles are created through thermal excitation, but can also be excited by photons with $h \nu > 2 \Delta$\cite{Gao}
     \item Quasiparticles change the surface impedance of resonators, which can be measured.
@@ -282,17 +278,41 @@ Quasiparticles are Cooper-pairs that are excited to form an electron-hole pair. 
 
 \subsubsection{Radiation}
 
+A third source of dissipation is due to radiation from the resonator. This radiation is due to the spontaneous emission of photons.
+
+The amount of dissipation due to radition is directly related through \cite{sage2011study,Mazin}:
+
+\begin{equation}
+    Q_{rad} = \alpha \left( \frac{L}{ S + W}\right)^{n_r}
+    \label{Qrad}
+\end{equation}
+
+In this formula $S$ is the distance between the conducting and grounded track, $W$ is the width of the conducting track, $\alpha$ depends on properties such as impedance and the dielectric constant of the substrate. From Formula \ref{Qrad} it is clear that a decrease of the conducting track width or the distance between tracks leads to an increase in $Q_{rad}$. However, with a decrease of either of the two parameters, the field strength close to the resonator becomes higher. If the TLS are not saturated (i.e. low power and temperature), this will increase the amount of dissipation through TLS. Therefore it is not necessarily advantageous to minimize $S$ and $W$.
+
+Radiation loss becomes the dominant source of dissipation at high powers and/or temperatures, but otherwise usually is not the limiting factor. Since measurements relevant for quantum computing are usually operated at low power and temperature, this source of dissipation is usually less important than other sources, such as TLS dissipation.
+
+\begin{itemize}
+    \item Possible other useful sources: \cite{denlinger1969radiation} \cite{khalil2011loss}
+\end{itemize}
 
 
 
-\subsection{Loss channels}
-
+\subsubsection{Vortices}
 
 
 
 
 
 \subsection{Combatting losses}
+
+\subsubsection{Infrared shielding}
+
+
+
+\begin{itemize}
+    \item Decrease of quasiparticle density by infrared shielding.
+\end{itemize}
+
 
 \subsubsection{Surface treatment}
 

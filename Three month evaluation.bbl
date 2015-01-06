@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{abdo2006nonlinear}
 Baleegh Abdo, Eran Segev, Oleg Shtempluck, and Eyal Buks.
@@ -18,6 +18,12 @@ J~Burnett, L~Faoro, I~Wisby, VL~Gurtovoi, AV~Chernykh, GM~Mikhailov, VA~Tulin,
   superconducting resonator.
 \newblock {\em arXiv preprint arXiv:1311.1655}, 2013.
 
+\bibitem{denlinger1969radiation}
+EJ~Denlinger.
+\newblock Radiation from microstrip resonators (correspondence).
+\newblock {\em Microwave Theory and Techniques, IEEE Transactions on},
+  17(4):235--236, 1969.
+
 \bibitem{Gao}
 Jiansong Gao.
 \newblock {\em The Physics of Superconducting Microwave Resonators}.
@@ -36,6 +42,13 @@ Kurtis~L. Geerlings.
 \newblock {\em Improving Coherence of Superconducting Qubits and Resonators}.
 \newblock PhD thesis, Yale University, 2013.
 
+\bibitem{khalil2011loss}
+Moe~S Khalil, FC~Wellstood, and Kevin~D Osborn.
+\newblock Loss dependence on geometry and applied power in superconducting
+  coplanar resonators.
+\newblock {\em Applied Superconductivity, IEEE Transactions on},
+  21(3):879--882, 2011.
+
 \bibitem{martinis2014ucsb}
 John~M Martinis and A~Megrant.
 \newblock Ucsb final report for the csq program: Review of decoherence and
@@ -46,5 +59,11 @@ John~M Martinis and A~Megrant.
 Benjamin~A. Mazin.
 \newblock {\em Microwave Kinetic Inductance Detectors}.
 \newblock PhD thesis, California Institute of Technology, 2004.
+
+\bibitem{sage2011study}
+Jeremy~M Sage, Vladimir Bolkhovsky, William~D Oliver, Benjamin Turek, and
+  Paul~B Welander.
+\newblock Study of loss in superconducting coplanar waveguide resonators.
+\newblock {\em Journal of Applied Physics}, 109(6):063915, 2011.
 
 \end{thebibliography}
