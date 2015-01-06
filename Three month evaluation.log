@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.12.23)  4 JAN 2015 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.12.23)  6 JAN 2015 15:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -981,26 +981,27 @@ Chapter 3.
 AED: lastpage setting LastPage
 [10
 
-] (./Three month evaluation.aux) ) 
+] [11] (./Three month evaluation.aux) ) 
 Here is how much of TeX's memory you used:
- 15068 strings out of 493109
- 299037 string characters out of 6138586
- 438224 words of memory out of 5000000
- 18119 multiletter control sequences out of 15000+600000
- 135155 words of font info for 245 fonts, out of 8000000 for 9000
+ 15092 strings out of 493109
+ 299282 string characters out of 6138586
+ 438248 words of memory out of 5000000
+ 18123 multiletter control sequences out of 15000+600000
+ 137457 words of font info for 261 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,11n,43p,10401b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2014/texmf-dist/fonts/enc/dvips/b
-ase/8r.enc}<c:/texlive/2014/texmf-dist/fonts/type1/public/fourier/fourier-ml.pf
-b><c:/texlive/2014/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb><c:/t
-exlive/2014/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb><c:/texlive/20
-14/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb><c:/texlive/2014/texmf-dist/f
-onts/type1/adobe/utopia/putr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/adob
-e/utopia/putri8a.pfb>
-Output written on "Three month evaluation.pdf" (11 pages, 84021 bytes).
+{c:/texlive/2014/texmf-dist/fonts/enc/dv
+ips/base/8r.enc}<c:/texlive/2014/texmf-dist/fonts/type1/public/fourier/fourier-
+mex.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb><
+c:/texlive/2014/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb><c:/texl
+ive/2014/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb><c:/texlive/2014/
+texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb><c:/texlive/2014/texmf-dist/font
+s/type1/adobe/utopia/putr8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/adobe/u
+topia/putri8a.pfb>
+Output written on "Three month evaluation.pdf" (12 pages, 90190 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46593 words of extra memory for PDF output out of 51595 (max. 10000000)
 
