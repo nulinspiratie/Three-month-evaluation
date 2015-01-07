@@ -136,6 +136,7 @@ Topics:
     \item Material (Silicon, sapphire)
     \item Superconducting material NbTiN
     \item Asymmetry (can refer to \cite[p.~192]{Geerlings})
+    \item Lorentzian shape
 \end{itemize}
 
 Types of resonators studied:
@@ -219,10 +220,6 @@ With knowledge of the resonant frequency $\omega_0$, the resonant width $\Delta 
     \item Photon number dependence
     \item nonlinear effects (can refer to \cite{abdo2006nonlinear})
 \end{itemize}
-
-
-
-
 
 
 
@@ -329,65 +326,91 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 
 \section{Experimental set-up}
 
-The fridge used in this experiment is a dilution refrigerator, made by Leiden Cryogenics. The refrigerator has a base temperature of \SI{~15}{\milli \kelvin}. An input signal was generated using a Rohde \& Schwarz ZVM vector network analyzer, connected to an Aeroflex 8310 step attenuator, which has an attenuation range of \SI{120}{\decibel}. The signal out of the fridge was measured using the same vector network analyzer. 
+The fridge used in this experiment is a dilution refrigerator, made by Leiden Cryogenics. The refrigerator has a base temperature of \SI{~15}{\milli \kelvin}. An input signal was generated using a Rohde \& Schwarz ZVM vector network analyzer, connected to an Aeroflex 8310 step attenuator, which has an attenuation range of \SI{120}{\decibel}. The signal out of the fridge was measured using the same vector network analyzer.
 
-Using this set-up resonators were measured in a frequency range between $1-9$\SI{}{\giga \hertz}. The resonators were made of NbTiN on a silicon substrate. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
+Using this set-up $1/4 - \lambda$ resonators were measured in a frequency range between $1-9$\SI{}{\giga \hertz}. The resonators were made using NbTiN on a silicon substrate. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
 
+By driving a signal through the feedline, the resulting transmitted signal $S_{21}$ can be measured. At or close to the resonance frequency of a resonator, the resonator will either cause enhanced transmission ($1/2 \lambda$ resonator), or diminished transmission ($1/4 \lambda$ resonator).
 
-
+Unless stated otherwise, all measurements were performed with the fridge at base temperature (\SI{~15}{\milli \kelvin}).
 
 \section{Results and discussion}
 
-\subsection{Measuring resonator}
+\subsection{Measurement of a resonator}
 
-\begin{figure}
-    \begin{subfigure}[b]{0.3\textwidth}
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{.4\linewidth}
         \label{fig:resonator_amplitude}
-        \includegraphics[width=0.5\textwidth]{Figures/resonator_amplitude.png}
+        \includegraphics[width=\textwidth]{Figures/resonator_amplitude.png}
     \end{subfigure}
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{.4\linewidth}
         \label{fig:resonator_complex}
-        \includegraphics[width=0.5\textwidth]{Figures/resonator_complex.png}
+        \includegraphics[width=\textwidth]{Figures/resonator_complex.png}
     \end{subfigure}
+    \label{fig:resonator}
 \end{figure}
 
+ In Figure~\ref{fig:resonator} the transmission $S_{21}$ of a resonator is shown. Figure~\ref{fig:resonator_amplitude} shows the transmitted voltage $|S_{21}|$ of the resonator as a function of frequency. As one can see, the resonator has a shape similar to a Lorentzian dip. One interesting point is that the Lorentzian exhibits an asymmetry, which is often attributed to reflections in the feedline \cite{Geerlings}. This could be caused by impedance mismatching.
 
+ % TODO
+ % Say something about complex data
 
 \subsection{Power dependence}
 
-
-
-The resonators were measured at \SI{15}{mK} for several powers. Using proper calibrations for the attenuation down to the sample, the power can be converted to the input power at the sample. This value can then be converted to the mean number of photons present in the resonator Equation using (TODO: ref). The results are shown in Figure~\ref{fig:Qi_vs_n_photon}. As can be seen, the quality factor of all resonators decrease with decreasing photon number. One explanation for this phenomenon is due to the dissipation by TLS. Since measurements were performed at \SI{~15}{mK}, the TLS are not saturated since the rate of thermal excitation is low. As discussed in section~\ref{sec:TLS}, the loss due to TLS is highest at low power, in the regime where they are not saturated.
-
-
 \begin{figure}
-    \includegraphics[width=0.5\textwidth]{Figures/Qi_vs_n_photon.png}
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figures/Qi_vs_n_photon.png}
     \caption{Quality factor of resonators versus mean number of photons present in the resonator.}
     \label{fig:Qi_vs_n_photon}
 \end{figure}
 
+To be able to study the behaviour of the resonators, measurements were performed for several powers. Using proper calibrations for the attenuation down to the sample, the power can be converted to the input power at the sample. This value can then be converted to the mean number of photons present in the resonator \cite{DRIE}. The results are shown in Figure~\ref{fig:Qi_vs_n_photon}.
+
+As can be seen, the internal quality factor $Q_i$ of all resonators decrease with decreasing photon number. One explanation for this phenomenon is that the dissipation dissipation is mainly due to TLS. Since measurements were performed at \SI{~15}{mK}, the TLS are not saturated since the rate of thermal excitation is low. As discussed in section~\ref{sec:TLS}, the loss due to TLS is highest at low power, in the regime where they are not saturated. Therefore the fact that the internal quality factor $Q_i$ rises with the mean number of photons present in the resonator can be attributed to a larger amount of TLS being satured. This would suggest that, even with HMDS and DRIE treatment of the sample, the internal quality factor is still limited by TLS being present.
+
+The mean photon number of a resonator is inversely proportional to the square of frequency \cite{DRIE}, so for resonators with a low frequency a lower input power is required than with a high frequency. At high photon numbers this is not a concern, as the transmitted signal is high enough to be accurately measured in a short period of time. For the single-photon powers, however, which is the region of interest for quantum computation, acquiring enough signal took up to five hours for the lowest frequencies. The reason that for the resonator with a resonance frequency at \SI{1.83}{\giga \hertz} has large error bars at low powers can be partly attributed to this, but as we will see in section \ref{sec:noise_results}, the main reason is that its frequency lies outside the bandwidth of the amplifiers and circulators of the set-up.
+
+\begin{itemize}
+    \item Quality factor depends on frequency?
+    \item One can also see that the quality factor is lower for resonators with higher resonance frequency.
+\end{itemize}
 
 
 
 
-
+\subsection{Temperature dependence}
 
 \begin{figure}
+    \centering
     \label{fig:Qi_vs_n_photon_temperature_dependence}
-    \includegraphics[width=0.5\textwidth]{Figures/Qi_vs_n_photon_temperature_dependence.png}
+    \includegraphics[width=0.8\textwidth]{Figures/Qi_vs_n_photon_temperature_dependence.png}
 \end{figure}
+
+Aside from power, some of the dissipation channels also depend on the temperature of the system. To be able to study the effect of temperature on resonators, the resonator with frequency \SI{2.75}{\giga \hertz} has been studied as a function of power for several temperatures ranging from \SI{15}{\milli \kelvin} up to \SI{400}{\milli \kelvin}. The reason for choosing this resonator is that it has the highest internal quality factor of all the resonators measured, and so any change in quality factor would be most clearly visible.
+
+The results are shown in Figure~\ref{fig:Qi_vs_n_photon_temperature_dependence}. As can be clearly seen, the quality factor increases with increasing temperature. This is likely due to the fact that TLS are thermally excited for a larger percentage of time. Therefore, the relative energy dissipation with respect to total energy in the resonator will be lower, resulting in an increase in quality factor.
+
+Another interesting point is that the increase in quality factor as a function of temperature is largest at low powers. This can also be explained when the limiting factor is due to TLS. With low powers, the TLS are almost exclusively excited thermally, while at higher powers, the excitation of TLS is not only due to thermal excitations, but also from photon absorption.
+
+If one looks at the highest temperatures, it seems that the increase in quality factor as a function of temperature seems to slowly approach a saturation point. One reason is that the TLS are approaching their saturation, and so increasing the temperature further will have little effect on the percentage of time that the TLS are in the excited state. As will be shown in the next section, the quality factor is close to its maximum value, and will decrease as temperature is increased further.
+
+
+
+\subsection{Temperature tracking}
+
+
+
+To further investigate the temperature dependence of the resonator, it has been continuously measured while the fridge was cooling down from \SI{~1}{\kelvin} to base temperature (\SI{15}{\milli \kelvin}).
+
+
 
 
 \begin{itemize}
-    \item Power dependence
-    \item Temperature dependence
-    \item One can also see that the quality factor is lower for resonators with higher resonance frequency. 
+    \item Quality factor
+    \item Center frequency
     \begin{itemize}
-        \item Quality factor
-        \item Center frequency
-        \begin{itemize}
-            \item Shift at lowest temperature could be due to TLS \cite[p.~91]{Geerlings}
-        \end{itemize}
+        \item Shift at lowest temperature could be due to TLS \cite[p.~91]{Geerlings}
     \end{itemize}
 \end{itemize}
 
@@ -443,7 +466,7 @@ The resonators were measured at \SI{15}{mK} for several powers. Using proper cal
 
 
 \begin{itemize}
-    \item Noise level sets the lower limit on the magnitude of a signal that can be detected in the presence of the noise 
+    \item Noise level sets the lower limit on the magnitude of a signal that can be detected in the presence of the noise
     \item How does an attenuator affect the noise? Brief info at \cite[p.~4]{Iulian}
     \item Quantities such as noise temperature work for white noise
 \end{itemize}
@@ -471,7 +494,7 @@ The resonators were measured at \SI{15}{mK} for several powers. Using proper cal
 
 \section{Characterization of noise}
 
-When performing measurements one important question to ask is what the contribution of noise is to the system. 
+When performing measurements one important question to ask is what the contribution of noise is to the system.
 
 One way of quantifying the noise is through the noise spectral density $S(f)$, which is the power contribution of noise per unit bandwidth as a function of frequency. When the only noise contribution is white noise, the spectral density is independent of frequency.
 
@@ -489,7 +512,7 @@ Noise spectral density is the noise power per unit bandwidth (Wikipedia)
 Noise spectral density characterizes the noise in the frequency domain
 
 
-We can model our set-up by a noise source, 
+We can model our set-up by a noise source,
 
 \begin{itemize}
     \item Noise temperature is the equivalent amount of noise added by a resistor being at that temperature
@@ -497,6 +520,16 @@ We can model our set-up by a noise source,
     \item Show plot of noise temperature
     \item Explain why first amplifier is most important
 \end{itemize}
+
+
+
+\section{Results}
+\label{sec:noise_results}
+
+
+
+
+
 
 \bibliographystyle{plain}
 \bibliography{bibliography}
