@@ -16,6 +16,7 @@
 \usepackage{url, lipsum}
 \usepackage{siunitx}
 \usepackage{subcaption}
+\usepackage[space]{grffile}
 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 % \onehalfspacing
@@ -124,7 +125,7 @@ Because the relevant regime where resonators interact with qubits is the single-
 
 Topics:
 \begin{itemize}
-    \item Center frequency
+    \item resonance frequency
     \item Temperature dependence
     \item Kinetic inductance
     \item shift of resonance frequency due to trapped vortices
@@ -245,6 +246,7 @@ In the low power, low temperature regime, TLS reside mostly in their ground stat
     \item To our knowledge, dielectric loss at low temperature
         arises from the presence of two-level states (TLS) formed
         by random bonds that tunnel between two sites. \cite{martinis2014ucsb}
+    \item Mostly reside at surface \cite{gao2008experimental}
     \item 1/f noise \cite{burnett2013evidence}
     \item Dielectric materials (Table \cite{martinis2014ucsb})
 \end{itemize}
@@ -339,11 +341,11 @@ Unless stated otherwise, all measurements were performed with the fridge at base
 
 \begin{figure}[h]
     \centering
-    \begin{subfigure}[b]{.4\linewidth}
+    \begin{subfigure}[b]{.49\textwidth}
         \label{fig:resonator_amplitude}
         \includegraphics[width=\textwidth]{Figures/resonator_amplitude.png}
     \end{subfigure}
-    \begin{subfigure}[b]{.4\linewidth}
+    \begin{subfigure}[b]{.49\textwidth}
         \label{fig:resonator_complex}
         \includegraphics[width=\textwidth]{Figures/resonator_complex.png}
     \end{subfigure}
@@ -406,11 +408,35 @@ If one looks at the highest temperatures, it seems that the increase in quality 
 % Make stronger statement supporting claim that quasiparticles are dominant source at higher temperatures
 % Maybe also mention the rapid shift of resonator frequency during beginning stage of cooldown
 
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{.49\textwidth}
+        \label{fig:temperature_tracking_Qi_drop}
+        \includegraphics[width=\textwidth]{Figures/Temperature tracking drop - Qi vs T.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{.49\textwidth}
+        \label{fig:temperature_tracking_Qi_nodrop}
+        \includegraphics[width=\textwidth]{Figures/Temperature tracking - no drop - Qi vs T.png}
+    \end{subfigure}
+    \label{fig:temperature_tracking_Qi}
+\end{figure}
+
 To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic ... TODO. All temperatures were measured at an input power of TODO, corresponding to roughly TODO photons In Figure TODO the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
 
-% ADD figure of center frequency
+% ADD figure of resonance frequency
 
-Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The existence of quasiparticles increases the kinetic inductance. The resonance frequency is inversely proportional to the square root of the total conductance, and so an increase in kinetic inductance leads to a decrease in resonance frequency.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\textwidth]{Figures/Temperature tracking - f0 vs T.png}
+    \label{fig:temperature_tracking_f0}
+\end{figure}
+
+
+Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The result from of tracking the resonance frequency of the resonator during cooldown and subsequent warm-up is shown in Figure~\ref{fig:temperature_tracking_f0}. As can be seen, the resonance frequency reaches a maximum around \SI{500}{\kelvin}. 
+
+The decrease in resonance frequency at higher temperatures can be explained by the presence of quasiparticles, which increase the kinetic inductance \cite[p.~91]{Geerlings}. The resonance frequency is inversely proportional to the square root of the total conductance through the relation $\f_0 = 1 / \sqrt{L C}$, and so an increase in kinetic inductance leads to a decrease in resonance frequency.
+
+The decrease in resonance frequency at lower temperatures can be explained due to TLS being present 
 
 
 % TODO
@@ -418,7 +444,7 @@ Aside from the internal quality factor, another quantity of interest is the reso
 
 \begin{itemize}
     \item Info at Geerlings \cite[p.~106]{Geerlings}. Seems to say that resonance frequency depends on kinetic inductance, but also on TLS
-    \item Mention that center frequency also depends on TLS
+    \item Mention that resonance frequency also depends on TLS
 \end{itemize}
 
 
@@ -444,7 +470,7 @@ Aside from the internal quality factor, another quantity of interest is the reso
     \item Complex signal
 \end{itemize}
 
-\section{Conclusion and future ...TODO}
+\section{Conclusion and future work}
 
 \begin{itemize}
     \item One goal is to set-up the complex signal heterodyne system and compare it to the Vector network analyzer
