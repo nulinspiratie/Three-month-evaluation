@@ -7,19 +7,20 @@
 \contentsline {subsubsection}{\numberline {1.3.1.1}Two-level systems}{5}
 \contentsline {subsubsection}{\numberline {1.3.1.2}Quasiparticles}{6}
 \contentsline {subsubsection}{\numberline {1.3.1.3}Radiation}{7}
-\contentsline {subsubsection}{\numberline {1.3.1.4}}{7}
-\contentsline {subsection}{\numberline {1.3.2}Loss channels}{7}
-\contentsline {subsection}{\numberline {1.3.3}Combatting losses}{7}
-\contentsline {subsubsection}{\numberline {1.3.3.1}Infrared shielding}{7}
-\contentsline {subsubsection}{\numberline {1.3.3.2}Surface treatment}{7}
-\contentsline {subsubsection}{\numberline {1.3.3.3}Deep-reactive ion etching}{7}
-\contentsline {section}{\numberline {1.4}Results}{7}
-\contentsline {chapter}{\numberline {2}Measurements}{8}
-\contentsline {section}{\numberline {2.1}Heterodyne detection}{8}
-\contentsline {section}{\numberline {2.2}Vector network analyzer}{8}
-\contentsline {chapter}{\numberline {3}Noise}{9}
-\contentsline {section}{\numberline {3.1}Noise sources}{9}
-\contentsline {subsection}{\numberline {3.1.1}Johnson noise}{9}
-\contentsline {subsection}{\numberline {3.1.2}Shot noise}{9}
-\contentsline {subsection}{\numberline {3.1.3}1/f noise}{9}
-\contentsline {section}{\numberline {3.2}Noise temperature}{9}
+\contentsline {subsubsection}{\numberline {1.3.1.4}Vortices}{7}
+\contentsline {subsection}{\numberline {1.3.2}Minimizing losses}{7}
+\contentsline {subsubsection}{\numberline {1.3.2.1}Surface treatment}{7}
+\contentsline {subsubsection}{\numberline {1.3.2.2}Infrared shielding}{7}
+\contentsline {subsubsection}{\numberline {1.3.2.3}Deep-reactive ion etching}{7}
+\contentsline {section}{\numberline {1.4}Experimental set-up}{7}
+\contentsline {section}{\numberline {1.5}Results and discussion}{8}
+\contentsline {subsection}{\numberline {1.5.1}Power dependence}{8}
+\contentsline {chapter}{\numberline {2}Measurements}{10}
+\contentsline {section}{\numberline {2.1}Heterodyne detection}{10}
+\contentsline {section}{\numberline {2.2}Vector network analyzer}{10}
+\contentsline {chapter}{\numberline {3}Noise}{11}
+\contentsline {section}{\numberline {3.1}Noise sources}{11}
+\contentsline {subsection}{\numberline {3.1.1}Johnson noise}{11}
+\contentsline {subsection}{\numberline {3.1.2}Shot noise}{11}
+\contentsline {subsection}{\numberline {3.1.3}1/f noise}{11}
+\contentsline {section}{\numberline {3.2}Characterization of noise}{11}

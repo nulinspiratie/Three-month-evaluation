@@ -15,6 +15,7 @@
 \usepackage{sectsty}
 \usepackage{url, lipsum}
 \usepackage{siunitx}
+\usepackage{subcaption}
 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 % \onehalfspacing
@@ -237,7 +238,7 @@ One loss channel was already discussed in section~\ref{sec:Quality factor}, name
 \subsection{Causes of loss}
 
 \subsubsection{Two-level systems}
-
+\label{sec:TLS}
 Two-level systems (TLS) are systems which can be in a ground state or an excited state. In some cases they can be useful, such as in the case of a qubit. In other cases, however, TLS can also be a source of dissipation. In cQED TLS which cause dissipation are most often oxides residing in amorphous materials (TODO: ref). In fact, study suggests that most TLS reside in a thin oxide layer at the interface between two substances (TODO: ref).
 
 Resonators are surrounded by a large quantity of TLS, each of which has its own resonance frequency, depending on its energy landscape. When the resonance frequency of a TLS is close to that of the resonator, it can absorb a photon from the resonator, upon which it tunnels to an excited meta-stable state. TLS have a finite lifetime in their excited state, after which they decay back to their ground state.
@@ -306,7 +307,11 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 
 
 
-\subsection{Combatting losses}
+\subsection{Minimizing losses}
+
+\subsubsection{Surface treatment}
+
+
 
 \subsubsection{Infrared shielding}
 
@@ -317,13 +322,49 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 \end{itemize}
 
 
-\subsubsection{Surface treatment}
-
 \subsubsection{Deep-reactive ion etching}
 
 
 
 
+\section{Experimental set-up}
+
+The fridge used in this experiment is a dilution refrigerator, made by Leiden Cryogenics. The refrigerator has a base temperature of \SI{~15}{\milli \kelvin}. An input signal was generated using a Rohde \& Schwarz ZVM vector network analyzer, connected to an Aeroflex 8310 step attenuator, which has an attenuation range of \SI{120}{\decibel}. The signal out of the fridge was measured using the same vector network analyzer. 
+
+Using this set-up resonators were measured in a frequency range between $1-9$\SI{}{\giga \hertz}. The resonators were made of NbTiN on a silicon substrate. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
+
+
+
+
+\section{Results and discussion}
+
+\subsection{Measuring resonator}
+
+\begin{figure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \label{fig:resonator_amplitude}
+        \includegraphics[width=0.5\textwidth]{Figures/resonator_amplitude.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \label{fig:resonator_complex}
+        \includegraphics[width=0.5\textwidth]{Figures/resonator_complex.png}
+    \end{subfigure}
+\end{figure}
+
+
+
+\subsection{Power dependence}
+
+
+
+The resonators were measured at \SI{15}{mK} for several powers. Using proper calibrations for the attenuation down to the sample, the power can be converted to the input power at the sample. This value can then be converted to the mean number of photons present in the resonator Equation using (TODO: ref). The results are shown in Figure~\ref{fig:Qi_vs_n_photon}. As can be seen, the quality factor of all resonators decrease with decreasing photon number. One explanation for this phenomenon is due to the dissipation by TLS. Since measurements were performed at \SI{~15}{mK}, the TLS are not saturated since the rate of thermal excitation is low. As discussed in section~\ref{sec:TLS}, the loss due to TLS is highest at low power, in the regime where they are not saturated.
+
+
+\begin{figure}
+    \includegraphics[width=0.5\textwidth]{Figures/Qi_vs_n_photon.png}
+    \caption{Quality factor of resonators versus mean number of photons present in the resonator.}
+    \label{fig:Qi_vs_n_photon}
+\end{figure}
 
 
 
@@ -331,16 +372,16 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 
 
 
+\begin{figure}
+    \label{fig:Qi_vs_n_photon_temperature_dependence}
+    \includegraphics[width=0.5\textwidth]{Figures/Qi_vs_n_photon_temperature_dependence.png}
+\end{figure}
 
 
-
-
-
-
-\section{Results}
 \begin{itemize}
     \item Power dependence
     \item Temperature dependence
+    \item One can also see that the quality factor is lower for resonators with higher resonance frequency. 
     \begin{itemize}
         \item Quality factor
         \item Center frequency
@@ -398,6 +439,24 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 
 \chapter{Noise}
 
+
+
+
+\begin{itemize}
+    \item Noise level sets the lower limit on the magnitude of a signal that can be detected in the presence of the noise 
+    \item How does an attenuator affect the noise? Brief info at \cite[p.~4]{Iulian}
+    \item Quantities such as noise temperature work for white noise
+\end{itemize}
+
+\begin{itemize}
+    \item [\textbf{Pros}]
+    \item Find out if the 1/2 division is due to impedance matching of load and source
+\end{itemize}
+
+
+
+
+
 \section{Noise sources}
 
 \subsection{Johnson noise}
@@ -410,9 +469,30 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 \end{itemize}
 
 
-\section{Noise temperature}
+\section{Characterization of noise}
+
+When performing measurements one important question to ask is what the contribution of noise is to the system. 
+
+One way of quantifying the noise is through the noise spectral density $S(f)$, which is the power contribution of noise per unit bandwidth as a function of frequency. When the only noise contribution is white noise, the spectral density is independent of frequency.
+
+We can ass
+replace our entire set-up by a resistor being at a certain temperature. This temperature is known as the noise temperature
+The noise temperature of a system is the temperature for which a resistor would produce the same amount of noise.
+
+The noise spectral density is given by:
+
+
+
+
+Noise spectral density is the noise power per unit bandwidth (Wikipedia)
+
+Noise spectral density characterizes the noise in the frequency domain
+
+
+We can model our set-up by a noise source, 
 
 \begin{itemize}
+    \item Noise temperature is the equivalent amount of noise added by a resistor being at that temperature
     \item Formula for noise temperature
     \item Show plot of noise temperature
     \item Explain why first amplifier is most important
