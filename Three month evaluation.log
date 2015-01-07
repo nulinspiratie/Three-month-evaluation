@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.12.23)  7 JAN 2015 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.12.23)  7 JAN 2015 19:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -967,13 +967,13 @@ Package microtype Info: Loading generic settings for font family
 
 ] [4]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 235.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 234.
  [5] [6]
 [7] <Figures/resonator_amplitude.png, id=35, 433.62pt x 289.08pt>
 File: Figures/resonator_amplitude.png Graphic file (type png)
 
 <use Figures/resonator_amplitude.png>
-Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 345
+Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 344
 .
 (pdftex.def)             Requested size: 181.18439pt x 120.79082pt.
 
@@ -981,33 +981,33 @@ Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 345
 File: Figures/resonator_complex.png Graphic file (type png)
 
 <use Figures/resonator_complex.png>
-Package pdftex.def Info: Figures/resonator_complex.png used on input line 349.
+Package pdftex.def Info: Figures/resonator_complex.png used on input line 348.
 (pdftex.def)             Requested size: 181.18439pt x 129.41873pt.
 
 
-Package caption Warning: \label without proper \caption on input line 351.
+Package caption Warning: \label without proper \caption on input line 350.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:resonator' on page 8 undefined on input line 354.
+LaTeX Warning: Reference `fig:resonator' on page 8 undefined on input line 353.
 
 
 
-Package caption Warning: \label without proper \caption on input line 344.
+Package caption Warning: \label without proper \caption on input line 343.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:resonator_amplitude' on page 8 undefined on input
- line 354.
+ line 353.
 
 <Figures/Qi_vs_n_photon.png, id=38, 433.62pt x 289.08pt>
 File: Figures/Qi_vs_n_photon.png Graphic file (type png)
 
 <use Figures/Qi_vs_n_photon.png>
-Package pdftex.def Info: Figures/Qi_vs_n_photon.png used on input line 364.
+Package pdftex.def Info: Figures/Qi_vs_n_photon.png used on input line 363.
 (pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 365.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 364.
  [8 <./Figures/resonator_amplitude.png> <./Figures/resonator_complex.png>]
 <Figures/Qi_vs_n_photon_temperature_dependence.png, id=44, 351.9549pt x 231.264
 pt>
@@ -1015,16 +1015,16 @@ File: Figures/Qi_vs_n_photon_temperature_dependence.png Graphic file (type png)
 
  <use Figures/Qi_vs_n_photon_temperature_dependence.png>
 Package pdftex.def Info: Figures/Qi_vs_n_photon_temperature_dependence.png used
- on input line 388.
+ on input line 387.
 (pdftex.def)             Requested size: 362.37569pt x 238.11987pt.
  [9 <./Figures/Qi_vs_n_photon.png>]
 
-Package caption Warning: \label without proper \caption on input line 387.
+Package caption Warning: \label without proper \caption on input line 386.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:Qi_vs_n_photon_temperature_dependence' on page 10
- undefined on input line 393.
+ undefined on input line 392.
 
 [10 <./Figures/Qi_vs_n_photon_temperature_dependence.png>] [11]
 Chapter 2.
@@ -1058,7 +1058,7 @@ onts/type1/public/fourier/fourier-ml.pfb><c:/texlive/2014/texmf-dist/fonts/type
 c/fourier/fourier-ms.pfb><c:/texlive/2014/texmf-dist/fonts/type1/adobe/utopia/p
 utb8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb><c:/t
 exlive/2014/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on "Three month evaluation.pdf" (17 pages, 229401 bytes).
+Output written on "Three month evaluation.pdf" (17 pages, 230154 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream

@@ -94,7 +94,7 @@ The subject of my Master's thesis will be on ways of improving T1 and T2 coheren
 
 Traditionally the measurements were performed using Labview software. However, in the months that I have been working in the DiCarlo lab, a transition in measurement software has taken place from Labview to the Python-based QTLab. I have been very involved in this transition, as an important part of my research will be to characterize a sample quickly and accurately. This will enable a fast cycle from sample fabrication to characterization, hopefully leading to rapid progress in the development of quantum computing using cQED.
 
-The past few weeks the focus of my measurements has shifted towards the characterization of resonators. This is largely due to the fact that two of my colleagues, Alessandro Bruno and Gijs de Lange, are working on a paper on ways of improving the quality factor of resonators. A large part of the data was already obtained before I joined the group, but a last set of measurements was required at the dilution refrigerator I most often operate at. The reason is that its base temperature is at \SI{15}{\milli \kelvin}, which is considerably lower than the base temperature of the refrigerator at which the other measurements were performed, namely \SI{250}{\milli \kelvin}. Because my focus so far has been more on resonators than of qubits, the main topic of this report will be on resonators, and will include the topic of qubits in my final thesis.
+The past few weeks the focus of my measurements has shifted towards the characterization of resonators. This is largely due to the fact that two of my colleagues, Alessandro Bruno and Gijs de Lange, are working on a paper on ways of improving the quality factor of resonators. A large part of the data was already obtained before I joined the group, but a last set of measurements was required using the dilution refrigerator I most often operate at. The reason is that its base temperature is at \SI{15}{\milli \kelvin}, which is considerably lower than the base temperature of the refrigerator at which the other measurements were performed, namely \SI{250}{\milli \kelvin}. Because my focus so far has been more on resonators than on qubits, the main topic of this report will be on resonators, and I will include the topic of qubits in my final thesis.
 
 As I have spent a large part of my time at the lab performing measurements, I would also like to discuss this topic in my three month report. I will treat the types of set-up I have used so far, and the techniques used for measuring resonators.
 
@@ -132,7 +132,6 @@ Topics:
         \item Trapped vortices cause parts to be non-superconducting
         \item Combatting trapped vortices with grid-like structure
     \end{itemize}
-    \item photon number
     \item Material (Silicon, sapphire)
     \item Superconducting material NbTiN
     \item Asymmetry (can refer to \cite[p.~192]{Geerlings})
@@ -351,7 +350,7 @@ Unless stated otherwise, all measurements were performed with the fridge at base
     \label{fig:resonator}
 \end{figure}
 
- In Figure~\ref{fig:resonator} the transmission $S_{21}$ of a resonator is shown. Figure~\ref{fig:resonator_amplitude} shows the transmitted voltage $|S_{21}|$ of the resonator as a function of frequency. As one can see, the resonator has a shape similar to a Lorentzian dip. One interesting point is that the Lorentzian exhibits an asymmetry, which is often attributed to reflections in the feedline \cite{Geerlings}. This could be caused by impedance mismatching.
+ In Figure~\ref{fig:resonator} the transmission $S_{21}$ of a resonator is shown. Figure~\ref{fig:resonator_amplitude} shows the transmitted voltage $|S_{21}|$ of the resonator as a function of frequency. As one can see, the resonator has a shape similar to a Lorentzian dip. One interesting point is that the Lorentzian exhibits an asymmetry, which is often attributed to reflections in the feedline \cite[p.~192]{Geerlings}. This could be caused by impedance mismatching.
 
  % TODO
  % Say something about complex data
@@ -411,9 +410,16 @@ To further investigate the temperature dependence of the resonator, a continous 
 
 % ADD figure of center frequency
 
-Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature.
+Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The existence of quasiparticles increases the kinetic inductance. The resonance frequency is inversely proportional to the square root of the total conductance, and so an increase in kinetic inductance leads to a decrease in resonance frequency.
 
 
+% TODO
+% Find more information on kinetic inductance. What exactly does it depend on? Cooper pair density or quasiparticle density? What is it exactly?
+
+\begin{itemize}
+    \item Info at Geerlings \cite[p.~106]{Geerlings}. Seems to say that resonance frequency depends on kinetic inductance, but also on TLS
+    \item Mention that center frequency also depends on TLS
+\end{itemize}
 
 
 
@@ -426,6 +432,8 @@ Aside from the internal quality factor, another quantity of interest is the reso
 
 \chapter{Measurements}
 
+
+
 \section{Heterodyne detection}
 \begin{itemize}
     \item Idea to also obtain complex signal
@@ -436,9 +444,11 @@ Aside from the internal quality factor, another quantity of interest is the reso
     \item Complex signal
 \end{itemize}
 
+\section{Conclusion and future ...TODO}
 
-
-
+\begin{itemize}
+    \item One goal is to set-up the complex signal heterodyne system and compare it to the Vector network analyzer
+\end{itemize}
 
 
 
