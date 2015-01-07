@@ -326,13 +326,13 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 
 \section{Experimental set-up}
 
-The fridge used in this experiment is a dilution refrigerator, made by Leiden Cryogenics. The refrigerator has a base temperature of \SI{~15}{\milli \kelvin}. An input signal was generated using a Rohde \& Schwarz ZVM vector network analyzer, connected to an Aeroflex 8310 step attenuator, which has an attenuation range of \SI{120}{\decibel}. The signal out of the fridge was measured using the same vector network analyzer.
+The fridge used in this experiment is a dilution refrigerator, made by Leiden Cryogenics. The refrigerator has a base temperature of \SI{\sim15}{\milli \kelvin}. An input signal was generated using a Rohde \& Schwarz ZVM vector network analyzer, connected to an Aeroflex 8310 step attenuator, which has an attenuation range of \SI{120}{\decibel}. The signal out of the fridge was measured using the same vector network analyzer.
 
 Using this set-up $1/4 - \lambda$ resonators were measured in a frequency range between $1-9$\SI{}{\giga \hertz}. The resonators were made using NbTiN on a silicon substrate. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
 
 By driving a signal through the feedline, the resulting transmitted signal $S_{21}$ can be measured. At or close to the resonance frequency of a resonator, the resonator will either cause enhanced transmission ($1/2 \lambda$ resonator), or diminished transmission ($1/4 \lambda$ resonator).
 
-Unless stated otherwise, all measurements were performed with the fridge at base temperature (\SI{~15}{\milli \kelvin}).
+Unless stated otherwise, all measurements were performed with the fridge at base temperature (\SI{\sim15}{\milli \kelvin}).
 
 \section{Results and discussion}
 
@@ -357,6 +357,7 @@ Unless stated otherwise, all measurements were performed with the fridge at base
  % Say something about complex data
 
 \subsection{Power dependence}
+\label{sec:resonator:results:power_dependence}
 
 \begin{figure}
     \centering
@@ -367,7 +368,7 @@ Unless stated otherwise, all measurements were performed with the fridge at base
 
 To be able to study the behaviour of the resonators, measurements were performed for several powers. Using proper calibrations for the attenuation down to the sample, the power can be converted to the input power at the sample. This value can then be converted to the mean number of photons present in the resonator \cite{DRIE}. The results are shown in Figure~\ref{fig:Qi_vs_n_photon}.
 
-As can be seen, the internal quality factor $Q_i$ of all resonators decrease with decreasing photon number. One explanation for this phenomenon is that the dissipation dissipation is mainly due to TLS. Since measurements were performed at \SI{~15}{mK}, the TLS are not saturated since the rate of thermal excitation is low. As discussed in section~\ref{sec:TLS}, the loss due to TLS is highest at low power, in the regime where they are not saturated. Therefore the fact that the internal quality factor $Q_i$ rises with the mean number of photons present in the resonator can be attributed to a larger amount of TLS being satured. This would suggest that, even with HMDS and DRIE treatment of the sample, the internal quality factor is still limited by TLS being present.
+As can be seen, the internal quality factor $Q_i$ of all resonators decrease with decreasing photon number. One explanation for this phenomenon is that the dissipation dissipation is mainly due to TLS. Since measurements were performed at \SI{\sim15}{mK}, the TLS are not saturated since the rate of thermal excitation is low. As discussed in section~\ref{sec:TLS}, the loss due to TLS is highest at low power, in the regime where they are not saturated. Therefore the fact that the internal quality factor $Q_i$ rises with the mean number of photons present in the resonator can be attributed to a larger amount of TLS being satured. This would suggest that, even with HMDS and DRIE treatment of the sample, the internal quality factor is still limited by TLS being present.
 
 The mean photon number of a resonator is inversely proportional to the square of frequency \cite{DRIE}, so for resonators with a low frequency a lower input power is required than with a high frequency. At high photon numbers this is not a concern, as the transmitted signal is high enough to be accurately measured in a short period of time. For the single-photon powers, however, which is the region of interest for quantum computation, acquiring enough signal took up to five hours for the lowest frequencies. The reason that for the resonator with a resonance frequency at \SI{1.83}{\giga \hertz} has large error bars at low powers can be partly attributed to this, but as we will see in section \ref{sec:noise_results}, the main reason is that its frequency lies outside the bandwidth of the amplifiers and circulators of the set-up.
 
@@ -380,7 +381,7 @@ The mean photon number of a resonator is inversely proportional to the square of
 
 
 \subsection{Temperature dependence}
-
+\label{sec:resonator:results:emperature_dependence}
 \begin{figure}
     \centering
     \label{fig:Qi_vs_n_photon_temperature_dependence}
@@ -398,25 +399,19 @@ If one looks at the highest temperatures, it seems that the increase in quality 
 
 
 \subsection{Temperature tracking}
+\label{resonator:results:temperature_tracking}
+% TODO
+% Add figures of temperature and of frequency
+% Find out the name of the process that occurs at 1K.
+% Find out what the input power is corresponding to -60 dBm
+% Make stronger statement supporting claim that quasiparticles are dominant source at higher temperatures
+% Maybe also mention the rapid shift of resonator frequency during beginning stage of cooldown
 
+To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic ... TODO. All temperatures were measured at an input power of TODO, corresponding to roughly TODO photons In Figure TODO the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
 
+% ADD figure of center frequency
 
-To further investigate the temperature dependence of the resonator, it has been continuously measured while the fridge was cooling down from \SI{~1}{\kelvin} to base temperature (\SI{15}{\milli \kelvin}).
-
-
-
-
-\begin{itemize}
-    \item Quality factor
-    \item Center frequency
-    \begin{itemize}
-        \item Shift at lowest temperature could be due to TLS \cite[p.~91]{Geerlings}
-    \end{itemize}
-\end{itemize}
-
-
-
-
+Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature.
 
 
 
