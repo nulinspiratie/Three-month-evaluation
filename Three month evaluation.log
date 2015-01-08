@@ -1,7 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.12)  7 JAN 2015 20:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.12)  8 JAN 2015 12:23
 entering extended mode
-**D:/sasaad/Three-month-evaluation/Three*month*evaluation.tex
-("D:/sasaad/Three-month-evaluation/Three month evaluation.tex"
+**K:/ns/qt/Transmon/Personal*Folders/Serwan/Three-month-evaluation/Three*month*
+evaluation.tex
+
+("K:/ns/qt/Transmon/Personal Folders/Serwan/Three-month-evaluation/Three month 
+evaluation.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -767,7 +770,8 @@ Package grffile Info: Option `extendedchars' is set to `false'.
 Package grffile Info: Option `space' is set to `true'.
 Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 486.
 )
-("D:\sasaad\Three-month-evaluation\Three month evaluation.aux")
+("K:\ns\qt\Transmon\Personal Folders\Serwan\Three-month-evaluation\Three month 
+evaluation.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
@@ -783,14 +787,12 @@ LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 39.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 39.
 
-
-(D:\TUD277449\AppData\MiKTeX\2.9\tex\latex\fourier\fmlfutm.fd
+ (D:\TUD277449\AppData\MiKTeX\2.9\tex\latex\fourier\fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
 LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 39.
 LaTeX Font Info:    Try loading font information for FMS+futm on input line 39.
-
 
 (D:\TUD277449\AppData\MiKTeX\2.9\tex\latex\fourier\fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
@@ -943,7 +945,8 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 81.
 
-("D:\sasaad\Three-month-evaluation\Three month evaluation.toc"
+("K:\ns\qt\Transmon\Personal Folders\Serwan\Three-month-evaluation\Three month 
+evaluation.toc"
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 2.
 )
@@ -976,7 +979,7 @@ LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <14.4> not available
 File: Figures/resonator_amplitude.png Graphic file (type png)
 
 <use Figures/resonator_amplitude.png>
-Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 345
+Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 346
 .
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
@@ -984,7 +987,7 @@ Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 345
 File: Figures/resonator_complex.png Graphic file (type png)
 
 <use Figures/resonator_complex.png>
-Package pdftex.def Info: Figures/resonator_complex.png used on input line 349.
+Package pdftex.def Info: Figures/resonator_complex.png used on input line 350.
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
 
@@ -992,7 +995,7 @@ Package caption Warning: \label without proper \caption on input line 351.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:resonator' on page 8 undefined on input line 354.
+LaTeX Warning: Reference `fig:resonator' on page 8 undefined on input line 355.
 
 
 
@@ -1001,40 +1004,42 @@ See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:resonator_amplitude' on page 8 undefined on input
- line 354.
+ line 355.
 
 <Figures/Qi_vs_n_photon.png, id=37, 433.62pt x 289.08pt>
 File: Figures/Qi_vs_n_photon.png Graphic file (type png)
 
 <use Figures/Qi_vs_n_photon.png>
-Package pdftex.def Info: Figures/Qi_vs_n_photon.png used on input line 364.
+Package pdftex.def Info: Figures/Qi_vs_n_photon.png used on input line 365.
 (pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 365.
- [8 <D:/sasaad/Three-month-evaluation/Figures/resonator_amplitude.png> <D:/sasa
-ad/Three-month-evaluation/Figures/resonator_complex.png>]
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 366.
+ [8 <K:/ns/qt/Transmon/Personal Folders/Serwan/Three-month-evaluation/Figures/r
+esonator_amplitude.png> <K:/ns/qt/Transmon/Personal Folders/Serwan/Three-month-
+evaluation/Figures/resonator_complex.png>]
 <Figures/Qi_vs_n_photon_temperature_dependence.png, id=43, 433.62pt x 289.08pt>
 File: Figures/Qi_vs_n_photon_temperature_dependence.png Graphic file (type png)
 
 <use Figures/Qi_vs_n_photon_temperature_dependence.png>
 Package pdftex.def Info: Figures/Qi_vs_n_photon_temperature_dependence.png used
- on input line 388.
+ on input line 389.
 (pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
- [9 <D:/sasaad/Three-month-evaluation/Figures/Qi_vs_n_photon.png>]
+ [9 <K:/ns/qt/Transmon/Personal Folders/Serwan/Three-month-evaluation/Figures/Q
+i_vs_n_photon.png>]
 
 Package caption Warning: \label without proper \caption on input line 387.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:Qi_vs_n_photon_temperature_dependence' on page 10
- undefined on input line 393.
+ undefined on input line 394.
 
 <Figures/Temperature tracking drop - Qi vs T.png, id=48, 433.62pt x 289.08pt>
 File: Figures/Temperature tracking drop - Qi vs T.png Graphic file (type png)
 
 <use Figures/Temperature tracking drop - Qi vs T.png>
 Package pdftex.def Info: Figures/Temperature tracking drop - Qi vs T.png used o
-n input line 414.
+n input line 415.
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
 <Figures/Temperature tracking - no drop - Qi vs T.png, id=49, 433.62pt x 289.08
@@ -1043,25 +1048,51 @@ File: Figures/Temperature tracking - no drop - Qi vs T.png Graphic file (type p
 ng)
  <use Figures/Temperature tracking - no drop - Qi vs T.png>
 Package pdftex.def Info: Figures/Temperature tracking - no drop - Qi vs T.png u
-sed on input line 418.
+sed on input line 419.
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10 <D:/sasaad/Three-month-evaluation/Figures/Qi_vs_n_photon_temperature_depend
-ence.png>]
+[10 <K:/ns/qt/Transmon/Personal Folders/Serwan/Three-month-evaluation/Figures/Q
+i_vs_n_photon_temperature_dependence.png>]
 <Figures/Temperature tracking - f0 vs T.png, id=54, 505.89pt x 361.35pt>
 File: Figures/Temperature tracking - f0 vs T.png Graphic file (type png)
 
 <use Figures/Temperature tracking - f0 vs T.png>
 Package pdftex.def Info: Figures/Temperature tracking - f0 vs T.png used on inp
-ut line 429.
+ut line 430.
 (pdftex.def)             Requested size: 317.07614pt x 226.4883pt.
- [11 <D:/sasaad/Three-month-evaluation/Figures/Temperature tracking drop - Qi v
-s T.png> <D:/sasaad/Three-month-evaluation/Figures/Temperature tracking - no dr
-op - Qi vs T.png> <D:/sasaad/Three-month-evaluation/Figures/Temperature trackin
-g - f0 vs T.png>] [12]
+
+
+Package caption Warning: \label without proper \caption on input line 430.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:temperature_tracking_f0' on page 11 undefined on 
+input line 435.
+
+! Undefined control sequence.
+<recently read> \f 
+                   
+l.437 ...otal conductance through the relation $\f
+                                                  _0 = 1 / \sqrt{L C}$, and ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[11 <K:/ns/qt/Transmon/Personal Folders/Serwan/Three-month-evaluation/Figures/T
+emperature tracking drop - Qi vs T.png> <K:/ns/qt/Transmon/Personal Folders/Ser
+wan/Three-month-evaluation/Figures/Temperature tracking - no drop - Qi vs T.png
+> <K:/ns/qt/Transmon/Personal Folders/Serwan/Three-month-evaluation/Figures/Tem
+perature tracking - f0 vs T.png>]
+
+LaTeX Warning: Citation `barends2008contribution' on page 12 undefined on input
+ line 449.
+
+[12]
 Chapter 2.
 [13
 
@@ -1069,24 +1100,30 @@ Chapter 2.
 Chapter 3.
 [14
 
-] ("D:\sasaad\Three-month-evaluation\Three month evaluation.bbl" [15]
-[16
+]
+("K:\ns\qt\Transmon\Personal Folders\Serwan\Three-month-evaluation\Three month 
+evaluation.bbl" [15] [16
 
 ]) 
 AED: lastpage setting LastPage
-[17] ("D:\sasaad\Three-month-evaluation\Three month evaluation.aux")
+[17]
+("K:\ns\qt\Transmon\Personal Folders\Serwan\Three-month-evaluation\Three month 
+evaluation.aux")
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 15013 strings out of 493921
- 300670 string characters out of 3147312
+ 15014 strings out of 493921
+ 301047 string characters out of 3147312
  429596 words of memory out of 3000000
- 17833 multiletter control sequences out of 15000+200000
+ 17834 multiletter control sequences out of 15000+200000
  149192 words of font info for 294 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,11n,43p,10445b,744s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,43p,10477b,744s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<D:/TUD277
 449/AppData/MiKTeX/2.9/fonts/type1/public/fourier/fourier-mex.pfb><D:/TUD277449
 /AppData/MiKTeX/2.9/fonts/type1/public/fourier/fourier-ml.pfb><D:/TUD277449/App
@@ -1095,7 +1132,7 @@ ta/MiKTeX/2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/adobe/utopia/putri8a.pfb>
-Output written on "Three month evaluation.pdf" (18 pages, 345816 bytes).
+Output written on "Three month evaluation.pdf" (18 pages, 346782 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
