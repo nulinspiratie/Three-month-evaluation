@@ -4,6 +4,7 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper]{geometry}
 \usepackage[myheadings]{fullpage}
+\usepackage{amsmath}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{graphicx, wrapfig, subcaption, setspace, booktabs}
@@ -307,7 +308,7 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 
 Previous research has determined that for resonators, TLS are mostly present at the surfaces \cite{gao2008experimental}. These oxides may reside at the interface between metal and dielectric, or between the dielectric and vacuum, or possibly between metal and vacuum (depending on the type of metal used). One explanation for TLS being present is the presence of an amorphous oxide layer at the interfaces. These oxides may act as TLS. During deposition of the metal on the dielectric, this oxide layer can become trapped between the two interfaces. For a silicon dielectric, this oxide layer can be removed by shortly treating the sample with hydrophluoric acid. This process is also known as an 'HF dip'.
 
-Aside from the HF dip, additional surface treatment can be applied. For the resonators measured in this report, before depositing the metal on the substrate, an additional ...TODO of HMDS (...TODO) was applied. The reason for this additional step is that there is a lattice mismatch between the metal and substrate. The intermediate layer of HMDS can possibly mediate this lattice mismatch. See \cite{DRIE} for more information.
+Aside from the HF dip, additional surface treatment can be applied. For the resonators measured in this report, before depositing the metal on the substrate, an additional exposure to hexamethyldisilazane (HMDS) was applied. The reason for this additional step is that there is a lattice mismatch between the metal and substrate. The intermediate layer of HMDS can possibly mediate this lattice mismatch. See \cite{DRIE} for more information.
 
 
 \subsubsection{Infrared shielding}
@@ -427,7 +428,7 @@ If one looks at the highest temperatures, it seems that the increase in quality 
     \label{fig:temperature_tracking_Qi}
 \end{figure}
 
-To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic ... TODO. All temperatures were measured at an input power of TODO, corresponding to roughly TODO photons In Figure TODO the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
+To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic ... TODO. All temperatures were measured at an input power of TODO, corresponding to roughly $5 \times 10^5$ photons. In Figure \ref{fig:temperature_tracking_Qi} the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
 
 % ADD figure of resonance frequency
 
@@ -440,7 +441,7 @@ To further investigate the temperature dependence of the resonator, a continous 
 
 Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The result from of tracking the resonance frequency of the resonator during cooldown and subsequent warm-up is shown in Figure~\ref{fig:temperature_tracking_f0}. As can be seen, the resonance frequency reaches a maximum around \SI{500}{\kelvin}.
 
-The decrease in resonance frequency at higher temperatures can be explained by the presence of quasiparticles, which increase the kinetic inductance \cite[p.~91]{Geerlings}. The resonance frequency is inversely proportional to the square root of the total conductance \cite{barends2008contribution}, and so an increase in kinetic inductance leads to a decrease in resonance frequency.
+The decrease in resonance frequency at higher temperatures can be explained by the presence of quasiparticles, which increase the kinetic inductance \cite[p.~91]{Geerlings}. The resonance frequency is inversely proportional to the square root of the total conductance \cite{barends2008contribution}, and so an increase in kinetic inductance leads to a decrease in resonance frequency. For measurements done by Barends et al. \cite{barends2008contribution}, the change in resonance frequency due to changes in the kinetic inductance seem to roughly correspond with the decrease in center frequency measured in Figure~\ref{fig:temperature_tracking_f0}.
 
 \begin{figure}[h]
     \centering
@@ -462,31 +463,31 @@ The decrease in resonance frequency at lower temperatures can be explained due t
 
 Since the quality factor of all resonators is found to decrease with decreasing input power, this indicates that at low temperatures and powers the limiting factor is still due to TLS. The fact that the quality factor initially increases with higher temperatures, supports this claim. By also measuring  the resonance frequency as a function of temperature, the curve obtained is in good agreement with a model describing the resonance frequency shift due to TLS \cite{gao2008experimental}. The curve even shows an increase in resonance frequency at the lowest temperatures, which was also predicted by the model. These results suggest that even after HMDS surface treatment and deep-reactive ion etching was applied, the internal quality factor of the resonator at low temperatures and power is still limited by the presence of TLS.
 
-Nevertheless, As shown by Bruno et al. \cite{DRIE}, the application of HMDS surface treatment and DRIE resulted in a significant improve in internal quality factor of the resonators. More research must be done to determine at what interface the dissipation due to TLS is greatest.
+Nevertheless, As shown by Bruno et al. \cite{DRIE}, the application of HMDS surface treatment and DRIE resulted in an improvement of the internal quality factor of the resonators by almost an order of magnitude. More research must be done to determine at what interface the dissipation due to TLS is greatest after these two treatments.
 
 The next step is to perform the same treatments (HMDS and DRIE) on transmon qubits, to study what the influence will be on coherence times.
 
 
 
-\chapter{Measurements}
+% \chapter{Measurements}
 
 
 
-\section{Heterodyne detection}
-\begin{itemize}
-    \item Idea to also obtain complex signal
-\end{itemize}
+% \section{Heterodyne detection}
+% \begin{itemize}
+%     \item Idea to also obtain complex signal
+% \end{itemize}
 
-\section{Vector network analyzer}
-\begin{itemize}
-    \item Complex signal
-\end{itemize}
+% \section{Vector network analyzer}
+% \begin{itemize}
+%     \item Complex signal
+% \end{itemize}
 
-\section{Conclusion and future work}
+% \section{Conclusion and future work}
 
-\begin{itemize}
-    \item One goal is to set-up the complex signal heterodyne system and compare it to the Vector network analyzer
-\end{itemize}
+% \begin{itemize}
+%     \item One goal is to set-up the complex signal heterodyne system and compare it to the Vector network analyzer
+% \end{itemize}
 
 
 
@@ -541,10 +542,6 @@ When performing measurements one important question to ask is what the contribut
 
 One way of quantifying the noise is through the noise spectral density $S(f)$, which is the power contribution of noise per unit bandwidth as a function of frequency. When the only noise contribution is white noise, the spectral density is independent of frequency.
 
-We can ass
-replace our entire set-up by a resistor being at a certain temperature. This temperature is known as the noise temperature
-The noise temperature of a system is the temperature for which a resistor would produce the same amount of noise.
-
 The noise spectral density is given by:
 
 
@@ -555,7 +552,35 @@ Noise spectral density is the noise power per unit bandwidth (Wikipedia)
 Noise spectral density characterizes the noise in the frequency domain
 
 
-We can model our set-up by as a combination of three components: a noise source, in series with an amplifier, and at the end a mixer to downconvert the signal. We can include the noise added by the amplifier to the noise source, in which case we assume the amplifier to be ideal. Furthermore, we assume the signal to be amplified sufficiently by the amplifier such that the mixer adds a negligible amount of noise, and we ignore effect such as mixer leakage. In this model
+We can model our set-up by as a succession of four components: 
+
+\begin{enumerate}
+    \item A noise source.
+    \item An amplifier to amplify the weak signal exiting the fridge.
+    \item A mixer to downconvert the signal.
+    \item A low-pass filter to remove unwanted signal.
+\end{enumerate}
+We can include the noise added by the amplifier to the noise source, in which case we assume the amplifier to be ideal. Furthermore, we assume the signal to be amplified sufficiently, such that the mixer and low-pass filter add a negligible amount of noise. We also ignore effect such as mixer leakage. 
+
+In this model we can associate an effective noise temperature to this noise source. The noise temperature is the temperature at which a resistor would produce an equal amount of noise.
+
+\begin{itemize}
+    \item have section about 1/2 division
+    \item section on Noise spectral density.
+\end{itemize}
+itemize
+
+After amplification the frequency $\omega$ of the signal is still in the GHz range. In a heterodyne set-up the signal is then downconverted to a lower frequency, to be more easily measured. To downconvert the signal, it is mixed in a mixer with a local oscillator (LO) signal having the same frequency $\omega$ (homodyne) or a slightly higher frequency $\omega + \Delta \omega$ (heterodyne). The mixer effectively multiplies the two signals (TODO: mention why amplitude of LO signal is unimportant). If the signal exiting the amplifier is given by $v(t) = A cos\omega t$, then, ignoring a possible phase difference, the signal at the output of the mixer is given by: 
+
+\begin{align}
+    v(t) \cdot \cos{(\omega) t}& = A \cos{\omega t} \cdot \cos{(\omega + \Delta \omega ) t} \\
+        & = \frac{1}{2}\left[\cos{(2\omega + \Delta \omega)t} + \cos{\Delta \omega t}\right]
+        \label{eqn:mixer}
+\end{align}
+
+As can be seen from Equation~\ref{eqn:mixer}, the final signal contains both the sum and the difference of the two signals.However, as the sum of both frequencies is in the GHz range, it can easily be filtered out using a low-pass filter, leaving only the downconverted signal, which is the result of the difference between the two frequencies. Note that the amplitude of the signal is reduced by a factor two. Furthermore, in the case of a homodyne set-up, the difference signal is simply a DC signal, while in the case of heterodyne the signal still contains a slow frequency $\Delta \omega$. For simplification we assume our set-up to be a homodyne set-up.
+
+In the case of homodyne detection
 
 \begin{itemize}
     \item Noise temperature is the equivalent amount of noise added by a resistor being at that temperature
