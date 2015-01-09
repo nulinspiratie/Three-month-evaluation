@@ -123,18 +123,10 @@ Because the relevant regime where resonators interact with qubits is the single-
 % Mention that a resonator can be seen as an LC-cirquit
 % Check if node/antinode is correct
 
-Topics:
+Possible additional topics:
 \begin{itemize}
-    \item resonance frequency
-    \item Temperature dependence
-    \item Kinetic inductance
-    \item shift of resonance frequency due to trapped vortices
-    \begin{itemize}
-        \item Trapped vortices cause parts to be non-superconducting
-        \item Combatting trapped vortices with grid-like structure
-    \end{itemize}
     \item Material (Silicon, sapphire)
-    \item Superconducting material NbTiN
+    \item Superconducting material NbTiN. Advantage is that
     \item Asymmetry (can refer to \cite[p.~192]{Geerlings})
     \item Lorentzian shape
 \end{itemize}
@@ -302,6 +294,10 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 \subsubsection{Vortices}
 
 
+\begin{itemize}
+    \item Trapped vortices cause parts to be non-superconducting
+    \item Combatting trapped vortices with grid-like structure
+\end{itemize}
 
 
 
@@ -309,27 +305,37 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 
 \subsubsection{Surface treatment}
 
+Previous research has determined that for resonators, TLS are mostly present at the surfaces \cite{gao2008experimental}. These oxides may reside at the interface between metal and dielectric, or between the dielectric and vacuum, or possibly between metal and vacuum (depending on the type of metal used). One explanation for TLS being present is the presence of an amorphous oxide layer at the interfaces. These oxides may act as TLS. During deposition of the metal on the dielectric, this oxide layer can become trapped between the two interfaces. For a silicon dielectric, this oxide layer can be removed by shortly treating the sample with hydrophluoric acid. This process is also known as an 'HF dip'.
+
+Aside from the HF dip, additional surface treatment can be applied. For the resonators measured in this report, before depositing the metal on the substrate, an additional ...TODO of HMDS (...TODO) was applied. The reason for this additional step is that there is a lattice mismatch between the metal and substrate. The intermediate layer of HMDS can possibly mediate this lattice mismatch. See \cite{DRIE} for more information.
 
 
 \subsubsection{Infrared shielding}
 
+Aside from thermal excitation, quasiparticles are also formed from the absorption of photons. High-frequency photons (UV-range or higher) are usually not a significant contribution, as they are easily absorbed by materials, well before they reach the inner layers of the fridge. Lower-frequency photons, such as in the infrared range, however, can penetrate through the fridge to the sample. These infrared photons can cause the excititation of quasiparticles. By using infrared shielding, such as a coating film inside the fridge, the amount of infrared radiation reaching the sample can be lowered.
 
-
-\begin{itemize}
-    \item Decrease of quasiparticle density by infrared shielding.
-\end{itemize}
 
 
 \subsubsection{Deep-reactive ion etching}
 
+Another technique applied to the resonators studied in this report is deep-reactive ion etching. In this technique alternating steps of reactive ion etching (TODO: is this true?), and sidewall passivation (TODO: what material?) are applied.
 
+
+See \cite{DRIE} for more information.
 
 
 \section{Experimental set-up}
 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = .4\textwidth]{Figures/All_set4.png}
+    \label{fig:set4}
+\end{figure}
+
 The fridge used in this experiment is a dilution refrigerator, made by Leiden Cryogenics. The refrigerator has a base temperature of \SI{\sim15}{\milli \kelvin}. An input signal was generated using a Rohde \& Schwarz ZVM vector network analyzer, connected to an Aeroflex 8310 step attenuator, which has an attenuation range of \SI{120}{\decibel}. The signal out of the fridge was measured using the same vector network analyzer.
 
-Using this set-up $1/4 - \lambda$ resonators were measured in a frequency range between $1-9$\SI{}{\giga \hertz}. The resonators were made using NbTiN on a silicon substrate. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
+Using this set-up $1/4 - \lambda$ resonators, fabricated by Alessandro Bruno, were measured in a frequency range between $1-9$\SI{}{\giga \hertz}. The sample is shown in Figure~\ref{fig:set4}. The resonators were made using NbTiN on a silicon substrate. The advantage of NbTiN is that the metal atoms are bound to nitrogen, thereby inhibiting bond formation with oxides. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
 
 By driving a signal through the feedline, the resulting transmitted signal $S_{21}$ can be measured. At or close to the resonance frequency of a resonator, the resonator will either cause enhanced transmission ($1/2 \lambda$ resonator), or diminished transmission ($1/4 \lambda$ resonator).
 
@@ -432,29 +438,33 @@ To further investigate the temperature dependence of the resonator, a continous 
 \end{figure}
 
 
-Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The result from of tracking the resonance frequency of the resonator during cooldown and subsequent warm-up is shown in Figure~\ref{fig:temperature_tracking_f0}. As can be seen, the resonance frequency reaches a maximum around \SI{500}{\kelvin}. 
+Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The result from of tracking the resonance frequency of the resonator during cooldown and subsequent warm-up is shown in Figure~\ref{fig:temperature_tracking_f0}. As can be seen, the resonance frequency reaches a maximum around \SI{500}{\kelvin}.
 
-The decrease in resonance frequency at higher temperatures can be explained by the presence of quasiparticles, which increase the kinetic inductance \cite[p.~91]{Geerlings}. The resonance frequency is inversely proportional to the square root of the total conductance through the relation $\f_0 = 1 / \sqrt{L C}$, and so an increase in kinetic inductance leads to a decrease in resonance frequency.
+The decrease in resonance frequency at higher temperatures can be explained by the presence of quasiparticles, which increase the kinetic inductance \cite[p.~91]{Geerlings}. The resonance frequency is inversely proportional to the square root of the total conductance \cite{barends2008contribution}, and so an increase in kinetic inductance leads to a decrease in resonance frequency.
 
-The decrease in resonance frequency at lower temperatures can be explained due to TLS being present 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\textwidth]{Figures/Temperature increase tracking - f0 vs T with fit.png}
+    \label{fig:f0_vs_T_with_fit}
+\end{figure}
 
-
-% TODO
-% Find more information on kinetic inductance. What exactly does it depend on? Cooper pair density or quasiparticle density? What is it exactly?
+The decrease in resonance frequency at lower temperatures can be explained due to still being present. A model is presented by Gao et al. \cite{gao2008experimental}, in which they describe the decrease in resonance frequency due to the presence of TLS. As can be seen in Figure~\ref{fig:f0_vs_T_with_fit} the model corresponds well with the data at low temperatures. At higher temperatures the model deviates from data, which may be explained by quasiparticles dominating as source of dissipation. An interesting thing to note is that an increase in resonance frequency was predicted at the lowest temperatures, but as they did not reach temperatures sufficiently low they could not confirm this effect. In Figure~\ref{fig:f0_vs_T_with_fit} however, this increase in resonance frequency is observed. This supports the claim that at low temperatures the resonator is still limited by TLS, even after treatment of HMDS and DRIE.
 
 \begin{itemize}
     \item Info at Geerlings \cite[p.~106]{Geerlings}. Seems to say that resonance frequency depends on kinetic inductance, but also on TLS
     \item Mention that resonance frequency also depends on TLS
-    \item Resonance frequency corresponds well with TLS at low temperatures \cite{gao2008experimental}
     \item At higher temperatures kinetic inductance takes over: \cite{barends2008contribution}, \cite[ch.~3]{Gao}
 \end{itemize}
 
 
 
+\section{Conclusion and future work}
 
+Since the quality factor of all resonators is found to decrease with decreasing input power, this indicates that at low temperatures and powers the limiting factor is still due to TLS. The fact that the quality factor initially increases with higher temperatures, supports this claim. By also measuring  the resonance frequency as a function of temperature, the curve obtained is in good agreement with a model describing the resonance frequency shift due to TLS \cite{gao2008experimental}. The curve even shows an increase in resonance frequency at the lowest temperatures, which was also predicted by the model. These results suggest that even after HMDS surface treatment and deep-reactive ion etching was applied, the internal quality factor of the resonator at low temperatures and power is still limited by the presence of TLS.
 
+Nevertheless, As shown by Bruno et al. \cite{DRIE}, the application of HMDS surface treatment and DRIE resulted in a significant improve in internal quality factor of the resonators. More research must be done to determine at what interface the dissipation due to TLS is greatest.
 
-
+The next step is to perform the same treatments (HMDS and DRIE) on transmon qubits, to study what the influence will be on coherence times.
 
 
 
@@ -545,7 +555,7 @@ Noise spectral density is the noise power per unit bandwidth (Wikipedia)
 Noise spectral density characterizes the noise in the frequency domain
 
 
-We can model our set-up by a noise source,
+We can model our set-up by as a combination of three components: a noise source, in series with an amplifier, and at the end a mixer to downconvert the signal. We can include the noise added by the amplifier to the noise source, in which case we assume the amplifier to be ideal. Furthermore, we assume the signal to be amplified sufficiently by the amplifier such that the mixer adds a negligible amount of noise, and we ignore effect such as mixer leakage. In this model
 
 \begin{itemize}
     \item Noise temperature is the equivalent amount of noise added by a resistor being at that temperature
