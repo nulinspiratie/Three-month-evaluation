@@ -540,16 +540,26 @@ The next step is to perform the same treatments (HMDS and DRIE) on transmon qubi
 
 When performing measurements one important question to ask is what the contribution of noise is to the system.
 
+\subsection{Noise spectral Density}
+
 One way of quantifying the noise is through the noise spectral density $S(f)$, which is the power contribution of noise per unit bandwidth as a function of frequency. When the only noise contribution is white noise, the spectral density is independent of frequency.
 
-The noise spectral density is given by:
+\begin{itemize}
+
+    \item Noise spectral density is the noise power per unit bandwidth (Wikipedia)
+    \item Noise spectral density characterizes the noise in the frequency domain
+    \item Mention that if the noise has a white spectrum, the noise spectral density is a constant, i.e. independent of frequency. 
+\end{itemize}
 
 
 
+\setion{Maximum power transfer theorem}
 
-Noise spectral density is the noise power per unit bandwidth (Wikipedia)
+\begin{itemize}
+    \item Talk about 1/2 division
+\end{itemize}
 
-Noise spectral density characterizes the noise in the frequency domain
+
 
 
 We can model our set-up by as a succession of four components: 
@@ -564,11 +574,10 @@ We can include the noise added by the amplifier to the noise source, in which ca
 
 In this model we can associate an effective noise temperature to this noise source. The noise temperature is the temperature at which a resistor would produce an equal amount of noise.
 
-\begin{itemize}
-    \item have section about 1/2 division
-    \item section on Noise spectral density.
-\end{itemize}
-itemize
+
+
+
+\subsection{Mixer}
 
 After amplification the frequency $\omega$ of the signal is still in the GHz range. In a heterodyne set-up the signal is then downconverted to a lower frequency, to be more easily measured. To downconvert the signal, it is mixed in a mixer with a local oscillator (LO) signal having the same frequency $\omega$ (homodyne) or a slightly higher frequency $\omega + \Delta \omega$ (heterodyne). The mixer effectively multiplies the two signals (TODO: mention why amplitude of LO signal is unimportant). If the signal exiting the amplifier is given by $v(t) = A cos\omega t$, then, ignoring a possible phase difference, the signal at the output of the mixer is given by: 
 
