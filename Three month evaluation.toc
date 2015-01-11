@@ -19,10 +19,15 @@
 \contentsline {subsection}{\numberline {1.5.3}Temperature dependence}{10}
 \contentsline {subsection}{\numberline {1.5.4}Temperature tracking}{11}
 \contentsline {section}{\numberline {1.6}Conclusion and future work}{13}
-\contentsline {chapter}{\numberline {2}Noise}{14}
-\contentsline {section}{\numberline {2.1}Noise sources}{14}
-\contentsline {subsection}{\numberline {2.1.1}Johnson noise}{14}
-\contentsline {subsection}{\numberline {2.1.2}Shot noise}{14}
-\contentsline {subsection}{\numberline {2.1.3}1/f noise}{14}
-\contentsline {section}{\numberline {2.2}Characterization of noise}{14}
-\contentsline {section}{\numberline {2.3}Results}{16}
+\contentsline {chapter}{\numberline {2}Noise}{15}
+\contentsline {section}{\numberline {2.1}Noise sources}{15}
+\contentsline {subsection}{\numberline {2.1.1}Johnson noise}{15}
+\contentsline {subsection}{\numberline {2.1.2}Shot noise}{15}
+\contentsline {subsection}{\numberline {2.1.3}1/f noise}{15}
+\contentsline {section}{\numberline {2.2}Characterization of noise}{15}
+\contentsline {subsection}{\numberline {2.2.1}Noise spectral Density}{16}
+\contentsline {section}{\numberline {2.3}The model}{16}
+\contentsline {subsection}{\numberline {2.3.1}Noise source}{16}
+\contentsline {subsection}{\numberline {2.3.2}Amplification}{17}
+\contentsline {subsection}{\numberline {2.3.3}Mixing and filtering}{17}
+\contentsline {section}{\numberline {2.4}Results}{18}

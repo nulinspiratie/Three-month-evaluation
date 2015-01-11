@@ -439,7 +439,9 @@ To further investigate the temperature dependence of the resonator, a continous 
 \end{figure}
 
 
-Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The result from of tracking the resonance frequency of the resonator during cooldown and subsequent warm-up is shown in Figure~\ref{fig:temperature_tracking_f0}. As can be seen, the resonance frequency reaches a maximum around \SI{500}{\kelvin}.
+Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The result from of tracking the resonance frequency of the resonator during cooldown and subsequent warm-up is shown in Figure~\ref{fig:temperature_tracking_f0}. As can be seen in both cases, the resonance frequency reaches a maximum around \SI{500}{\kelvin}.
+
+Between the cooldown and warm-up the resonance frequency seems to have shifted by roughly \SI{500}{Hz}. As the sample was kept at \SI{15}{\milli \kelvin}, it is unlikely that this decrease in resonance frequency is due to degradation of the sample. One possible explanation is that this change in resonance frequency is due to phase noise, which is known to shift the resonance frequency of the resonator. Further measurements are, however, required to determine if this is the case.
 
 The decrease in resonance frequency at higher temperatures can be explained by the presence of quasiparticles, which increase the kinetic inductance \cite[p.~91]{Geerlings}. The resonance frequency is inversely proportional to the square root of the total conductance \cite{barends2008contribution}, and so an increase in kinetic inductance leads to a decrease in resonance frequency. For measurements done by Barends et al. \cite{barends2008contribution}, the change in resonance frequency due to changes in the kinetic inductance seem to roughly correspond with the decrease in center frequency measured in Figure~\ref{fig:temperature_tracking_f0}.
 
@@ -513,6 +515,8 @@ The next step is to perform the same treatments (HMDS and DRIE) on transmon qubi
     \item Noise level sets the lower limit on the magnitude of a signal that can be detected in the presence of the noise
     \item How does an attenuator affect the noise? Brief info at \cite[p.~4]{Iulian}
     \item Quantities such as noise temperature work for white noise
+    \item Mention that white noise can be due to thermal fluctuations
+    \item noise can be frequency independent or frequency dependent (in fact not independent, as quantum mechanics sets upper limit (ref: noise theory). Also otherwise infinite power added by noise)
 \end{itemize}
 
 \begin{itemize}
@@ -540,46 +544,67 @@ The next step is to perform the same treatments (HMDS and DRIE) on transmon qubi
 
 When performing measurements one important question to ask is what the contribution of noise is to the system.
 
+
 \subsection{Noise spectral Density}
+% TODO: change subsection such that it includes mentioning of voltage
+% TODO: scheme?
 
-One way of quantifying the noise is through the noise spectral density $S(f)$, which is the power contribution of noise per unit bandwidth as a function of frequency. When the only noise contribution is white noise, the spectral density is independent of frequency.
+There are two ways in which we can model our system: The Th\'evenin scheme, and the Norton scheme. In the Th\'evenin scheme we can model the system as a voltage source, and the noise added to the system is a noise voltage source connected in series. In the Norton scheme the system is a current source and the noise added is a noise current source connected in parallel to the current source. These two schemes are identical and can be converted into each other. In this section we will adopt the Thev\'enin scheme, and so the signal will be a voltage source combined in series with a noise voltage source.
 
-\begin{itemize}
+One way of quantifying the noise of the system is through the noise spectral density $S(f)$, which is the distribution of noise per unit bandwidth as a function of frequency. For the Th\'evenin scheme, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. According to Nyquist's theorem (TODO: cite noise theory of linear and non-linear cirquits), the noise voltage spectral density $S_{v_n}$ is then given by:
 
-    \item Noise spectral density is the noise power per unit bandwidth (Wikipedia)
-    \item Noise spectral density characterizes the noise in the frequency domain
-    \item Mention that if the noise has a white spectrum, the noise spectral density is a constant, i.e. independent of frequency. 
-\end{itemize}
+% TODO: bar above v
+% Units [V^2/Hz]
+\begin{equation}
+    S_{v_n} = \frac{{v_n^2}}{\Delta f} = 4 k_b T R
+    \label{eqn:noise spectral density}
+\end{equation}
+
+In this equation $v_n^2$(TODO) is the mean-squared voltage (TODO: correct name?), $\Delta f$ is the bandwidth over which the noise is integrated, $k_B$ is the Boltzmann constant, and $R$ is the impedance of the system.
+
+From this it follows that the root-mean square noise voltage $v_n^{rms}$ is given by:
+
+\begin{equation}
+% TODO bar, rms to non-italics
+    v_n^{rms} = \sqrt{v_n^2} = 4 k_b T R \Delta f
+    \label{eqn:noise rms voltage}
+\end{equation}
+
+From equation \ref{eqn:noise rms voltage} we see that the noise added depends linearly on the bandwidth over which is integrated.
 
 
+\section{The model}
 
-\setion{Maximum power transfer theorem}
-
-\begin{itemize}
-    \item Talk about 1/2 division
-\end{itemize}
-
-
-
-
-We can model our set-up by as a succession of four components: 
+We can model our set-up by as being a succession of four components:
 
 \begin{enumerate}
     \item A noise source.
     \item An amplifier to amplify the weak signal exiting the fridge.
     \item A mixer to downconvert the signal.
-    \item A low-pass filter to remove unwanted signal.
+    \item A low-pass filter to remove unwanted high-frequency signal.
 \end{enumerate}
-We can include the noise added by the amplifier to the noise source, in which case we assume the amplifier to be ideal. Furthermore, we assume the signal to be amplified sufficiently, such that the mixer and low-pass filter add a negligible amount of noise. We also ignore effect such as mixer leakage. 
 
-In this model we can associate an effective noise temperature to this noise source. The noise temperature is the temperature at which a resistor would produce an equal amount of noise.
+\subsection{Noise source}
+
+Using the Th\'evenin model, we can approximate the components up to the first amplifier in the fridge as a voltage source, with a noise voltage source connected in series.
+
+We can include the noise added by the amplifier in the noise voltage source, in which case we assume the amplifier to be ideal. Furthermore, we assume the signal to be amplified sufficiently, such that the mixer and low-pass filter add a negligible amount of noise. We also ignore effect such as mixer leakage. With these assumptions all of the noise is originated from the noise voltage source.
+
+We can associate an effective noise temperature to the noise voltage source. The noise temperature is defined as the temperature at which a resistor would produce an equal amount of noise. Note that, since we are comparing the system to a resistor, the noise needs to have an (approximately) white spectrum.
 
 
 
 
-\subsection{Mixer}
+\subsection{Amplification}
 
-After amplification the frequency $\omega$ of the signal is still in the GHz range. In a heterodyne set-up the signal is then downconverted to a lower frequency, to be more easily measured. To downconvert the signal, it is mixed in a mixer with a local oscillator (LO) signal having the same frequency $\omega$ (homodyne) or a slightly higher frequency $\omega + \Delta \omega$ (heterodyne). The mixer effectively multiplies the two signals (TODO: mention why amplitude of LO signal is unimportant). If the signal exiting the amplifier is given by $v(t) = A cos\omega t$, then, ignoring a possible phase difference, the signal at the output of the mixer is given by: 
+
+\begin{itemize}
+    \item Talk about Maximum power transfer theorem (1/2 division)
+\end{itemize}
+
+\subsection{Mixing and filtering}
+
+After amplification the frequency $\omega$ of the signal is still in the GHz range. In a heterodyne set-up the signal is then downconverted to a lower frequency, to be more easily measured. To downconvert the signal, it is mixed in a mixer with a local oscillator (LO) signal having the same frequency $\omega$ (homodyne) or a slightly higher frequency $\omega + \Delta \omega$ (heterodyne). The mixer effectively multiplies the two signals (TODO: mention why amplitude of LO signal is unimportant). If the signal exiting the amplifier is given by $v(t) = A cos\omega t$, then, ignoring a possible phase difference, the signal at the output of the mixer is given by:
 
 \begin{align}
     v(t) \cdot \cos{(\omega) t}& = A \cos{\omega t} \cdot \cos{(\omega + \Delta \omega ) t} \\
@@ -591,12 +616,16 @@ As can be seen from Equation~\ref{eqn:mixer}, the final signal contains both the
 
 In the case of homodyne detection
 
+
+
 \begin{itemize}
     \item Noise temperature is the equivalent amount of noise added by a resistor being at that temperature
     \item Formula for noise temperature
     \item Show plot of noise temperature
     \item Explain why first amplifier is most important
+    \item low-pass filter
 \end{itemize}
+
 
 
 
