@@ -92,7 +92,9 @@ Dr.~Alessandro Bruno
 %-------------------------------------------------------------------------------
 
 \section*{Introduction}
-The subject of my Master's thesis will be on ways of improving T1 and T2 coherence times for qubits. The past few months I have been learning about superconducting cirquit quantum electrodynamics. I have learned what set-ups are used for performing measurements on cQED samples, and about the types of measurements that are performed.
+% TODO: Remove section on Measurement
+
+The subject of my Master's thesis will be on ways of improving T1 and T2 coherence times for qubits. The past few months I have been learning about superconducting circuit quantum electrodynamics. I have learned what set-ups are used for performing measurements on cQED samples, and about the types of measurements that are performed.
 
 Traditionally the measurements were performed using Labview software. However, in the months that I have been working in the DiCarlo lab, a transition in measurement software has taken place from Labview to the Python-based QTLab. I have been very involved in this transition, as an important part of my research will be to characterize a sample quickly and accurately. This will enable a fast cycle from sample fabrication to characterization, hopefully leading to rapid progress in the development of quantum computing using cQED.
 
@@ -118,10 +120,10 @@ Because the relevant regime where resonators interact with qubits is the single-
 
 
 \chapter{Resonators}
-
+\label{chapter:Resonators}
 % TODO:
 % Add picture of resonator connected to central feedline (CPW)
-% Mention that a resonator can be seen as an LC-cirquit
+% Mention that a resonator can be seen as an LC-circuit
 % Check if node/antinode is correct
 
 Possible additional topics:
@@ -153,7 +155,7 @@ When a signal enters a fridge it is attenuated in several stages and eventually 
 % Todo:
 % Talk a little about why the geometry of a coplanar waveguide is the way it is
 
-In the context of cirquit QED, one of the most common types of resonators are coplanar waveguides (CPW). Coplanar waveguides consist of a long central conducting track, with on both sides a neighbouring grounded track. The conducting track is seperated from the grounded tracks by a fixed distance.
+In the context of circuit QED, one of the most common types of resonators are coplanar waveguides (CPW). Coplanar waveguides consist of a long central conducting track, with on both sides a neighbouring grounded track. The conducting track is seperated from the grounded tracks by a fixed distance.
 
 One end is usually capacitively coupled to a feedline and has an open end, while the other end can either be open or shorted. This determines whether the resonant frequencies have a node or an antinode at that end. In the case of a shorted end, the resonant frequencies have a node at that end, resulting in a  $1/4 - \lambda$ resonator. This means that the wavelength fundamental mode fits $1/4$ times into the resonator. In the case of an open end, the resonant frequencies have an antinode at that end, resulting in a $1/2 \lambda$ resonator.
 
@@ -430,6 +432,8 @@ If one looks at the highest temperatures, it seems that the increase in quality 
 
 To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic ... TODO. All temperatures were measured at an input power of TODO, corresponding to roughly $5 \times 10^5$ photons. In Figure \ref{fig:temperature_tracking_Qi} the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
 
+From Figure~\ref{fig:temperature_tracking_Qi} it seems that there is some hysteresis at high temperatures. This is likely due to the fact that the thermometer is at a different position in the fridge as the sample, and does not thermalize equally fast. There may therefore be a delay between the temperature of the thermometer, and the actual temperature of the sample.
+
 % ADD figure of resonance frequency
 
 \begin{figure}[h]
@@ -507,71 +511,56 @@ The next step is to perform the same treatments (HMDS and DRIE) on transmon qubi
 
 
 \chapter{Noise}
+% TODO: p~256 of electric noise book (deals with amplifier circuits)
+% TODO better definition of noise
+When performing measurements one is faced with the reality that no component is ideal. If one has a signal that passes through the different parts of the set-up, noise is constantly being added. Noise is the term given for all the random fluctuations that degrade the signal. These fluctuations are the cumulative result of several contributions.
+
+Thermal noise is one of the most common sources of noise. It is the result of the random thermal fluctuations of electrons. It is an example of frequency-independent noise, also known as white noise. Noise sources can also be frequency-dependent, such as TLS, as discussed in chapter~\ref{chapter:Resonators}. This is an example of $1/f$-noise: the amount of noise added increases with decreasing frequency. In fact, truly frequency-independent noise does not exist, as even white noise has been observed to decrease at extremely high frequencies ($\sim10^{15}$\;\SI{}{\hertz}). At these frequencies a quantum correction needs to be added. %ref[p.~50]{electric noise book} %TODO create ref and add more info on quantum correction
+
+When performing measurements one important question to ask is what the contribution of noise is to the system. In this chapter a model is presented for the general set-up used for measuring superconducting resonators and qubits. Using this model it is possible to characterize the amount of noise through an associated noise temperature. Finally, this model is applied to the set-up used to characterize the resonators presented in chapter~\ref{chapter:Resonators}
+% TODO: chapter with captal C?
+
+\section{Characterizing noise}
+
+\subsection{signal-to-noise ratio (SNR)}
+% TODO consider removing
+In some measurements the effect of noise is barely noticeable. In these cases the signal is sufficiently strong compared to the noise. In other cases, the signal may be very weak, and so may be difficult to detect. The signal to noise ratio (SNR) is the ratio between the average power of the signal and the average power of the noise, and is a measure for how well a signal can be separated from the noise.
 
 
+\subsection{Circuit representations}
+% TODO: representation?
+% TODO: schematic of norton and thevenin pictures?
 
+There are two ways in which we can represent noise in a circuit: The Th\'evenin representation, and the Norton representation. In the Th\'evenin representation we can model the system as a voltage source, and the noise added to the system is a noise voltage source connected in series. In the Norton representation the system is a current source and the noise added is a noise current source connected in parallel to the current source. These two representations are identical and can be converted into each other. In this section we will adopt the Thev\'enin representation, and so the signal will be a voltage source combined in series with a noise voltage source.
 
-\begin{itemize}
-    \item Noise level sets the lower limit on the magnitude of a signal that can be detected in the presence of the noise
-    \item How does an attenuator affect the noise? Brief info at \cite[p.~4]{Iulian}
-    \item Quantities such as noise temperature work for white noise
-    \item Mention that white noise can be due to thermal fluctuations
-    \item noise can be frequency independent or frequency dependent (in fact not independent, as quantum mechanics sets upper limit (ref: noise theory). Also otherwise infinite power added by noise)
-\end{itemize}
+Assuming the signal to be at a fixed frequency $\omega$ and amplitude $A$, the combined voltage $v(t)$ is then given by:
 
-\begin{itemize}
-    \item [\textbf{Pros}]
-    \item Find out if the 1/2 division is due to impedance matching of load and source
-\end{itemize}
+\begin{equation}
+    v(t) = v_{signal}(t) + v_{noise}(t) = A \cos{\omega t} + v_n(t)
+\end{equation}
 
+The mean value of the noise voltage $\left<v_n\right>$ is equal to zero. The amount of noise can be quantified by the root-mean square noise voltage $v_{rms}$:
 
+\begin{equation}
+    v_{rms} = \sqrt{\left<{v}^2\right> - {\left<v\right>}^2} = \sqrt{\left<{v_n}^2\right>}
+    \label{eqn:v_rms}
+\end{equation}
 
-
-
-\section{Noise sources}
-
-\subsection{Johnson noise}
-
-\subsection{Shot noise}
-
-\subsection{1/f noise}
-\begin{itemize}
-    \item Two-level systems
-\end{itemize}
-
-
-\section{Characterization of noise}
-
-When performing measurements one important question to ask is what the contribution of noise is to the system.
-
-
-\subsection{Noise spectral Density}
+\subsection{Noise spectral density}
 % TODO: change subsection such that it includes mentioning of voltage
-% TODO: scheme?
 
-There are two ways in which we can model our system: The Th\'evenin scheme, and the Norton scheme. In the Th\'evenin scheme we can model the system as a voltage source, and the noise added to the system is a noise voltage source connected in series. In the Norton scheme the system is a current source and the noise added is a noise current source connected in parallel to the current source. These two schemes are identical and can be converted into each other. In this section we will adopt the Thev\'enin scheme, and so the signal will be a voltage source combined in series with a noise voltage source.
-
-One way of quantifying the noise of the system is through the noise spectral density $S(f)$, which is the distribution of noise per unit bandwidth as a function of frequency. For the Th\'evenin scheme, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. According to Nyquist's theorem (TODO: cite noise theory of linear and non-linear cirquits), the noise voltage spectral density $S_{v_n}$ is then given by:
+One way of quantifying the noise of the system is through the noise spectral density $S(f)$, which is the distribution of noise per unit bandwidth as a function of frequency. For the Th\'evenin representation, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. According to Nyquist's theorem (TODO: cite noise theory of linear and non-linear circuits), the noise voltage spectral density $S_{v_n}$ is then given by:
 
 % TODO: bar above v
 % Units [V^2/Hz]
 \begin{equation}
-    S_{v_n} = \frac{{v_n^2}}{\Delta f} = 4 k_b T R
+    S_{v_n} = \frac{\left<{v_n}^2\right>}{\Delta f} = 4 k_b T R
     \label{eqn:noise spectral density}
 \end{equation}
 
-In this equation $v_n^2$(TODO) is the mean-squared voltage (TODO: correct name?), $\Delta f$ is the bandwidth over which the noise is integrated, $k_B$ is the Boltzmann constant, and $R$ is the impedance of the system.
+In this equation$\Delta f$ is the bandwidth over which the noise is integrated, $k_B$ is the Boltzmann constant, and $R$ is the impedance of the system.
 
-From this it follows that the root-mean square noise voltage $v_n^{rms}$ is given by:
-
-\begin{equation}
-% TODO bar, rms to non-italics
-    v_n^{rms} = \sqrt{v_n^2} = 4 k_b T R \Delta f
-    \label{eqn:noise rms voltage}
-\end{equation}
-
-From equation \ref{eqn:noise rms voltage} we see that the noise added depends linearly on the bandwidth over which is integrated.
-
+% TODO temperature
 
 \section{The model}
 
@@ -584,6 +573,8 @@ We can model our set-up by as being a succession of four components:
     \item A low-pass filter to remove unwanted high-frequency signal.
 \end{enumerate}
 
+
+
 \subsection{Noise source}
 
 Using the Th\'evenin model, we can approximate the components up to the first amplifier in the fridge as a voltage source, with a noise voltage source connected in series.
@@ -593,48 +584,88 @@ We can include the noise added by the amplifier in the noise voltage source, in 
 We can associate an effective noise temperature to the noise voltage source. The noise temperature is defined as the temperature at which a resistor would produce an equal amount of noise. Note that, since we are comparing the system to a resistor, the noise needs to have an (approximately) white spectrum.
 
 
+From this it follows that the root-mean square noise voltage $v_n^{rms}$ is given by:
+
+\begin{equation}
+% TODO bar, rms to non-italics
+    v_n^{rms} = \sqrt{v_n^2} = 4 k_b T R \Delta f
+    \label{eqn:noise rms voltage}
+\end{equation}
+
+From equation \ref{eqn:noise rms voltage} we see that the noise added depends linearly on the bandwidth over which is integrated.
+
 
 
 \subsection{Amplification}
+% TODO same amount? If so then why does the noise temperature shoot through the roof?
+% TODO quantified by or through?
+% Explain why first amplifier is most important (amplification chain)
+During the amplification stage both the signal and the noise is amplified by the same amount. This amount of amplification is quantified through the gain $G$. It is defined as the ratio between the output voltage and the input voltage:
 
+\begin{equation}
+    G = \frac{v_{out}}{v_{in}}
+    \label{eqn:gain}
+\end{equation}
+
+According to the maximum power transfer theorem, the maximum power transfer between a source and load occurs when the impedances of source and load are matched, in which case half of the power is transferred. From this it follows that in the amplification process half of the signal is dissipated. However, as $G$ is defined as the ratio between $v_{out}$ and $v_{in}$ (Equation~\ref{eqn:gain}), the factor $\frac{1}{2}$ is included in $G$.
+
+During amplification not only the signal is amplified with gain G: the noise is amplified by the same amount. Defining the noise voltage spectral density before amplification as $S_{v_n}^{in}$, and after amplification as $S_{v_n}^{out}$, the following relation holds:
+
+\begin{equation}
+    S_{v_n}^{out} = G^2\; S_{v_n}^{in}
+    \label{eqn:noise voltage spectral density amplification}
+\end{equation}
+
+Note that the gain $G$ is squared, since the noise voltage spectral density depends quadratically on the root-mean square noise voltage. (TODO improve sentence)
+
+In our set-up the amplification happens in several steps. Aside from amplifying the signal and its noise, additional noise, originating from the amplifier itself, is also added. (TODO finish). Therefore it is always best to have the amplifier with highest gain and lowest noise temperature as the first amplifier in the chain.
 
 \begin{itemize}
-    \item Talk about Maximum power transfer theorem (1/2 division)
+    \item Each amplifier adds its own noise temperature $T_n$ and amplifies the previous noise temperatures $T_{n-1}$
 \end{itemize}
 
-\subsection{Mixing and filtering}
+\subsection{Downconversion}
 
-After amplification the frequency $\omega$ of the signal is still in the GHz range. In a heterodyne set-up the signal is then downconverted to a lower frequency, to be more easily measured. To downconvert the signal, it is mixed in a mixer with a local oscillator (LO) signal having the same frequency $\omega$ (homodyne) or a slightly higher frequency $\omega + \Delta \omega$ (heterodyne). The mixer effectively multiplies the two signals (TODO: mention why amplitude of LO signal is unimportant). If the signal exiting the amplifier is given by $v(t) = A cos\omega t$, then, ignoring a possible phase difference, the signal at the output of the mixer is given by:
+After amplification the frequency $\omega$ of the signal is still in the GHz range. In homodyne or heterodyne detection the signal is downconverted to DC (homodyne) or to a lower frequency (heterodyne), such that it can be measured more easily. To downconvert the signal, it is mixed in a mixer with a local oscillator (LO) signal having the same frequency $\omega$ (homodyne) or a slightly higher frequency $\omega + \Delta \omega$ (heterodyne). The mixer effectively multiplies the two signals (TODO: mention why amplitude of LO signal is unimportant). If the signal exiting the amplifier is given by $v(t) = A\cos \omega t$, then, ignoring a possible phase difference, the signal at the output of the mixer is given by:
 
 \begin{align}
-    v(t) \cdot \cos{(\omega) t}& = A \cos{\omega t} \cdot \cos{(\omega + \Delta \omega ) t} \\
-        & = \frac{1}{2}\left[\cos{(2\omega + \Delta \omega)t} + \cos{\Delta \omega t}\right]
+    v(t) \cdot \cos{\omega t}& = A \cos{\omega t} \cdot \cos{(\omega + \Delta \omega ) t} \\
+        & = \frac{1}{2} A \left[\cos{(2\omega + \Delta \omega)t} + \cos{\Delta \omega t}\right]
         \label{eqn:mixer}
 \end{align}
 
-As can be seen from Equation~\ref{eqn:mixer}, the final signal contains both the sum and the difference of the two signals.However, as the sum of both frequencies is in the GHz range, it can easily be filtered out using a low-pass filter, leaving only the downconverted signal, which is the result of the difference between the two frequencies. Note that the amplitude of the signal is reduced by a factor two. Furthermore, in the case of a homodyne set-up, the difference signal is simply a DC signal, while in the case of heterodyne the signal still contains a slow frequency $\Delta \omega$. For simplification we assume our set-up to be a homodyne set-up.
+As can be seen from Equation~\ref{eqn:mixer}, the final signal contains both the sum and the difference of the two signals. However, as the sum of both frequencies is in the GHz range, it can easily be filtered out using a low-pass filter, leaving only the downconverted signal, which is the result of the difference between the two frequencies. Note that the amplitude of the signal is reduced by a factor two. Furthermore, in the case of a homodyne set-up, the difference signal is simply a DC signal, while in the case of heterodyne the signal still contains a slow frequency $\Delta \omega$. For simplification we assume our set-up to be a homodyne set-up.
 
-In the case of homodyne detection
+\section{Low-pass filtering}
 
+In the case of homodyne detection the signal at the frequency of interest is downconverted to DC. However, the signal at other frequencies have not disappeared; in the mixer these have also shifted in frequency. Since the signal of interest is at DC, a low-pass filter can be used to filter out signal above a certain frequency.
 
-
-\begin{itemize}
-    \item Noise temperature is the equivalent amount of noise added by a resistor being at that temperature
-    \item Formula for noise temperature
-    \item Show plot of noise temperature
-    \item Explain why first amplifier is most important
-    \item low-pass filter
-\end{itemize}
+The frequency above which a low-pass filter will filter out the signal is defined by the bandwidth $\Delta f$. However, it is worth mentioning that filters aren't ideal, and the amount of filtering will have a slope around $\Delta f$, the steepness of which being a measure of the quality of the filter.
 
 
-
+signal
+\begin{align}
+% TODO find better place for sqrt (somewhere at introduction of noise)
+\frac{v_n^{rms}}{v_s} = & \frac{\sqrt{\left<v^2\right> - {\left<v\right>}^2}}{\left<v\right>}\\
+    = & \frac{S_v}{bla}
+\end{align}
 
 \section{Results}
 \label{sec:noise_results}
 
 
+\begin{itemize}
+    \item Plot of noise temperature
+    \item zoom-in on 2.75 GHz region
+\end{itemize}
 
+\section{Conclusion and future work}
 
+\begin{itemize}
+    \item Comparison of noise temperature of VNA with phase preserving homebuilt VNA
+    \item Also compare duty cycle
+    \item Check if noise temperature is the same in future cooldown
+\end{itemize}
 
 
 \bibliographystyle{plain}
