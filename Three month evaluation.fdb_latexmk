@@ -1,25 +1,26 @@
 # Fdb version 3
-["bibtex Three month evaluation"] 1420995494 "Three month evaluation.aux" "Three month evaluation.bbl" "Three month evaluation" 1420995998
-  "Three month evaluation.aux" 1420995997 6597 cc989631367b2b74dcb87173d73655d4 ""
+["bibtex Three month evaluation"] 1421018852 "Three month evaluation.aux" "Three month evaluation.bbl" "Three month evaluation" 1421018855
+  "Three month evaluation.aux" 1421018854 7393 f66961e381e14678fef92d10bd0bdda6 ""
   "Three month evaluation.bcf" 0 -1 0 ""
   "bibliography.bib" 1420732120 4647 781998a5bd9ad8485f6d0e7d8614c3c8 ""
   "c:/texlive/2014/texmf-dist/bibtex/bst/base/plain.bst" 1419355295 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
   "Three month evaluation.bbl"
   "Three month evaluation.blg"
-["pdflatex"] 1420995995 "Three month evaluation.tex" "Three month evaluation.pdf" "Three month evaluation" 1420995998
+["pdflatex"] 1421018852 "Three month evaluation.tex" "Three month evaluation.pdf" "Three month evaluation" 1421018855
   "Figures/All_set4.png" 1420735926 2091121 526cfbbd9665871c3a44806ef994d3f3 ""
   "Figures/Qi_vs_n_photon.png" 1420643787 47310 0b125d1859ff55801a48bceab7a0581f ""
   "Figures/Temperature increase tracking - f0 vs T with fit.png" 1420732120 36992 949847147cec0805545138aa6976f0e8 ""
   "Figures/Temperature tracking - f0 vs T.png" 1420732120 57893 6a2318d3ad9754970b37545d8eef7285 ""
   "Figures/Temperature tracking - no drop - Qi vs T.png" 1420732120 47751 f286c63e7de9cd117fc0e74de9196a00 ""
   "Figures/Temperature tracking drop - Qi vs T.png" 1420732120 39134 f03ea322254e7d94f69a1bc5df3a4d33 ""
+  "Figures/noise_temperature_versus_power.png" 1420821649 30782 1453b1f1fe1e30f0eacbddc44890a7e3 ""
   "Figures/resonator_amplitude.png" 1420643787 32958 c27762aaab758a8a9c3a98423d0e6057 ""
   "Figures/resonator_complex.png" 1420732120 38394 156fef40f7933f2e8a60fe24f5996d65 ""
-  "Three month evaluation.aux" 1420995997 6597 cc989631367b2b74dcb87173d73655d4 ""
-  "Three month evaluation.bbl" 1420995494 3299 a4bff92ff440872d03fe12c87bf022d5 "bibtex Three month evaluation"
-  "Three month evaluation.tex" 1420995994 45694 bbdec37587ab6a2a7b2af5247bf4631f ""
-  "Three month evaluation.toc" 1420995997 2174 98aeae0175182c7fe61c7e3ac02eea67 ""
+  "Three month evaluation.aux" 1421018854 7393 f66961e381e14678fef92d10bd0bdda6 ""
+  "Three month evaluation.bbl" 1421018852 3299 a4bff92ff440872d03fe12c87bf022d5 "bibtex Three month evaluation"
+  "Three month evaluation.tex" 1421018848 47332 1144d867ec00c92c825620a239ec1c17 ""
+  "Three month evaluation.toc" 1421018854 2164 98e8f49d2c37e0ea9521ff92adeb64fe ""
   "c:/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii" 1419358329 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2014/texmf-dist/tex/generic/babel-english/english.ldf" 1419354835 6963 2e0cb3d93aa64508bdb0db58ae900d97 ""
   "c:/texlive/2014/texmf-dist/tex/generic/babel/babel.def" 1419354812 49725 b40154b767b0073ee42b35911042b793 ""
@@ -95,7 +96,7 @@
   "c:/texlive/2014/texmf-dist/tex/latex/url/url.sty" 1419360122 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "c:/texlive/2014/texmf-dist/tex/latex/wrapfig/wrapfig.sty" 1419360264 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   (generated)
+  "Three month evaluation.pdf"
+  "Three month evaluation.toc"
   "Three month evaluation.aux"
   "Three month evaluation.log"
-  "Three month evaluation.toc"
-  "Three month evaluation.pdf"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.12.23)  11 JAN 2015 18:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.12.23)  12 JAN 2015 00:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1037,19 +1037,26 @@ File: Figures/All_set4.png Graphic file (type png)
 <use Figures/All_set4.png>
 Package pdftex.def Info: Figures/All_set4.png used on input line 335.
 (pdftex.def)             Requested size: 181.18439pt x 77.76776pt.
-
-
-Package caption Warning: \label without proper \caption on input line 336.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:set4' on page 8 undefined on input line 341.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 336.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 336.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 336.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 336.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 336.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 336.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 336.
 
 <Figures/resonator_amplitude.png, id=37, 433.62pt x 289.08pt>
 File: Figures/resonator_amplitude.png Graphic file (type png)
 
 <use Figures/resonator_amplitude.png>
-Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 355
+Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 357
 .
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
@@ -1057,166 +1064,163 @@ Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 355
 File: Figures/resonator_complex.png Graphic file (type png)
 
 <use Figures/resonator_complex.png>
-Package pdftex.def Info: Figures/resonator_complex.png used on input line 359.
+Package pdftex.def Info: Figures/resonator_complex.png used on input line 361.
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package caption Warning: \label without proper \caption on input line 361.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:resonator' on page 8 undefined on input line 364.
-
-
-
-Package caption Warning: \label without proper \caption on input line 354.
+Package caption Warning: \label without proper \caption on input line 356.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:resonator_amplitude' on page 8 undefined on input
- line 364.
+ line 367.
 
 [8 <./Figures/All_set4.png>]
 <Figures/Qi_vs_n_photon.png, id=43, 433.62pt x 289.08pt>
 File: Figures/Qi_vs_n_photon.png Graphic file (type png)
 
 <use Figures/Qi_vs_n_photon.png>
-Package pdftex.def Info: Figures/Qi_vs_n_photon.png used on input line 374.
+Package pdftex.def Info: Figures/Qi_vs_n_photon.png used on input line 377.
 (pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 375.
- [9 <./Figures/resonator_amplitude.png> <./Figures/resonator_complex.png> <./Fi
-gures/Qi_vs_n_photon.png>]
-<Figures/Qi_vs_n_photon_temperature_dependence.png, id=50, 433.62pt x 289.08pt>
+ [9 <./Figures/resonator_amplitude.png> <./Figures/resonator_complex.png>]
+<Figures/Qi_vs_n_photon_temperature_dependence.png, id=49, 433.62pt x 289.08pt>
 File: Figures/Qi_vs_n_photon_temperature_dependence.png Graphic file (type png)
 
 <use Figures/Qi_vs_n_photon_temperature_dependence.png>
 Package pdftex.def Info: Figures/Qi_vs_n_photon_temperature_dependence.png used
- on input line 398.
+ on input line 401.
 (pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
- [10 <./Figures/Qi_vs_n_photon_temperature_dependence.png>]
 
-Package caption Warning: \label without proper \caption on input line 397.
+
+Package caption Warning: \label without proper \caption on input line 400.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:Qi_vs_n_photon_temperature_dependence' on page 11
- undefined on input line 403.
+LaTeX Warning: Reference `fig:Qi_vs_n_photon_temperature_dependence' on page 10
+ undefined on input line 406.
 
-<Figures/Temperature tracking drop - Qi vs T.png, id=55, 433.62pt x 289.08pt>
+[10 <./Figures/Qi_vs_n_photon.png>]
+<Figures/Temperature tracking drop - Qi vs T.png, id=54, 433.62pt x 289.08pt>
 File: Figures/Temperature tracking drop - Qi vs T.png Graphic file (type png)
 
 <use Figures/Temperature tracking drop - Qi vs T.png>
 Package pdftex.def Info: Figures/Temperature tracking drop - Qi vs T.png used o
-n input line 424.
+n input line 427.
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
-<Figures/Temperature tracking - no drop - Qi vs T.png, id=56, 433.62pt x 289.08
+<Figures/Temperature tracking - no drop - Qi vs T.png, id=55, 433.62pt x 289.08
 pt>
 File: Figures/Temperature tracking - no drop - Qi vs T.png Graphic file (type p
 ng)
  <use Figures/Temperature tracking - no drop - Qi vs T.png>
 Package pdftex.def Info: Figures/Temperature tracking - no drop - Qi vs T.png u
-sed on input line 428.
+sed on input line 431.
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
 
-Package caption Warning: \label without proper \caption on input line 430.
+Package caption Warning: \label without proper \caption on input line 433.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:temperature_tracking_Qi' on page 11 undefined on 
-input line 433.
+input line 436.
 
-[11 <./Figures/Temperature tracking drop - Qi vs T.png> <./Figures/Temperature 
-tracking - no drop - Qi vs T.png>]
+[11 <./Figures/Qi_vs_n_photon_temperature_dependence.png> <./Figures/Temperatur
+e tracking drop - Qi vs T.png> <./Figures/Temperature tracking - no drop - Qi v
+s T.png>]
 
-Package caption Warning: \label without proper \caption on input line 430.
+Package caption Warning: \label without proper \caption on input line 433.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:temperature_tracking_Qi' on page 12 undefined on 
-input line 435.
+input line 438.
 
 <Figures/Temperature tracking - f0 vs T.png, id=62, 505.89pt x 361.35pt>
 File: Figures/Temperature tracking - f0 vs T.png Graphic file (type png)
 
 <use Figures/Temperature tracking - f0 vs T.png>
 Package pdftex.def Info: Figures/Temperature tracking - f0 vs T.png used on inp
-ut line 441.
+ut line 444.
 (pdftex.def)             Requested size: 317.07614pt x 226.4883pt.
 
 
-Package caption Warning: \label without proper \caption on input line 442.
+Package caption Warning: \label without proper \caption on input line 445.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:temperature_tracking_f0' on page 12 undefined on 
-input line 446.
+input line 449.
 
+[12 <./Figures/Temperature tracking - f0 vs T.png>]
 
-Package caption Warning: \label without proper \caption on input line 442.
+Package caption Warning: \label without proper \caption on input line 445.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:temperature_tracking_f0' on page 12 undefined on 
-input line 450.
+LaTeX Warning: Reference `fig:temperature_tracking_f0' on page 13 undefined on 
+input line 453.
 
 
-<Figures/Temperature increase tracking - f0 vs T with fit.png, id=63, 505.89pt 
+<Figures/Temperature increase tracking - f0 vs T with fit.png, id=68, 505.89pt 
 x 361.35pt>
 File: Figures/Temperature increase tracking - f0 vs T with fit.png Graphic file
  (type png)
  <use Figures/Temperature increase tracking - f0 vs T with fit.png>
 Package pdftex.def Info: Figures/Temperature increase tracking - f0 vs T with f
-it.png used on input line 454.
+it.png used on input line 457.
 (pdftex.def)             Requested size: 317.07614pt x 226.4883pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package caption Warning: \label without proper \caption on input line 455.
+Package caption Warning: \label without proper \caption on input line 458.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:f0_vs_T_with_fit' on page 12 undefined on input l
-ine 458.
+LaTeX Warning: Reference `fig:f0_vs_T_with_fit' on page 13 undefined on input l
+ine 461.
 
 
-Package caption Warning: \label without proper \caption on input line 455.
+Package caption Warning: \label without proper \caption on input line 458.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:f0_vs_T_with_fit' on page 12 undefined on input l
-ine 458.
+LaTeX Warning: Reference `fig:f0_vs_T_with_fit' on page 13 undefined on input l
+ine 461.
 
-[12 <./Figures/Temperature tracking - f0 vs T.png>] [13 <./Figures/Temperature 
-increase tracking - f0 vs T with fit.png>] [14]
+[13 <./Figures/Temperature increase tracking - f0 vs T with fit.png>] [14]
 Chapter 2.
 [15
 
-] [16] [17] [18] (./Three month evaluation.bbl [19] [20
+] [16] [17] [18]
+<Figures/noise_temperature_versus_power.png, id=89, 433.62pt x 289.08pt>
+File: Figures/noise_temperature_versus_power.png Graphic file (type png)
+
+<use Figures/noise_temperature_versus_power.png>
+Package pdftex.def Info: Figures/noise_temperature_versus_power.png used on inp
+ut line 674.
+(pdftex.def)             Requested size: 317.07614pt x 211.39275pt.
+ [19 <./Figures/noise_temperature_versus_power.png>] (./Three month evaluation.
+bbl [20] [21
 
 ])
 
 AED: lastpage setting LastPage
-[21] (./Three month evaluation.aux)
+[22] (./Three month evaluation.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15821 strings out of 493109
- 309704 string characters out of 6138586
- 451814 words of memory out of 5000000
- 18790 multiletter control sequences out of 15000+600000
- 149879 words of font info for 299 fonts, out of 8000000 for 9000
+ 15896 strings out of 493109
+ 311109 string characters out of 6138586
+ 452778 words of memory out of 5000000
+ 18844 multiletter control sequences out of 15000+600000
+ 170925 words of font info for 339 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,43p,10424b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,48p,10424b,1060s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2014/texm
 f-dist/fonts/type1/public/fourier/fourier-mex.pfb><c:/texlive/2014/texmf-dist/f
 onts/type1/public/fourier/fourier-ml.pfb><c:/texlive/2014/texmf-dist/fonts/type
@@ -1224,10 +1228,10 @@ onts/type1/public/fourier/fourier-ml.pfb><c:/texlive/2014/texmf-dist/fonts/type
 c/fourier/fourier-ms.pfb><c:/texlive/2014/texmf-dist/fonts/type1/adobe/utopia/p
 utb8a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb><c:/t
 exlive/2014/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on "Three month evaluation.pdf" (22 pages, 2237180 bytes).
+Output written on "Three month evaluation.pdf" (23 pages, 2262933 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 53294 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 58931 words of extra memory for PDF output out of 61914 (max. 10000000)
 

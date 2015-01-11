@@ -333,6 +333,7 @@ See \cite{DRIE} for more information.
 \begin{figure}[h]
     \centering
     \includegraphics[width = .4\textwidth]{Figures/All_set4.png}
+    \caption{Optical microscopy image of the sample measured in this report. The sample consists of ten $1/4 - \lambda$ resonators, with frequencies ranging between $1-17$\;\SI{}{\giga \hertz}(TODO:??), connected to a central feedline. The resonators are made using NbTiN on a Si substrate. The sample is treated with HMDS and DRIE.}
     \label{fig:set4}
 \end{figure}
 
@@ -349,6 +350,7 @@ Unless stated otherwise, all measurements were performed with the fridge at base
 \subsection{Measurement of a resonator}
 
 \begin{figure}[h]
+% TODO: A and B
     \centering
     \begin{subfigure}[b]{.49\textwidth}
         \label{fig:resonator_amplitude}
@@ -358,6 +360,7 @@ Unless stated otherwise, all measurements were performed with the fridge at base
         \label{fig:resonator_complex}
         \includegraphics[width=\textwidth]{Figures/resonator_complex.png}
     \end{subfigure}
+    \caption{Forward transmission $S_{21}$ spectrum of a resonator around \SI{2.75}{\giga \hertz}. Measurement was performed at \SI{15}{\milli \kelvin} at an input power of (TODO: mV), corresponding to (TODO nph) photons.}
     \label{fig:resonator}
 \end{figure}
 
@@ -372,7 +375,7 @@ Unless stated otherwise, all measurements were performed with the fridge at base
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Figures/Qi_vs_n_photon.png}
-    \caption{Quality factor of resonators versus mean number of photons present in the resonator.}
+    \caption{Intrinsic quality factor of resonators as a function of mean number of photons present in the resonator. Measurements were performed at \SI{15}{\milli \kelvin}.}
     \label{fig:Qi_vs_n_photon}
 \end{figure}
 
@@ -513,25 +516,19 @@ The next step is to perform the same treatments (HMDS and DRIE) on transmon qubi
 \chapter{Noise}
 % TODO: p~256 of electric noise book (deals with amplifier circuits)
 % TODO better definition of noise
-When performing measurements one is faced with the reality that no component is ideal. If one has a signal that passes through the different parts of the set-up, noise is constantly being added. Noise is the term given for all the random fluctuations that degrade the signal. These fluctuations are the cumulative result of several contributions.
+When performing measurements one is faced with the reality that no component is ideal. When a signal passes through the different parts of a set-up, noise is constantly being added. Noise is the term given for all the random fluctuations that degrade the signal. These fluctuations are the cumulative result of several noise source contributions.
 
 Thermal noise is one of the most common sources of noise. It is the result of the random thermal fluctuations of electrons. It is an example of frequency-independent noise, also known as white noise. Noise sources can also be frequency-dependent, such as TLS, as discussed in chapter~\ref{chapter:Resonators}. This is an example of $1/f$-noise: the amount of noise added increases with decreasing frequency. In fact, truly frequency-independent noise does not exist, as even white noise has been observed to decrease at extremely high frequencies ($\sim10^{15}$\;\SI{}{\hertz}). At these frequencies a quantum correction needs to be added. %ref[p.~50]{electric noise book} %TODO create ref and add more info on quantum correction
 
-When performing measurements one important question to ask is what the contribution of noise is to the system. In this chapter a model is presented for the general set-up used for measuring superconducting resonators and qubits. Using this model it is possible to characterize the amount of noise through an associated noise temperature. Finally, this model is applied to the set-up used to characterize the resonators presented in chapter~\ref{chapter:Resonators}
+When performing measurements one important question to ask is how much noise is being contributed to the signal. In this chapter a model is presented for the general set-up used for measuring superconducting resonators and qubits. Using this model it is possible to characterize the amount of noise by determining its associated noise temperature. Finally, this model is applied to the set-up used to characterize the resonators presented in chapter~\ref{chapter:Resonators}
 % TODO: chapter with captal C?
 
 \section{Characterizing noise}
 
-\subsection{signal-to-noise ratio (SNR)}
-% TODO consider removing
-In some measurements the effect of noise is barely noticeable. In these cases the signal is sufficiently strong compared to the noise. In other cases, the signal may be very weak, and so may be difficult to detect. The signal to noise ratio (SNR) is the ratio between the average power of the signal and the average power of the noise, and is a measure for how well a signal can be separated from the noise.
-
-
 \subsection{Circuit representations}
-% TODO: representation?
 % TODO: schematic of norton and thevenin pictures?
-
-There are two ways in which we can represent noise in a circuit: The Th\'evenin representation, and the Norton representation. In the Th\'evenin representation we can model the system as a voltage source, and the noise added to the system is a noise voltage source connected in series. In the Norton representation the system is a current source and the noise added is a noise current source connected in parallel to the current source. These two representations are identical and can be converted into each other. In this section we will adopt the Thev\'enin representation, and so the signal will be a voltage source combined in series with a noise voltage source.
+% TODO change first sentence
+There are two ways in which we can represent noise in a circuit: The Th\'evenin representation, and the Norton representation. In the Th\'evenin representation we can model the system as a voltage source, and the noise added to the system is a noise voltage source connected in series. In the Norton representation the system is a current source and the noise added is a noise current source connected in parallel to the current source. These two representations are identical and can be converted to each other. In this section we will adopt the Thev\'enin representation, and so the signal will be a voltage source combined in series with a noise voltage source.
 
 Assuming the signal to be at a fixed frequency $\omega$ and amplitude $A$, the combined voltage $v(t)$ is then given by:
 
@@ -539,32 +536,31 @@ Assuming the signal to be at a fixed frequency $\omega$ and amplitude $A$, the c
     v(t) = v_{signal}(t) + v_{noise}(t) = A \cos{\omega t} + v_n(t)
 \end{equation}
 
-The mean value of the noise voltage $\left<v_n\right>$ is equal to zero. The amount of noise can be quantified by the root-mean square noise voltage $v_{rms}$:
+The mean value of the noise voltage $\left<v_n\right>$ is equal to zero. The amount of noise can be quantified by the root-mean square noise voltage $v_n^{rms}$:
 
 \begin{equation}
-    v_{rms} = \sqrt{\left<{v}^2\right> - {\left<v\right>}^2} = \sqrt{\left<{v_n}^2\right>}
+    v_n^{rms} = \sqrt{\left<{v}^2\right> - {\left<v\right>}^2} = \sqrt{\left<{v_n}^2\right>}
     \label{eqn:v_rms}
 \end{equation}
 
 \subsection{Noise spectral density}
 % TODO: change subsection such that it includes mentioning of voltage
 
-One way of quantifying the noise of the system is through the noise spectral density $S(f)$, which is the distribution of noise per unit bandwidth as a function of frequency. For the Th\'evenin representation, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. According to Nyquist's theorem (TODO: cite noise theory of linear and non-linear circuits), the noise voltage spectral density $S_{v_n}$ is then given by:
+One way of quantifying the noise of the system is through the noise spectral density $S(f)$, which is the distribution of noise per unit bandwidth as a function of frequency. For the Th\'evenin representation, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. It is then given by:
 
 % TODO: bar above v
 % Units [V^2/Hz]
 \begin{equation}
-    S_{v_n} = \frac{\left<{v_n}^2\right>}{\Delta f} = 4 k_b T R
-    \label{eqn:noise spectral density}
+    S_{v_n} = \frac{\left<{v_n}^2\right>}{\Delta f}
+    \label{eqn:noise spectral density definition}
 \end{equation}
 
-In this equation$\Delta f$ is the bandwidth over which the noise is integrated, $k_B$ is the Boltzmann constant, and $R$ is the impedance of the system.
 
-% TODO temperature
+
 
 \section{The model}
 
-We can model our set-up by as being a succession of four components:
+We can model our set-up by as being a succession of four elements:
 
 \begin{enumerate}
     \item A noise source.
@@ -583,16 +579,23 @@ We can include the noise added by the amplifier in the noise voltage source, in 
 
 We can associate an effective noise temperature to the noise voltage source. The noise temperature is defined as the temperature at which a resistor would produce an equal amount of noise. Note that, since we are comparing the system to a resistor, the noise needs to have an (approximately) white spectrum.
 
-
-From this it follows that the root-mean square noise voltage $v_n^{rms}$ is given by:
+According to Nyquist's theorem (TODO: cite noise theory of linear and non-linear circuits), if the system experiences white noise, and is in thermal equilibrium, the root-mean square noise voltage $v_n^{rms}$ is given by:
 
 \begin{equation}
 % TODO bar, rms to non-italics
-    v_n^{rms} = \sqrt{v_n^2} = 4 k_b T R \Delta f
+    v_n^{rms} = \sqrt{v_n^2} = 4 k_B T R \Delta f
     \label{eqn:noise rms voltage}
 \end{equation}
 
-From equation \ref{eqn:noise rms voltage} we see that the noise added depends linearly on the bandwidth over which is integrated.
+In this equation $\Delta f$ is the bandwidth over which the noise is integrated, $k_B$ is the Boltzmann constant, $T$ is the noise temperature of the noise source, and $R$ is the impedance of the system. We see that the noise added depends linearly on the bandwidth over which is integrated.
+
+Combining Equations~\ref{eqn:noise spectral density definition} and \ref{eqn:noise rms voltage}, the noise voltage spectral density $S_{v_n}$ can be rewritten as:
+
+\begin{equation}
+S_{v_n} = \frac{\left<{v_n}^2\right>}{\Delta f} = 4 k_B T R
+\end{equation}
+
+
 
 
 
@@ -612,17 +615,15 @@ According to the maximum power transfer theorem, the maximum power transfer betw
 During amplification not only the signal is amplified with gain G: the noise is amplified by the same amount. Defining the noise voltage spectral density before amplification as $S_{v_n}^{in}$, and after amplification as $S_{v_n}^{out}$, the following relation holds:
 
 \begin{equation}
-    S_{v_n}^{out} = G^2\; S_{v_n}^{in}
+    S_{v_n}^{out} = G^2\; S_{v_n}^{in} = G^2 4 k_B T R
     \label{eqn:noise voltage spectral density amplification}
 \end{equation}
 
 Note that the gain $G$ is squared, since the noise voltage spectral density depends quadratically on the root-mean square noise voltage. (TODO improve sentence)
 
-In our set-up the amplification happens in several steps. Aside from amplifying the signal and its noise, additional noise, originating from the amplifier itself, is also added. (TODO finish). Therefore it is always best to have the amplifier with highest gain and lowest noise temperature as the first amplifier in the chain.
+In our actual set-up the amplification occurs in multiple stages. Aside from amplifying the signal and its noise, at each stage additional noise, originating from the amplifier itself, is added as well. This added noise is then also amplified in the next amplification stage.   Therefore it is always best to have the amplifier with highest gain and lowest noise temperature as the first amplifier in the chain. For more information see Friis formula. (TODO ref electronics noise)
 
-\begin{itemize}
-    \item Each amplifier adds its own noise temperature $T_n$ and amplifies the previous noise temperatures $T_{n-1}$
-\end{itemize}
+
 
 \subsection{Downconversion}
 
@@ -634,24 +635,44 @@ After amplification the frequency $\omega$ of the signal is still in the GHz ran
         \label{eqn:mixer}
 \end{align}
 
-As can be seen from Equation~\ref{eqn:mixer}, the final signal contains both the sum and the difference of the two signals. However, as the sum of both frequencies is in the GHz range, it can easily be filtered out using a low-pass filter, leaving only the downconverted signal, which is the result of the difference between the two frequencies. Note that the amplitude of the signal is reduced by a factor two. Furthermore, in the case of a homodyne set-up, the difference signal is simply a DC signal, while in the case of heterodyne the signal still contains a slow frequency $\Delta \omega$. For simplification we assume our set-up to be a homodyne set-up.
+As can be seen from Equation~\ref{eqn:mixer}, the output signal contains both the sum and the difference of the two signals. However, as the sum of both frequencies is in the GHz range, it can be filtered out using a low-pass filter, leaving only the downconverted signal, which is the result of the difference between the two frequencies. Note that the amplitude of the signal is reduced by a factor two. The noise amplitude is also reduced by a factor 2. Furthermore, in the case of a homodyne set-up, the difference signal is simply a DC signal ($\Delta \omega = 0$), while in the case of heterodyne the signal still contains a slow frequency $\Delta \omega$. For simplification we assume our set-up to be a homodyne set-up.
 
-\section{Low-pass filtering}
+\subsection{Low-pass filtering}
 
 In the case of homodyne detection the signal at the frequency of interest is downconverted to DC. However, the signal at other frequencies have not disappeared; in the mixer these have also shifted in frequency. Since the signal of interest is at DC, a low-pass filter can be used to filter out signal above a certain frequency.
 
-The frequency above which a low-pass filter will filter out the signal is defined by the bandwidth $\Delta f$. However, it is worth mentioning that filters aren't ideal, and the amount of filtering will have a slope around $\Delta f$, the steepness of which being a measure of the quality of the filter.
+The frequency above which a low-pass filter will filter out the signal is defined by the bandwidth $\Delta f$. However, it is worth mentioning that filters aren't ideal, and the amount of filtering will have a slope around $\Delta f$, the steepness of which being a measure of the quality of the filter. It is this bandwidth up to which is integrated to obtain $v_n^{rms}$.
 
+\section{Noise temperature}
+% TODO: SNR is power ratio? in formula it seems voltage ratio.
+In the previous sections the influence of each of the components on the signal and on the noise has been analyzed. Using this information it is possible to determine the signal-to-noise ratio (SNR). The signal-to-noise ratio is the ratio between the average power of the signal and the average power of the noise, and is a measure for how well a signal can be separated from the noise.
 
-signal
+% TODO symbol for SNR
 \begin{align}
-% TODO find better place for sqrt (somewhere at introduction of noise)
-\frac{v_n^{rms}}{v_s} = & \frac{\sqrt{\left<v^2\right> - {\left<v\right>}^2}}{\left<v\right>}\\
-    = & \frac{S_v}{bla}
+% TODO arrow pointing to 1/2 saying its due to dowconversion
+    SNR = \frac{\left<v\right>}{v_n^{rms}} = & \frac{1/2 G v_{in}}{1/2 \sqrt{S_{v_n}^{out} \Delta f}}\\
+        = & \frac{G v_{in}}{\sqrt{G^2 S_{v_n}^{in}\Delta f}}\\
+        = & \frac{G v_{in}}{\sqrt{G^2 4 k_B T R \Delta f}}\\
+        = & \frac{v_{in}}{\sqrt{4 k_B T R \Delta f}}
+    \label{eqn:SNR}
 \end{align}
+
+Equation~\ref{eqn:SNR} can be rewritten such that we have an equation for the noise temperature of the system:
+
+\begin{equation}
+    T =\frac{{v_{in}}^2}{4 k_B R \Delta f SNR^2}
+    \label{eqn:noise temperature}
+\end{equation}
+
+
 
 \section{Results}
 \label{sec:noise_results}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = .7 \linewidth]{Figures/noise_temperature_versus_power.png}
+\end{figure}
 
 
 \begin{itemize}
