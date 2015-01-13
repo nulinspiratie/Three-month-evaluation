@@ -18,6 +18,8 @@
 \usepackage{siunitx}
 \usepackage{subcaption}
 \usepackage[space]{grffile}
+\usepackage{amsfonts}
+\usepackage{wrapfig}
 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 % \onehalfspacing
@@ -330,16 +332,17 @@ See \cite{DRIE} for more information.
 \section{Experimental set-up}
 
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width = .4\textwidth]{Figures/All_set4.png}
+\begin{wrapfigure}{r}{0.4\textwidth}
+    \begin{center}
+        \includegraphics[width = .4\textwidth]{Figures/All_set4.png}
+    \end{center}
     \caption{Optical microscopy image of the sample measured in this report. The sample consists of ten $1/4 - \lambda$ resonators, with frequencies ranging between $1-17$\;\SI{}{\giga \hertz}(TODO:??), connected to a central feedline. The resonators are made using NbTiN on a Si substrate. The sample is treated with HMDS and DRIE.}
     \label{fig:set4}
-\end{figure}
+\end{wrapfigure}
 
 The fridge used in this experiment is a dilution refrigerator, made by Leiden Cryogenics. The refrigerator has a base temperature of \SI{\sim15}{\milli \kelvin}. An input signal was generated using a Rohde \& Schwarz ZVM vector network analyzer, connected to an Aeroflex 8310 step attenuator, which has an attenuation range of \SI{120}{\decibel}. The signal out of the fridge was measured using the same vector network analyzer.
 
-Using this set-up $1/4 - \lambda$ resonators, fabricated by Alessandro Bruno, were measured in a frequency range between $1-9$\SI{}{\giga \hertz}. The sample is shown in Figure~\ref{fig:set4}. The resonators were made using NbTiN on a silicon substrate. The advantage of NbTiN is that the metal atoms are bound to nitrogen, thereby inhibiting bond formation with oxides. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
+Using this set-up $1/4 - \lambda$ resonators, fabricated by Alessandro Bruno, were measured in a frequency range between $1-9$ \SI{}{\giga \hertz}. The sample is shown in Figure~\ref{fig:set4}. The resonators were made using NbTiN on a silicon substrate. The advantage of NbTiN is that the metal atoms are bound to nitrogen, thereby inhibiting bond formation with oxides. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
 
 By driving a signal through the feedline, the resulting transmitted signal $S_{21}$ can be measured. At or close to the resonance frequency of a resonator, the resonator will either cause enhanced transmission ($1/2 \lambda$ resonator), or diminished transmission ($1/4 \lambda$ resonator).
 
@@ -378,7 +381,6 @@ Unless stated otherwise, all measurements were performed with the fridge at base
     \caption{Intrinsic quality factor of resonators as a function of mean number of photons present in the resonator. Measurements were performed at \SI{15}{\milli \kelvin}.}
     \label{fig:Qi_vs_n_photon}
 \end{figure}
-
 To be able to study the behaviour of the resonators, measurements were performed for several powers. Using proper calibrations for the attenuation down to the sample, the power can be converted to the input power at the sample. This value can then be converted to the mean number of photons present in the resonator \cite{DRIE}. The results are shown in Figure~\ref{fig:Qi_vs_n_photon}.
 
 As can be seen, the internal quality factor $Q_i$ of all resonators decrease with decreasing photon number. One explanation for this phenomenon is that the dissipation dissipation is mainly due to TLS. Since measurements were performed at \SI{\sim15}{mK}, the TLS are not saturated since the rate of thermal excitation is low. As discussed in section~\ref{sec:TLS}, the loss due to TLS is highest at low power, in the regime where they are not saturated. Therefore the fact that the internal quality factor $Q_i$ rises with the mean number of photons present in the resonator can be attributed to a larger amount of TLS being satured. This would suggest that, even with HMDS and DRIE treatment of the sample, the internal quality factor is still limited by TLS being present.
@@ -510,6 +512,15 @@ The next step is to perform the same treatments (HMDS and DRIE) on transmon qubi
 
 
 
+\newcommand{\vrms}{\text{v}_\text{n}^\text{rms}}
+\newcommand{\vsq}{\overline{\text{v}_\text{n}^2}}
+\newcommand{\vn}{\text{v}_\text{n}}
+\newcommand{\vin}{\text{v}_\text{in}}
+\newcommand{\vout}{\text{v}_\text{out}}
+\newcommand{\Sin}{\text{S}_{\vn}^\text{in}}
+\newcommand{\Sout}{\text{S}_{\vn}^\text{out}}
+\newcommand{\Svn}{\text{S}_{\vn}}
+
 
 
 
@@ -533,13 +544,12 @@ There are two ways in which we can represent noise in a circuit: The Th\'evenin 
 Assuming the signal to be at a fixed frequency $\omega$ and amplitude $A$, the combined voltage $v(t)$ is then given by:
 
 \begin{equation}
-    v(t) = v_{signal}(t) + v_{noise}(t) = A \cos{\omega t} + v_n(t)
+    \text{v}(t) = \text{v}_\text{signal}(t) + \text{v}_\text{noise}(t) = A \cos{\omega t} + \vn(t)
 \end{equation}
 
-The mean value of the noise voltage $\left<v_n\right>$ is equal to zero. The amount of noise can be quantified by the root-mean square noise voltage $v_n^{rms}$:
-
+The mean value of the noise voltage $\overline{\vn}$ is equal to zero. The amount of noise can be quantified by the root-mean square noise voltage $\vrms$:
 \begin{equation}
-    v_n^{rms} = \sqrt{\left<{v}^2\right> - {\left<v\right>}^2} = \sqrt{\left<{v_n}^2\right>}
+    \vrms = \sqrt{\overline{\text{v}^2} - \overline{\text{v}}^2} = \sqrt{\vsq}
     \label{eqn:v_rms}
 \end{equation}
 
@@ -551,7 +561,7 @@ One way of quantifying the noise of the system is through the noise spectral den
 % TODO: bar above v
 % Units [V^2/Hz]
 \begin{equation}
-    S_{v_n} = \frac{\left<{v_n}^2\right>}{\Delta f}
+    \Svn = \frac{\vsq}{\Delta f}
     \label{eqn:noise spectral density definition}
 \end{equation}
 
@@ -579,20 +589,20 @@ We can include the noise added by the amplifier in the noise voltage source, in 
 
 We can associate an effective noise temperature to the noise voltage source. The noise temperature is defined as the temperature at which a resistor would produce an equal amount of noise. Note that, since we are comparing the system to a resistor, the noise needs to have an (approximately) white spectrum.
 
-According to Nyquist's theorem (TODO: cite noise theory of linear and non-linear circuits), if the system experiences white noise, and is in thermal equilibrium, the root-mean square noise voltage $v_n^{rms}$ is given by:
+According to Nyquist's theorem (TODO: cite noise theory of linear and non-linear circuits), if the system experiences white noise, and is in thermal equilibrium, the root-mean square noise voltage $\vrms$ is given by:
 
 \begin{equation}
 % TODO bar, rms to non-italics
-    v_n^{rms} = \sqrt{v_n^2} = 4 k_B T R \Delta f
+    \vrms = \sqrt{\vsq} = 4 k_B T R \Delta f
     \label{eqn:noise rms voltage}
 \end{equation}
 
 In this equation $\Delta f$ is the bandwidth over which the noise is integrated, $k_B$ is the Boltzmann constant, $T$ is the noise temperature of the noise source, and $R$ is the impedance of the system. We see that the noise added depends linearly on the bandwidth over which is integrated.
 
-Combining Equations~\ref{eqn:noise spectral density definition} and \ref{eqn:noise rms voltage}, the noise voltage spectral density $S_{v_n}$ can be rewritten as:
+Combining Equations~\ref{eqn:noise spectral density definition} and \ref{eqn:noise rms voltage}, the noise voltage spectral density $S_{\vn}$ can be rewritten as:
 
 \begin{equation}
-S_{v_n} = \frac{\left<{v_n}^2\right>}{\Delta f} = 4 k_B T R
+\Svn = \frac{\vsq}{\Delta f} = 4 k_B T R
 \end{equation}
 
 
@@ -606,16 +616,16 @@ S_{v_n} = \frac{\left<{v_n}^2\right>}{\Delta f} = 4 k_B T R
 During the amplification stage both the signal and the noise is amplified by the same amount. This amount of amplification is quantified through the gain $G$. It is defined as the ratio between the output voltage and the input voltage:
 
 \begin{equation}
-    G = \frac{v_{out}}{v_{in}}
+    G = \frac{\text{v}_\text{out}}{\text{v}_\text{in}}
     \label{eqn:gain}
 \end{equation}
 
-According to the maximum power transfer theorem, the maximum power transfer between a source and load occurs when the impedances of source and load are matched, in which case half of the power is transferred. From this it follows that in the amplification process half of the signal is dissipated. However, as $G$ is defined as the ratio between $v_{out}$ and $v_{in}$ (Equation~\ref{eqn:gain}), the factor $\frac{1}{2}$ is included in $G$.
+According to the maximum power transfer theorem, the maximum power transfer between a source and load occurs when the impedances of source and load are matched, in which case half of the power is transferred. From this it follows that in the amplification process half of the signal is dissipated. However, as $G$ is defined as the ratio between $\text{v}_\text{out}$ and $\text{v}_\text{in}$ (Equation~\ref{eqn:gain}), the factor $\frac{1}{2}$ is included in $G$.
 
-During amplification not only the signal is amplified with gain G: the noise is amplified by the same amount. Defining the noise voltage spectral density before amplification as $S_{v_n}^{in}$, and after amplification as $S_{v_n}^{out}$, the following relation holds:
+During amplification not only the signal is amplified with gain G: the noise is amplified by the same amount. Defining the noise voltage spectral density before amplification as $S_{\vn}^\text{in}$, and after amplification as $S_{\vn}^\text{out}$, the following relation holds:
 
 \begin{equation}
-    S_{v_n}^{out} = G^2\; S_{v_n}^{in} = G^2 4 k_B T R
+    S_{\vn}^\text{out} = G^2\; S_{\vn}^\text{in} = G^2 4 k_B T R
     \label{eqn:noise voltage spectral density amplification}
 \end{equation}
 
@@ -627,10 +637,10 @@ In our actual set-up the amplification occurs in multiple stages. Aside from amp
 
 \subsection{Downconversion}
 
-After amplification the frequency $\omega$ of the signal is still in the GHz range. In homodyne or heterodyne detection the signal is downconverted to DC (homodyne) or to a lower frequency (heterodyne), such that it can be measured more easily. To downconvert the signal, it is mixed in a mixer with a local oscillator (LO) signal having the same frequency $\omega$ (homodyne) or a slightly higher frequency $\omega + \Delta \omega$ (heterodyne). The mixer effectively multiplies the two signals (TODO: mention why amplitude of LO signal is unimportant). If the signal exiting the amplifier is given by $v(t) = A\cos \omega t$, then, ignoring a possible phase difference, the signal at the output of the mixer is given by:
+After amplification the frequency $\omega$ of the signal is still in the GHz range. In homodyne or heterodyne detection the signal is downconverted to DC (homodyne) or to a lower frequency (heterodyne), such that it can be measured more easily. To downconvert the signal, it is mixed in a mixer with a local oscillator (LO) signal having the same frequency $\omega$ (homodyne) or a slightly higher frequency $\omega + \Delta \omega$ (heterodyne). The mixer effectively multiplies the two signals (TODO: mention why amplitude of LO signal is unimportant). If the signal exiting the amplifier is given by $\text{v}(t) = A\cos \omega t$, then, ignoring a possible phase difference, the signal at the output of the mixer is given by:
 
 \begin{align}
-    v(t) \cdot \cos{\omega t}& = A \cos{\omega t} \cdot \cos{(\omega + \Delta \omega ) t} \\
+    \text{v}(t) \cdot \cos{\omega t}& = A \cos{\omega t} \cdot \cos{(\omega + \Delta \omega ) t} \notag\\
         & = \frac{1}{2} A \left[\cos{(2\omega + \Delta \omega)t} + \cos{\Delta \omega t}\right]
         \label{eqn:mixer}
 \end{align}
@@ -641,7 +651,7 @@ As can be seen from Equation~\ref{eqn:mixer}, the output signal contains both th
 
 In the case of homodyne detection the signal at the frequency of interest is downconverted to DC. However, the signal at other frequencies have not disappeared; in the mixer these have also shifted in frequency. Since the signal of interest is at DC, a low-pass filter can be used to filter out signal above a certain frequency.
 
-The frequency above which a low-pass filter will filter out the signal is defined by the bandwidth $\Delta f$. However, it is worth mentioning that filters aren't ideal, and the amount of filtering will have a slope around $\Delta f$, the steepness of which being a measure of the quality of the filter. It is this bandwidth up to which is integrated to obtain $v_n^{rms}$.
+The frequency above which a low-pass filter will filter out the signal is defined by the bandwidth $\Delta f$. However, it is worth mentioning that filters aren't ideal, and the amount of filtering will have a slope around $\Delta f$, the steepness of which being a measure of the quality of the filter. It is this bandwidth up to which is integrated to obtain $\vrms$.
 
 \section{Noise temperature}
 % TODO: SNR is power ratio? in formula it seems voltage ratio.
@@ -650,17 +660,16 @@ In the previous sections the influence of each of the components on the signal a
 % TODO symbol for SNR
 \begin{align}
 % TODO arrow pointing to 1/2 saying its due to dowconversion
-    SNR = \frac{\left<v\right>}{v_n^{rms}} = & \frac{1/2 G v_{in}}{1/2 \sqrt{S_{v_n}^{out} \Delta f}}\\
-        = & \frac{G v_{in}}{\sqrt{G^2 S_{v_n}^{in}\Delta f}}\\
-        = & \frac{G v_{in}}{\sqrt{G^2 4 k_B T R \Delta f}}\\
-        = & \frac{v_{in}}{\sqrt{4 k_B T R \Delta f}}
+    \text{SNR} = \frac{\overline{\vout}^2}{\vsq} = & \frac{1/4 \;G^2 \; \overline{\vin}^2}{1/4 \; \Sout \; \Delta f}\notag\\
+        = & \frac{G^2 \; \vin^2}{G^2 \; \Sin \;\Delta f}\notag\\
+        = & \frac{\vin^2}{4 \; k_B \; T \; R \; \Delta f}
     \label{eqn:SNR}
 \end{align}
 
-Equation~\ref{eqn:SNR} can be rewritten such that we have an equation for the noise temperature of the system:
+Note that the factors $1/4$ are due to the amplitude being lowered by a factor $2$ due to mixing. Equation~\ref{eqn:SNR} can be rewritten such that we have an expression for the noise temperature of the system:
 
 \begin{equation}
-    T =\frac{{v_{in}}^2}{4 k_B R \Delta f SNR^2}
+    T =\frac{{\vin}^2}{4 \; k_B \; R \; \Delta f \; \text{SNR}}
     \label{eqn:noise temperature}
 \end{equation}
 
@@ -672,7 +681,20 @@ Equation~\ref{eqn:SNR} can be rewritten such that we have an equation for the no
 \begin{figure}[h]
     \centering
     \includegraphics[width = .7 \linewidth]{Figures/noise_temperature_versus_power.png}
+    \caption{Noise temperature versus frequency. Has been calculated for $160$ frequencies in the range $1-9$\SI{}{\giga \hertz}.}
+    \label{fig:Noise temperature}
 \end{figure}
+
+
+Using the Rhode \& Schwarz vector network analyzer, The transmission has been measured for $160$ equidistant frequencies in the range $1-9$ \SI{}{\giga \hertz}. For each frequency a total of $2001$ points was measured with an IF bandwidth $\Delta f = $ \SI{300}{\hertz}.From these measurements the signal-to-noise ratio has been determined for each frequency. Wit knowledge of the SNR, the noise temperature has then been determined as a function of frequency using Equation~\ref{eqn:noise temperature} . The result is shown in Figure~\ref{fig:Noise temperature}.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width = .6\linewidth]{Figures/noise_temperature_versus_power_detailed.png}
+    \label{fig:noise temperature 2GHz}
+\end{figure}
+
 
 
 \begin{itemize}

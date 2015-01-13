@@ -13,12 +13,12 @@
 \contentsline {subsubsection}{\numberline {1.3.2.2}Infrared shielding}{7}
 \contentsline {subsubsection}{\numberline {1.3.2.3}Deep-reactive ion etching}{8}
 \contentsline {section}{\numberline {1.4}Experimental set-up}{8}
-\contentsline {section}{\numberline {1.5}Results and discussion}{9}
-\contentsline {subsection}{\numberline {1.5.1}Measurement of a resonator}{9}
+\contentsline {section}{\numberline {1.5}Results and discussion}{8}
+\contentsline {subsection}{\numberline {1.5.1}Measurement of a resonator}{8}
 \contentsline {subsection}{\numberline {1.5.2}Power dependence}{9}
 \contentsline {subsection}{\numberline {1.5.3}Temperature dependence}{10}
 \contentsline {subsection}{\numberline {1.5.4}Temperature tracking}{11}
-\contentsline {section}{\numberline {1.6}Conclusion and future work}{14}
+\contentsline {section}{\numberline {1.6}Conclusion and future work}{13}
 \contentsline {chapter}{\numberline {2}Noise}{15}
 \contentsline {section}{\numberline {2.1}Characterizing noise}{15}
 \contentsline {subsection}{\numberline {2.1.1}Circuit representations}{15}
@@ -30,4 +30,4 @@
 \contentsline {subsection}{\numberline {2.2.4}Low-pass filtering}{18}
 \contentsline {section}{\numberline {2.3}Noise temperature}{18}
 \contentsline {section}{\numberline {2.4}Results}{19}
-\contentsline {section}{\numberline {2.5}Conclusion and future work}{19}
+\contentsline {section}{\numberline {2.5}Conclusion and future work}{20}
