@@ -535,7 +535,6 @@ The next step is to perform the same treatments (HMDS and DRIE) on transmon qubi
 % TODO better definition of noise
 
 % TODO: Left to find out:
-% Is the pi/2 justified for the spectral density?
 % Is the power to V_in conversion correct?
 % Does 10^5 noise temperature make sense?
 
@@ -565,19 +564,19 @@ The mean value of the noise voltage $\overline{\vn}$ is equal to zero. The amoun
     \label{eqn:v_rms}
 \end{equation}
 
-\subsection{Noise spectral density}
+\subsection{Noise power spectral density}
 % TODO: change subsection such that it includes mentioning of voltage
 
-One way of quantifying the noise of the system is through the noise spectral density $S(f)$, which is the distribution of noise per unit bandwidth as a function of frequency. For the Th\'evenin representation, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. It is then given by:
+One way of quantifying the noise of the system is through the noise power spectral density $S(f)$, which is the distribution of noise per unit bandwidth as a function of frequency. For the Th\'evenin representation, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. It is then given by:
 
 % TODO: bar above v
 % Units [V^2/Hz]
 \begin{equation}
-    \Svn = \frac{\vsq}{\Delta f}
+    S = \frac{\vsq}{\Delta f}
     \label{eqn:noise spectral density definition}
 \end{equation}
 
-
+In this equation $\Delta f$ is the noise bandwidth. This is the bandwidth over which the noise is measured.
 
 
 \section{The model}
@@ -611,10 +610,10 @@ According to Nyquist's theorem (TODO: cite noise theory of linear and non-linear
 
 In this equation $\Delta f$ is the bandwidth over which the noise is integrated, $k_B$ is the Boltzmann constant, $T$ is the noise temperature of the noise source, and $R$ is the impedance of the system. We see that the noise added depends linearly on the bandwidth over which is integrated.
 
-Combining Equations~\ref{eqn:noise spectral density definition} and \ref{eqn:noise rms voltage}, the noise voltage spectral density $S_{\vn}$ can be rewritten as:
+Combining Equations~\ref{eqn:noise spectral density definition} and \ref{eqn:noise rms voltage}, the noise power spectral density $S_{\vn}$ can be rewritten as:
 
 \begin{equation}
-\Svn = \frac{\vsq}{\Delta f} = 4 k_B T R
+S = \frac{\vsq}{\Delta f} = 4 k_B T R
 \end{equation}
 
 
@@ -625,7 +624,7 @@ Combining Equations~\ref{eqn:noise spectral density definition} and \ref{eqn:noi
 % TODO same amount? If so then why does the noise temperature shoot through the roof?
 % TODO quantified by or through?
 % Explain why first amplifier is most important (amplification chain)
-During the amplification stage both the signal and the noise is amplified by the same amount. This amount of amplification is quantified through the gain $G$. It is defined as the ratio between the output voltage and the input voltage:
+During the amplification stage both the signal and the noise is amplified by the same amount. This amount of amplification is determined by the gain $G$, which is defined as the ratio between the output voltage and the input voltage:
 
 \begin{equation}
     G = \frac{\text{v}_\text{out}}{\text{v}_\text{in}}
@@ -634,14 +633,14 @@ During the amplification stage both the signal and the noise is amplified by the
 
 According to the maximum power transfer theorem, the maximum power transfer between a source and load occurs when the impedances of source and load are matched, in which case half of the power is transferred. From this it follows that in the amplification process half of the signal is dissipated. However, as $G$ is defined as the ratio between $\text{v}_\text{out}$ and $\text{v}_\text{in}$ (Equation~\ref{eqn:gain}), the factor $\frac{1}{2}$ is included in $G$.
 
-During amplification not only the signal is amplified with gain G: the noise is amplified by the same amount. Defining the noise voltage spectral density before amplification as $S_{\vn}^\text{in}$, and after amplification as $S_{\vn}^\text{out}$, the following relation holds:
+During amplification not only the signal is amplified with gain G: the noise is amplified by the same amount. Defining the noise power spectral density before amplification as $S^\text{in}$, and after amplification as $S^\text{out}$, the following relation holds:
 
 \begin{equation}
-    S_{\vn}^\text{out} = G^2\; S_{\vn}^\text{in} = G^2 4 k_B T R
-    \label{eqn:noise voltage spectral density amplification}
+    S^\text{out} = G^2\; S^\text{in} = G^2 4 k_B T R
+    \label{eqn:noise power spectral density amplification}
 \end{equation}
 
-Note that the gain $G$ is squared, since the noise voltage spectral density depends quadratically on the root-mean square noise voltage. (TODO improve sentence)
+Note that the gain $G$ is squared, since the noise power spectral density depends quadratically on the root-mean square noise voltage. (TODO improve sentence)
 
 In our actual set-up the amplification occurs in multiple stages. Aside from amplifying the signal and its noise, at each stage additional noise, originating from the amplifier itself, is added as well. This added noise is then also amplified in the next amplification stage.   Therefore it is always best to have the amplifier with highest gain and lowest noise temperature as the first amplifier in the chain. For more information see Friis formula \cite[p.~103]{vasilescu2006electronic}.
 
@@ -663,7 +662,12 @@ As can be seen from Equation~\ref{eqn:mixer}, the output signal contains both th
 
 In the case of homodyne detection the signal at the frequency of interest is downconverted to DC. However, the signal at other frequencies have not disappeared; in the mixer these have also shifted in frequency. Since the signal of interest is at DC, a low-pass filter can be used to filter out signal above a certain frequency.
 
-The frequency above which a low-pass filter will filter out the signal is defined by the bandwidth $\Delta f$. However, it is worth mentioning that filters aren't ideal, and the amount of filtering will have a slope around $\Delta f$, the steepness of which being a measure of the quality of the filter. It is this bandwidth up to which is integrated to obtain $\vrms$.
+The frequency above which a low-pass filter will filter out the signal is defined by its cut-off frequency $f_\text{c}$. The cut-off frequency $f_\text{c}$ is the frequency at which the signal is attenuated by \SI{3}{\decibel}. For first-order low-pass filters the noise bandwidth $\Delta f$ is related to the filter cut-off frequency $f_\text{c}$ by \cite[p.~81]{vasilescu2006electronic}:
+
+\begin{equation}
+    \Delta f = \frac{\pi}{2} f_\text{c}
+    \label{eqn:noisebandwidth}
+\end{equation}
 
 \section{Noise temperature}
 
@@ -672,18 +676,17 @@ In the previous sections the influence of each of the components on the signal a
 
 \begin{align}
     \text{SNR} = \frac{\overline{\vout}^2}{\vsq} = & \frac{1/4 \;G^2 \; \overline{\vin}^2}{1/4 \; \Sout \; \Delta f}\notag\\
-        = & \frac{G^2 \; \vin^2}{G^2 \; \Sin \;\Delta f}\notag\\
-        = & \frac{\vin^2}{4 \; k_B \; T \; R \; \Delta f}
+        = & \frac{G^2 \; \overline{\vin}^2}{G^2 \; \Sin \;\frac{\pi}{2}\;f_\text{c}}\notag\\
+        = & \frac{\overline{\vin}^2}{2\;\pi \; k_B \; T \; R \; f_\text{c}}
     \label{eqn:SNR}
 \end{align}
 
-Note that the factors $1/4$ are due to the amplitude being lowered by a factor $2$ due to mixing. Equation~\ref{eqn:SNR} can be rewritten such that we have an expression for the noise temperature of the system:
+Note that the factors $1/4$ are due to the amplitude being lowered by a factor of $2$ due to mixing. Equation~\ref{eqn:SNR} can be rewritten such that we have an expression for the noise temperature of the system:
 
 \begin{equation}
-    T =\frac{{\vin}^2}{4 \; k_B \; R \; \Delta f \; \text{SNR}}
+    T =\frac{\overline{\vin}^2}{2\; \pi \; k_B \; R \; f_\text{c} \; \text{SNR}}
     \label{eqn:noise temperature}
 \end{equation}
-
 
 
 \section{Results}
@@ -692,17 +695,16 @@ Note that the factors $1/4$ are due to the amplitude being lowered by a factor $
 \begin{figure}[h]
     \centering
     \includegraphics[width = .7 \linewidth]{Figures/noise_temperature_versus_power.png}
-    \caption{Noise temperature versus frequency. The noise temperature has been calculated for $160$ frequencies in the range $1-9$\SI{}{\giga \hertz}. For each frequency $2001$ points were measured, from which the signal, noise, SNR, and noise temperature was determined. Measurements were performed at an input power of TODO (60) and an IF bandwidth of $\Delta f = $\SI{300}{\hertz}.}
+    \caption{Noise temperature versus frequency. The noise temperature has been calculated for $160$ frequencies in the range $1-9$ \SI{}{\giga \hertz}. For each frequency $2001$ points were measured, from which the signal, noise, SNR, and noise temperature was determined. Measurements were performed at an input power of TODO (60) and an IF bandwidth of $f_\text{c} = $\SI{300}{\hertz}.}
     \label{fig:Noise temperature}
 \end{figure}
 % TODO: Find explanation for why noise tempeature can reach 10^5 K
 
-Using the Rhode \& Schwarz vector network analyzer, The transmission has been measured for $160$ equidistant frequencies in the range $1-9$ \SI{}{\giga \hertz}. For each frequency a total of $2001$ points was measured with an IF bandwidth $\Delta f = $ \SI{300}{\hertz}.From these measurements the signal-to-noise ratio has been determined for each frequency. With knowledge of the SNR, the noise temperature has then been determined as a function of frequency using Equation~\ref{eqn:noise temperature} . The result is shown in Figure~\ref{fig:Noise temperature}.
+Using the Rhode \& Schwarz ZVM vector network analyzer, The transmission has been measured for $160$ equidistant frequencies in the range $1-9$ \SI{}{\giga \hertz}. For each frequency a total of $2001$ points was measured with an IF bandwidth $\Delta f = $ \SI{300}{\hertz}.From these measurements the signal-to-noise ratio has been determined for each frequency. With knowledge of the SNR, the noise temperature has then been determined as a function of frequency using Equation~\ref{eqn:noise temperature} . The result is shown in Figure~\ref{fig:Noise temperature}.
 
 From Figure~\ref{fig:Noise temperature} it is clear that the noise temperature is highly temperature-dependent. In the frequency range $4-8$ \SI{}{\giga \hertz} the noise temperature is quite low, never reaching above \SI{10}{\kelvin}. This is exactly the bandwidth of the cryogenic low-noise amplifier by Low Noise Factory, which is the first amplifier in the amplification chain. From the specifications of the amplifier, the noise temperature of the amplifier has been calculated at an ambient temperature of \SI{8}{\kelvin}, and equals roughly \SI{4}{\kelvin} for the entire bandwidth. Comparing the amplifier specifications with Figure~\ref{fig:Noise temperature}, it is likely that in the frequency range $4-8$ \SI{}{\giga \hertz} the first amplifier is the component contributing most to the total noise temperature.
 
-Outside the $4-8$ \SI{}{\giga \hertz} frequency band, however, the noise temperature rapidly increases. The fact that the
-% TODO: find out why noise temperature rapidly increases.
+Outside the $4-8$ \SI{}{\giga \hertz} frequency band, however, the noise temperature rapidly increases. This is partly due to the frequency lying outside of the bandwidth of the amplifier, in which case the amplification will be lower. However, this is not an adequate explanation for the fact that the noise temperature increases to several hundred thousand Kelvin. The reason for this unrealistic noise temperature is that in our model we did not take into account the noise added by components after the amplifier. While the gain of the amplifier decreases outside its bandwidth, the components after the amplification will still add the same amount of noise. When the gain decreases by a significant amount, the relative contribution of these post-amplification noise sources will increase. Furthermore the assumption that the noise spectrum is white is no longer correct at low frequencies, where $1/f$ noise starts to contribute.
 
 \begin{figure}[h]
     \centering
@@ -719,11 +721,15 @@ Another point of interest is that the resonance frequency of the resonator lies 
 
 \section{Conclusion and future work}
 
-\begin{itemize}
-    \item Comparison of noise temperature of VNA with phase preserving homebuilt VNA
-    \item Also compare duty cycle
-    \item Check if noise temperature is the same in future cooldown
-\end{itemize}
+The noise temperature gives us an estimate of the noise added to the system. It has been shown that the noise temperature can fluctuate strongly with varying frequency. In the model used to estimate the noise temperature it has been shown that outside the bandwidth of the amplifier the model breaks down. At this point the noise added by the components after the amplification, and indeed even the amplifiers themselves, needs to be taken into account to obtain accurate estimates of the noise temperature.
+
+However, even outside of the bandwidth of the amplifier, there are frequency regions in which the noise temperature may still be acceptable. It is therefore a good idea to initially perform measurements of the noise temperature of the set-up. This will give an indication of the signal-to-noise ratio, from which accurate estimates can be made as to what the integration times for measurements should be.
+
+The noise temperature measurements were performed using the Rhode \& Schwarz ZVM vector network analyzer. It would be interesting to see how other measurement set-ups would compare to the vector network analyzer. One interesting candidate would be a heterodyne detector. However, as the vector network analyzer can also measure phase, a fair comparison would also require the heterodyne detector to be able to measure the phase. This heterodyne detector is currently being set up, and will hopefully soon yield interesting results.
+
+Aside from only comparing the noise temperature, other properties are also important when comparing two set-ups. One of these is the duty cycle, which is the percentage of time acually spent measuring. For the vector network analyser the duty cycle seems to be around $50\%$, provided that a single measurement sweep takes at least a few seconds. Other set-ups may therefore offer an improvement in the duty cycle. Furthermore, properties such as phase stability and uncertainty would also be interesting to compare.
+
+Another interesting measurement would be to see if the noise temperature as a function of frequency remains the same in future cooldowns, and for different samples.
 
 
 \bibliographystyle{plain}

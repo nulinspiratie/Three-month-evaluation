@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex Three month evaluation"] 1421259125 "Three month evaluation.aux" "Three month evaluation.bbl" "Three month evaluation" 1421259128
-  "Three month evaluation.aux" 1421259127 9972 d9a0e4accd0c9855b0509dd2e6ee5fc4 ""
+["bibtex Three month evaluation"] 1421273657 "Three month evaluation.aux" "Three month evaluation.bbl" "Three month evaluation" 1421273661
+  "Three month evaluation.aux" 1421273660 10058 fce748cead1956cf1a25432cf81e5b1b ""
   "Three month evaluation.bcf" 0 -1 0 ""
   "bibliography.bib" 1421253960 4838 a93a775585089eb9105548bd446657ff ""
   "c:/texlive/2014/texmf-dist/bibtex/bst/base/plain.bst" 1419355295 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
   "Three month evaluation.bbl"
   "Three month evaluation.blg"
-["pdflatex"] 1421259125 "Three month evaluation.tex" "Three month evaluation.pdf" "Three month evaluation" 1421259128
+["pdflatex"] 1421273658 "Three month evaluation.tex" "Three month evaluation.pdf" "Three month evaluation" 1421273661
   "Figures/All_set4.png" 1420735926 2091121 526cfbbd9665871c3a44806ef994d3f3 ""
   "Figures/CPW.png" 1421253493 46220 0bf7b5ead4da3ac71b83f6e6c0c76bd6 ""
   "Figures/Qi_vs_n_photon.png" 1420643787 47310 0b125d1859ff55801a48bceab7a0581f ""
@@ -19,10 +19,10 @@
   "Figures/noise_temperature_versus_power_detailed.png" 1420821649 31522 0cf237ddb61789a78bda5b5cd744ed23 ""
   "Figures/resonator_amplitude.png" 1420643787 32958 c27762aaab758a8a9c3a98423d0e6057 ""
   "Figures/resonator_complex.png" 1420732120 38394 156fef40f7933f2e8a60fe24f5996d65 ""
-  "Three month evaluation.aux" 1421259127 9972 d9a0e4accd0c9855b0509dd2e6ee5fc4 ""
-  "Three month evaluation.bbl" 1421259125 3468 138386fd691f01c33d6bee801deedc5c "bibtex Three month evaluation"
-  "Three month evaluation.tex" 1421259121 52764 3703bd62e8e9dd3718cea6c7f6bb486e ""
-  "Three month evaluation.toc" 1421259127 2164 34bae305b57ebcf5e9ea4f1a35e176b9 ""
+  "Three month evaluation.aux" 1421273660 10058 fce748cead1956cf1a25432cf81e5b1b ""
+  "Three month evaluation.bbl" 1421273658 3468 138386fd691f01c33d6bee801deedc5c "bibtex Three month evaluation"
+  "Three month evaluation.tex" 1421273653 55665 073998070230ffb1b381e88eedde8ed8 ""
+  "Three month evaluation.toc" 1421273660 2170 0f5f0e70df69da6c02c8202e5f9b455d ""
   "c:/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii" 1419358329 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2014/texmf-dist/tex/generic/babel-english/english.ldf" 1419354835 6963 2e0cb3d93aa64508bdb0db58ae900d97 ""
   "c:/texlive/2014/texmf-dist/tex/generic/babel/babel.def" 1419354812 49725 b40154b767b0073ee42b35911042b793 ""
@@ -104,6 +104,6 @@
   "c:/texlive/2014/texmf-dist/tex/latex/wrapfig/wrapfig.sty" 1419360264 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   (generated)
   "Three month evaluation.toc"
-  "Three month evaluation.aux"
-  "Three month evaluation.pdf"
   "Three month evaluation.log"
+  "Three month evaluation.pdf"
+  "Three month evaluation.aux"
