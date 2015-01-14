@@ -1,5 +1,3 @@
-% Todo:
-% Change all the variables such that they are not in italics
 
 \documentclass[12pt]{report}
 \usepackage[a4paper]{geometry}
@@ -18,6 +16,7 @@
 \usepackage{siunitx}
 \usepackage[space]{grffile}
 \usepackage{amsfonts}
+\DeclareSIUnit\dBm{dBm}
 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 % \onehalfspacing
@@ -352,10 +351,10 @@ Unless stated otherwise, all measurements were performed with the fridge at base
 
 \section{Results and discussion}
 
+
 \subsection{Measurement of a resonator}
 \newcommand{\figureinset}[3]{\llap{\parbox[b]{#2in}{#1\\\rule{0ex}{#3in}}}}
 \begin{figure}[h]
-% TODO: A and B
     \centering
     \begin{subfigure}[b]{.49\textwidth}
         \label{fig:resonator_amplitude}
@@ -365,7 +364,7 @@ Unless stated otherwise, all measurements were performed with the fridge at base
         \label{fig:resonator_complex}
         \includegraphics[width=\textwidth]{Figures/resonator_complex.png}\figureinset{(b)}{2.55}{2.0}
     \end{subfigure}
-    \caption{Forward transmission $S_{21}$ spectrum of a resonator around \SI{2.75}{\giga \hertz}. Panel (a) shows the amplitude of $S_{21}$, along with a fit (red). Panel (b) shows the path of $S_{21}$ in the complex path, along with a fit (red). The green dot indicates the resonance frequency of the resonator.  Measurement was performed at \SI{15}{\milli \kelvin} at an input power of (TODO: mV), corresponding to (TODO nph) photons.}
+    \caption{Forward transmission $S_{21}$ spectrum of a resonator around \SI{2.75}{\giga \hertz}. Panel (a) shows the amplitude of $S_{21}$, along with a fit (red). Panel (b) shows the path of $S_{21}$ in the complex path, along with a fit (red). The green dot indicates the resonance frequency of the resonator.  Measurement was performed at \SI{15}{\milli \kelvin} at an input power of \SI{-123}{\dBm} corresponding to $\sim 5 \times 10^4$ photons.}
     \label{fig:resonator}
 \end{figure}
 
@@ -439,7 +438,7 @@ If one looks at the highest temperatures, it seems that the increase in quality 
     \label{fig:temperature_tracking_Qi}
 \end{figure}
 
-To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic ... TODO. All temperatures were measured at an input power of TODO, corresponding to roughly $5 \times 10^5$ photons. In Figure \ref{fig:temperature_tracking_Qi} the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
+To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic ... TODO. All temperatures were measured at an input power of \SI{-113}{\dBm}, corresponding to roughly $5 \times 10^5$ photons. In Figure \ref{fig:temperature_tracking_Qi} the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
 
 From Figure~\ref{fig:temperature_tracking_Qi} it seems that there is some hysteresis at high temperatures. This is likely due to the fact that the thermometer is at a different position in the fridge as the sample, and does not thermalize equally fast. There may therefore be a delay between the temperature of the thermometer, and the actual temperature of the sample.
 
@@ -536,11 +535,10 @@ The next step is to perform the same treatments (HMDS and DRIE) on transmon qubi
 
 % TODO: Left to find out:
 % Is the power to V_in conversion correct?
-% Does 10^5 noise temperature make sense?
 
 When performing measurements one is faced with the reality that no component is ideal. When a signal passes through the different parts of a set-up, noise is constantly being added. Noise is the term given for all the random fluctuations that degrade the signal. These fluctuations are the cumulative result of several noise source contributions.
 
-Thermal noise is one of the most common sources of noise. It is the result of the random thermal fluctuations of electrons. It is an example of frequency-independent noise, also known as white noise. Noise sources can also be frequency-dependent, such as TLS, as discussed in chapter~\ref{chapter:Resonators}. This is an example of $1/f$-noise: the amount of noise added increases with decreasing frequency. In fact, truly frequency-independent noise does not exist, as even white noise has been observed to decrease at extremely high frequencies ($\sim10^{15}$\;\SI{}{\hertz}). At these frequencies a quantum correction needs to be added. %ref[p.~50]{electric noise book} %TODO create ref and add more info on quantum correction
+Thermal noise is one of the most common sources of noise. It is the result of the random thermal fluctuations of electrons. It is an example of frequency-independent noise, also known as white noise. Noise sources can also be frequency-dependent, such as TLS, as discussed in chapter~\ref{chapter:Resonators}. This is an example of $1/f$-noise: the amount of noise added increases with decreasing frequency. In fact, truly frequency-independent noise does not exist, as even white noise has been observed to decrease at extremely high frequencies ($\sim10^{15}$\;\SI{}{\hertz}). At these frequencies a quantum correction needs to be added \cite[p.~50]{vasilescu2006electronic}.
 
 When performing measurements one important question to ask is how much noise is being contributed to the signal. In this chapter a model is presented for the general set-up used for measuring superconducting resonators and qubits. Using this model it is possible to characterize the amount of noise by determining its associated noise temperature. Finally, this model is applied to the set-up used to characterize the resonators presented in chapter~\ref{chapter:Resonators}
 % TODO: chapter with captal C?
@@ -565,12 +563,10 @@ The mean value of the noise voltage $\overline{\vn}$ is equal to zero. The amoun
 \end{equation}
 
 \subsection{Noise power spectral density}
-% TODO: change subsection such that it includes mentioning of voltage
 
 One way of quantifying the noise of the system is through the noise power spectral density $S(f)$, which is the distribution of noise per unit bandwidth as a function of frequency. For the Th\'evenin representation, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. It is then given by:
 
-% TODO: bar above v
-% Units [V^2/Hz]
+% TODO Units [V^2/Hz]
 \begin{equation}
     S = \frac{\vsq}{\Delta f}
     \label{eqn:noise spectral density definition}
@@ -600,10 +596,9 @@ We can include the noise added by the amplifier in the noise voltage source, in 
 
 We can associate an effective noise temperature to the noise voltage source. The noise temperature is defined as the temperature at which a resistor would produce an equal amount of noise. Note that, since we are comparing the system to a resistor, the noise needs to have an (approximately) white spectrum.
 
-According to Nyquist's theorem (TODO: cite noise theory of linear and non-linear circuits), if the system experiences white noise, and is in thermal equilibrium, the root-mean square noise voltage $\vrms$ is given by:
+According to Nyquist's theorem \cite[p.~47]{vasilescu2006electronic}, if the system experiences white noise, and is in thermal equilibrium, the root-mean square noise voltage $\vrms$ is given by:
 
 \begin{equation}
-% TODO bar, rms to non-italics
     \vrms = \sqrt{\vsq} = 4 k_B T R \Delta f
     \label{eqn:noise rms voltage}
 \end{equation}
@@ -621,9 +616,6 @@ S = \frac{\vsq}{\Delta f} = 4 k_B T R
 
 
 \subsection{Amplification}
-% TODO same amount? If so then why does the noise temperature shoot through the roof?
-% TODO quantified by or through?
-% Explain why first amplifier is most important (amplification chain)
 During the amplification stage both the signal and the noise is amplified by the same amount. This amount of amplification is determined by the gain $G$, which is defined as the ratio between the output voltage and the input voltage:
 
 \begin{equation}
@@ -695,10 +687,9 @@ Note that the factors $1/4$ are due to the amplitude being lowered by a factor o
 \begin{figure}[h]
     \centering
     \includegraphics[width = .7 \linewidth]{Figures/noise_temperature_versus_power.png}
-    \caption{Noise temperature versus frequency. The noise temperature has been calculated for $160$ frequencies in the range $1-9$ \SI{}{\giga \hertz}. For each frequency $2001$ points were measured, from which the signal, noise, SNR, and noise temperature was determined. Measurements were performed at an input power of TODO (60) and an IF bandwidth of $f_\text{c} = $\SI{300}{\hertz}.}
+    \caption{Noise temperature versus frequency. The noise temperature has been calculated for $160$ frequencies in the range $1-9$ \SI{}{\giga \hertz}. For each frequency $2001$ points were measured, from which the signal, noise, SNR, and noise temperature was determined. Measurements were performed at an input power of \SI{-113}{\dBm} and an IF bandwidth of $f_\text{c} = $\SI{300}{\hertz}.}
     \label{fig:Noise temperature}
 \end{figure}
-% TODO: Find explanation for why noise tempeature can reach 10^5 K
 
 Using the Rhode \& Schwarz ZVM vector network analyzer, The transmission has been measured for $160$ equidistant frequencies in the range $1-9$ \SI{}{\giga \hertz}. For each frequency a total of $2001$ points was measured with an IF bandwidth $\Delta f = $ \SI{300}{\hertz}.From these measurements the signal-to-noise ratio has been determined for each frequency. With knowledge of the SNR, the noise temperature has then been determined as a function of frequency using Equation~\ref{eqn:noise temperature} . The result is shown in Figure~\ref{fig:Noise temperature}.
 
