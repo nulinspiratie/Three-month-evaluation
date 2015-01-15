@@ -125,14 +125,9 @@ Because the relevant regime where resonators interact with qubits is the single-
 
 
 
-
-
-
-
 \chapter{Resonators}
 \label{chapter:Resonators}
 % TODO:
-% Add picture of resonator connected to central feedline (CPW)
 % Mention that a resonator can be seen as an LC-circuit
 
 Possible additional topics:
@@ -141,12 +136,6 @@ Possible additional topics:
     \item Superconducting material NbTiN. Advantage is that
     \item Asymmetry (can refer to \cite[p.~192]{Geerlings})
     \item Lorentzian shape
-\end{itemize}
-
-Types of resonators studied:
-\begin{itemize}
-    \item Halfmon
-    \item DRIE resonators
 \end{itemize}
 
 
@@ -248,7 +237,7 @@ One loss channel was already discussed in section~\ref{sec:Quality factor}, name
 
 \subsubsection{Two-level systems}
 \label{sec:TLS}
-Two-level systems (TLS) are systems which can be in a ground state or an excited state. In some cases they can be useful, such as in the case of a qubit. In other cases, however, TLS can also be a source of dissipation. In cQED TLS which cause dissipation are most often oxides residing in amorphous materials (TODO: ref). In fact, study suggests that most TLS reside in a thin oxide layer at the interface between two substances (TODO: ref).
+Two-level systems (TLS) are systems which can be in a ground state or an excited state. In some cases they can be useful. In fact a qubit itself is an example of a TLS. In other cases, however, TLS can also be a source of dissipation. Study suggests that in cQED, most TLS reside in a thin oxide layer at the metal-substrate interface and the substrate-air interface \cite{wenner2011surface}.
 
 Resonators are surrounded by a large quantity of TLS, each of which has its own resonance frequency, depending on its energy landscape. When the resonance frequency of a TLS is close to that of the resonator, it can absorb a photon from the resonator, upon which it tunnels to an excited meta-stable state. TLS have a finite lifetime in their excited state, after which they decay back to their ground state.
 
@@ -432,9 +421,7 @@ If one looks at the highest temperatures, it seems that the increase in quality 
 \subsection{Temperature tracking}
 \label{resonator:results:temperature_tracking}
 % TODO
-% Add figures of temperature and of frequency
 % Find out the name of the process that occurs at 1K.
-% Find out what the input power is corresponding to -60 dBm
 % Make stronger statement supporting claim that quasiparticles are dominant source at higher temperatures
 % Maybe also mention the rapid shift of resonator frequency during beginning stage of cooldown
 
@@ -594,7 +581,6 @@ The mean value of the noise voltage $\overline{\vn}$ is equal to zero. The amoun
 
 One way of quantifying the noise of the system is through the noise power spectral density $S(f)$, which is the distribution of noise per unit bandwidth as a function of frequency. For the Th\'evenin representation, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. It is then given by:
 
-% TODO Units [V^2/Hz]
 \begin{equation}
     S = \frac{\vsq}{\Delta f}
     \tagaddtext{[\si[per-mode=symbol]{\volt \squared \per \hertz}]}
