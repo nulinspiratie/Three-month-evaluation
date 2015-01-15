@@ -22,6 +22,7 @@
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 \newcommand{\figureinset}[3]{\llap{\parbox[b]{#2in}{#1\\\rule{0ex}{#3in}}}}
 
+\newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
 % This command adds optionality of units at right side of equation
 \makeatletter
 \providecommand\add@text{}
@@ -237,6 +238,8 @@ One loss channel was already discussed in section~\ref{sec:Quality factor}, name
 
 \subsubsection{Two-level systems}
 \label{sec:TLS}
+% TODO mention that dissipation rate depends on electric field strength
+
 Two-level systems (TLS) are systems which can be in a ground state or an excited state. In some cases they can be useful. In fact a qubit itself is an example of a TLS. In other cases, however, TLS can also be a source of dissipation. Study suggests that in cQED, most TLS reside in a thin oxide layer at the metal-substrate interface and the substrate-air interface \cite{wenner2011surface}.
 
 Resonators are surrounded by a large quantity of TLS, each of which has its own resonance frequency, depending on its energy landscape. When the resonance frequency of a TLS is close to that of the resonator, it can absorb a photon from the resonator, upon which it tunnels to an excited meta-stable state. TLS have a finite lifetime in their excited state, after which they decay back to their ground state.
@@ -256,7 +259,7 @@ In the low power, low temperature regime, TLS reside mostly in their ground stat
 
 \subsubsection{Quasiparticles}
 
-Another source of dissipation for resonators is due to quasiparticles being present in the superconducting layer. When a Cooper-pair is broken up, Bogoliubov quasiparticles are formed. These quasiparticles can have either electron-like or hole-like properties. Quasiparticles are a source of dissipation for resonators, since they are non-superconducting and therefore cause the surface impedance to be slightly resistive \cite[p.~18]{Mazin}.
+Another source of dissipation for resonators is due to quasiparticles being present in the superconducting layer. When a Cooper-pair is broken up, Bogoliubov quasiparticles are formed \cite[p.~16]{Barends}. These quasiparticles can have either electron-like or hole-like properties. They are a source of dissipation for resonators, since they are non-superconducting and therefore cause the surface impedance to be slightly resistive \cite[p.~18]{Mazin}.
 
 The breaking up of Cooper-pairs is due to excitations. These excitations can either be thermal, or due to photon absorption. Therefore an increase in temperature or an increase in photon density will result in a higher density of quasiparticles.
 
@@ -264,8 +267,6 @@ The breaking up of Cooper-pairs is due to excitations. These excitations can eit
     \item Quasiparticle excitation energy $E = \xi^2 + \Delta ^2$,
         where $\xi$ is the energy of the single particle in the normal state relative to the Fermi energy \cite{Barends}
     \item Increases with increasing frequency
-    \item ?Non-superconducting, thereby causing dissipation
-    \item removal by infrared filter
     \item Decreases exponentially as the temperature decreases \cite[p.~19?]{Mazin}
     \item Quasiparticles are created through thermal excitation, but can also be excited by photons with $h \nu > 2 \Delta$\cite{Gao}
     \item Quasiparticles change the surface impedance of resonators, which can be measured.
@@ -327,10 +328,15 @@ Aside from thermal excitation, quasiparticles are also formed from the absorptio
 
 \subsubsection{Deep-reactive ion etching}
 
-Another technique applied to the resonators studied in this report is deep-reactive ion etching. In this technique alternating steps of reactive ion etching (TODO: is this true?), and sidewall passivation (TODO: what material?) are applied.
+Another technique applied to the resonators studied in this report is deep-reactive ion etching (DRIE), which is a type of Bosch process \cite{DRIE}. In this technique two alternating steps are performed:
 
+\begin{enumerate}
+    \item An etching step in which an $\chem{SF_6}$ plasma is used to etch the substrate layer.
+    \item A passivation step in which $\chem{C_4H_8}$ is released. The gas forms a protective layer on the substrate, except for the direction in which the etching plasma is accelerated. The result is that the sidewalls are protected from the etching process
+\end{enumerate}
 
-See \cite{DRIE} for more information.
+Using DRIE, nearly vertical sidewalls can be created for the substrate. The result is that the substate-air interface is removed from the regions between the CPW tracks, which are the regions where the electric field strength is high. As the dissipation due to TLS depends on the electric field strength, it is expected that DRIE will result in a lower TLS dissipation rate at this interface.
+
 
 
 \section{Experimental set-up}
@@ -355,7 +361,7 @@ Unless stated otherwise, all measurements were performed with the fridge at base
 \section{Results and discussion}
 
 
-\subsection{Measurement of a resonator}
+\subsection{Resonator measurement}
 
 \begin{figure}[h]
     \centering
