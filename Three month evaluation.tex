@@ -16,9 +16,23 @@
 \usepackage{siunitx}
 \usepackage[space]{grffile}
 \usepackage{amsfonts}
+\sisetup{range-phrase = --, range-units = single}
 \DeclareSIUnit\dBm{dBm}
 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\figureinset}[3]{\llap{\parbox[b]{#2in}{#1\\\rule{0ex}{#3in}}}}
+
+% This command adds optionality of units at right side of equation
+\makeatletter
+\providecommand\add@text{}
+\newcommand\tagaddtext[1]{%
+  \gdef\add@text{#1\gdef\add@text{}}}%
+\renewcommand\tagform@[1]{%
+  \maketag@@@{\llap{\add@text\quad}(\ignorespaces#1\unskip\@@italiccorr)}%
+}
+\makeatother
+
+
 % \onehalfspacing
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
@@ -337,13 +351,13 @@ See \cite{DRIE} for more information.
     \begin{center}
         \includegraphics[width = .4\textwidth]{Figures/All_set4.png}
     \end{center}
-    \caption{Optical microscopy image of the sample measured in this report. The sample consists of ten $1/4 - \lambda$ resonators, with frequencies ranging between $1-11$\;\SI{}{\giga \hertz}, connected to a central feedline. The resonators are made using NbTiN on a Si substrate. The sample is treated with HMDS and DRIE.}
+    \caption{Optical microscopy image of the sample measured in this report. The sample consists of ten $1/4 - \lambda$ resonators, with frequencies ranging between \SIrange{1}{11}{\giga \hertz}, connected to a central feedline. The resonators are made using NbTiN on a Si substrate. The sample is treated with HMDS and DRIE.}
     \label{fig:set4}
 \end{wrapfigure}
 
 The fridge used in this experiment is a dilution refrigerator, made by Leiden Cryogenics. The refrigerator has a base temperature of \SI{\sim15}{\milli \kelvin}. An input signal was generated using a Rohde \& Schwarz ZVM vector network analyzer, connected to an Aeroflex 8310 step attenuator, which has an attenuation range of \SI{120}{\decibel}. The signal out of the fridge was measured using the same vector network analyzer.
 
-Using this set-up $1/4 - \lambda$ resonators, fabricated by Alessandro Bruno, were measured in a frequency range between $1-9$ \SI{}{\giga \hertz}. The sample is shown in Figure~\ref{fig:set4}. The resonators were made using NbTiN on a silicon substrate. The advantage of NbTiN is that the metal atoms are bound to nitrogen, thereby inhibiting bond formation with oxides. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
+Using this set-up $1/4 - \lambda$ resonators, fabricated by Alessandro Bruno, were measured in a frequency range between \SIrange{1}{9}{\giga \hertz}. The sample is shown in Figure~\ref{fig:set4}. The resonators were made using NbTiN on a silicon substrate. The advantage of NbTiN is that the metal atoms are bound to nitrogen, thereby inhibiting bond formation with oxides. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
 
 By driving a signal through the feedline, the resulting transmitted signal $S_{21}$ can be measured. At or close to the resonance frequency of a resonator, the resonator will either cause enhanced transmission ($1/2 \lambda$ resonator), or diminished transmission ($1/4 \lambda$ resonator).
 
@@ -353,7 +367,7 @@ Unless stated otherwise, all measurements were performed with the fridge at base
 
 
 \subsection{Measurement of a resonator}
-\newcommand{\figureinset}[3]{\llap{\parbox[b]{#2in}{#1\\\rule{0ex}{#3in}}}}
+
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.49\textwidth}
@@ -437,7 +451,7 @@ If one looks at the highest temperatures, it seems that the increase in quality 
     \caption{Internal quality factor versus temperature for the resonator with resonance frequency $f_0= $\SI{2.75}{\giga \hertz}. Quality factor was continuously measured as the sample was cooled down and warmed up four days later. Panel (a) shows the full temperature range up to the helium condensation cycle. Panel (b) shows a close-up of the region until \SI{900}{\milli \kelvin}.}
     \label{fig:temperature_tracking_Qi}
 \end{figure}
-
+`'
 To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic ... TODO. All temperatures were measured at an input power of \SI{-113}{\dBm}, corresponding to roughly $5 \times 10^5$ photons. In Figure \ref{fig:temperature_tracking_Qi} the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
 
 From Figure~\ref{fig:temperature_tracking_Qi} it seems that there is some hysteresis at high temperatures. This is likely due to the fact that the thermometer is at a different position in the fridge as the sample, and does not thermalize equally fast. There may therefore be a delay between the temperature of the thermometer, and the actual temperature of the sample.
@@ -454,7 +468,8 @@ From Figure~\ref{fig:temperature_tracking_Qi} it seems that there is some hyster
 
 Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The result from of tracking the resonance frequency of the resonator during cooldown and subsequent warm-up is shown in Figure~\ref{fig:temperature_tracking_f0}. As can be seen in both cases, the resonance frequency reaches a maximum around \SI{500}{\kelvin}.
 
-Between the cooldown and warm-up the resonance frequency seems to have shifted by roughly \SI{500}{Hz}. As the sample was kept at \SI{15}{\milli \kelvin}, it is unlikely that this decrease in resonance frequency is due to degradation of the sample. One possible explanation is that this change in resonance frequency is due to phase noise, which is known to shift the resonance frequency of the resonator. Further measurements are, however, required to determine if this is the case.
+B
+e++++++++++tween the cooldown and warm-up the resonance frequency seems to have shifted by roughly \SI{500}{Hz}. As the sample was kept at \SI{15}{\milli \kelvin}, it is unlikely that this decrease in resonance frequency is due to degradation of the sample. One possible explanation is that this change in resonance frequency is due to phase noise, which is known to shift the resonance frequency of the resonator. Further measurements are, however, required to determine if this is the case.
 
 The decrease in resonance frequency at higher temperatures can be explained by the presence of quasiparticles, which increase the kinetic inductance \cite[p.~91]{Geerlings}. The resonance frequency is inversely proportional to the square root of the total conductance \cite{barends2008contribution}, and so an increase in kinetic inductance leads to a decrease in resonance frequency. For measurements done by Barends et al. \cite{barends2008contribution}, the change in resonance frequency due to changes in the kinetic inductance seem to roughly correspond with the decrease in center frequency measured in Figure~\ref{fig:temperature_tracking_f0}.
 
@@ -531,24 +546,37 @@ The next step is to perform the same treatments (HMDS and DRIE) on transmon qubi
 
 \chapter{Noise}
 % TODO: p~256 of electric noise book (deals with amplifier circuits)
-% TODO better definition of noise
 
 % TODO: Left to find out:
 % Is the power to V_in conversion correct?
 
-When performing measurements one is faced with the reality that no component is ideal. When a signal passes through the different parts of a set-up, noise is constantly being added. Noise is the term given for all the random fluctuations that degrade the signal. These fluctuations are the cumulative result of several noise source contributions.
+When performing measurements one is faced with the reality that no component is ideal. When a signal passes through the different parts of a set-up, noise is constantly being added. Noise is the term given for all the random fluctuations that are added to the signal. These fluctuations are the cumulative result of several noise source contributions.
 
-Thermal noise is one of the most common sources of noise. It is the result of the random thermal fluctuations of electrons. It is an example of frequency-independent noise, also known as white noise. Noise sources can also be frequency-dependent, such as TLS, as discussed in chapter~\ref{chapter:Resonators}. This is an example of $1/f$-noise: the amount of noise added increases with decreasing frequency. In fact, truly frequency-independent noise does not exist, as even white noise has been observed to decrease at extremely high frequencies ($\sim10^{15}$\;\SI{}{\hertz}). At these frequencies a quantum correction needs to be added \cite[p.~50]{vasilescu2006electronic}.
+Thermal noise is one of the most common sources of noise. It is the result of the random thermal fluctuations of electrons. It is an example of frequency-independent noise, also known as white noise. Noise sources can also be frequency-dependent, such as TLS, as discussed in Chapter~\ref{chapter:Resonators}. This is an example of $1/f$-noise: the amount of noise added increases with decreasing frequency. In fact, truly frequency-independent noise does not exist, as even white noise has been observed to decrease at extremely high frequencies (\SI{\sim e15}{\hertz}). At these frequencies a quantum correction needs to be added \cite[p.~50]{vasilescu2006electronic}.
 
-When performing measurements one important question to ask is how much noise is being contributed to the signal. In this chapter a model is presented for the general set-up used for measuring superconducting resonators and qubits. Using this model it is possible to characterize the amount of noise by determining its associated noise temperature. Finally, this model is applied to the set-up used to characterize the resonators presented in chapter~\ref{chapter:Resonators}
-% TODO: chapter with captal C?
+When performing measurements one important question to ask is how much noise is being contributed to the signal. In this chapter a model is presented for the general set-up used for measuring superconducting resonators and qubits. Using this model it is possible to characterize the amount of noise by determining its associated noise temperature. Finally, this model is applied to the set-up used to characterize the resonators presented in Chapter~\ref{chapter:Resonators}.
 
 \section{Characterizing noise}
 
 \subsection{Circuit representations}
-% TODO: schematic of norton and thevenin pictures?
-% TODO change first sentence
-There are two ways in which we can represent noise in a circuit: The Th\'evenin representation, and the Norton representation. In the Th\'evenin representation we can model the system as a voltage source, and the noise added to the system is a noise voltage source connected in series. In the Norton representation the system is a current source and the noise added is a noise current source connected in parallel to the current source. These two representations are identical and can be converted to each other. In this section we will adopt the Thev\'enin representation, and so the signal will be a voltage source combined in series with a noise voltage source.
+
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{.43\textwidth}
+        \includegraphics[width=\textwidth]{Figures/thevenin.png}%\figureinset{(a)}{2.55}{1.5}
+        \caption{Th\'evenin representation}
+        \label{fig:thevenin}
+    \end{subfigure}
+    \begin{subfigure}[b]{.49\textwidth}
+        \includegraphics[width=\textwidth]{Figures/norton.png}%\figureinset{(b)}{2.55}{1.5}
+        \caption{Norton representation}
+        \label{fig:norton}
+    \end{subfigure}
+    \caption{Two equivalent representations of a system containing noise. Panel~\textbf{(a)} shows the Th\'evenin representation, in which a noiseless voltage source is connected in series with a noise voltage source. Panel~\textbf{(b)} shows the Norton representation, in which a noiseless current source is connected in parallel with a noise current source.}
+\end{figure}
+
+There are two circuit representations in which we can depict a system with a noise contribution: The Th\'evenin representation, and the Norton representation. In the Th\'evenin representation we can model the system as a voltage source, and the noise added to the system is a noise voltage source connected in series. In the Norton representation the system is a current source and the noise added is a noise current source connected in parallel to the current source. These two representations are identical and can be converted to each other. In this section we will adopt the Thev\'enin representation, and so the signal will be a voltage source combined in series with a noise voltage source.
 
 Assuming the signal to be at a fixed frequency $\omega$ and amplitude $A$, the combined voltage $v(t)$ is then given by:
 
@@ -569,15 +597,24 @@ One way of quantifying the noise of the system is through the noise power spectr
 % TODO Units [V^2/Hz]
 \begin{equation}
     S = \frac{\vsq}{\Delta f}
+    \tagaddtext{[\si[per-mode=symbol]{\volt \squared \per \hertz}]}
     \label{eqn:noise spectral density definition}
 \end{equation}
 
 In this equation $\Delta f$ is the noise bandwidth. This is the bandwidth over which the noise is measured.
 
-
+\newpage
 \section{The model}
 
-We can model our set-up by as being a succession of four elements:
+\begin{figure}
+    \centering
+    \includegraphics[width=.8\textwidth]{Figures/Noise model.png}
+    \caption{Schematic representation of the measurement set-up including a noise source.}
+    \label{fig:noise model}
+\end{figure}
+
+
+As shown in the schematic in Figure~\ref{fig:noise model}, we can model our set-up as a combination of four elements:
 
 \begin{enumerate}
     \item A noise source.
@@ -683,28 +720,27 @@ Note that the factors $1/4$ are due to the amplitude being lowered by a factor o
 
 \section{Results}
 \label{sec:noise_results}
-
 \begin{figure}[h]
     \centering
     \includegraphics[width = .7 \linewidth]{Figures/noise_temperature_versus_power.png}
-    \caption{Noise temperature versus frequency. The noise temperature has been calculated for $160$ frequencies in the range $1-9$ \SI{}{\giga \hertz}. For each frequency $2001$ points were measured, from which the signal, noise, SNR, and noise temperature was determined. Measurements were performed at an input power of \SI{-113}{\dBm} and an IF bandwidth of $f_\text{c} = $\SI{300}{\hertz}.}
+    \caption{Noise temperature versus frequency. The noise temperature has been calculated for $160$ frequencies in the range \SIrange{1}{9}{\giga \hertz}. For each frequency $2001$ points were measured, from which the signal, noise, SNR, and noise temperature was determined. Measurements were performed at an input power of \SI{-113}{\dBm} and an IF bandwidth of $f_\text{c} = $\SI{300}{\hertz}.}
     \label{fig:Noise temperature}
 \end{figure}
 
-Using the Rhode \& Schwarz ZVM vector network analyzer, The transmission has been measured for $160$ equidistant frequencies in the range $1-9$ \SI{}{\giga \hertz}. For each frequency a total of $2001$ points was measured with an IF bandwidth $\Delta f = $ \SI{300}{\hertz}.From these measurements the signal-to-noise ratio has been determined for each frequency. With knowledge of the SNR, the noise temperature has then been determined as a function of frequency using Equation~\ref{eqn:noise temperature} . The result is shown in Figure~\ref{fig:Noise temperature}.
+Using the Rhode \& Schwarz ZVM vector network analyzer, The transmission has been measured for $160$ equidistant frequencies in the range \SIrange{1}{9}{\giga \hertz}. For each frequency a total of $2001$ points was measured with an IF bandwidth $\Delta f = $ \SI{300}{\hertz}.From these measurements the signal-to-noise ratio has been determined for each frequency. With knowledge of the SNR, the noise temperature has then been determined as a function of frequency using Equation~\ref{eqn:noise temperature} . The result is shown in Figure~\ref{fig:Noise temperature}.
 
-From Figure~\ref{fig:Noise temperature} it is clear that the noise temperature is highly temperature-dependent. In the frequency range $4-8$ \SI{}{\giga \hertz} the noise temperature is quite low, never reaching above \SI{10}{\kelvin}. This is exactly the bandwidth of the cryogenic low-noise amplifier by Low Noise Factory, which is the first amplifier in the amplification chain. From the specifications of the amplifier, the noise temperature of the amplifier has been calculated at an ambient temperature of \SI{8}{\kelvin}, and equals roughly \SI{4}{\kelvin} for the entire bandwidth. Comparing the amplifier specifications with Figure~\ref{fig:Noise temperature}, it is likely that in the frequency range $4-8$ \SI{}{\giga \hertz} the first amplifier is the component contributing most to the total noise temperature.
+From Figure~\ref{fig:Noise temperature} it is clear that the noise temperature is highly temperature-dependent. In the frequency range \SIrange{4}{8}{\giga \hertz} the noise temperature is quite low, never reaching above \SI{10}{\kelvin}. This is exactly the bandwidth of the cryogenic low-noise amplifier by Low Noise Factory, which is the first amplifier in the amplification chain. From the specifications of the amplifier, the noise temperature of the amplifier has been calculated at an ambient temperature of \SI{8}{\kelvin}, and equals roughly \SI{4}{\kelvin} for the entire bandwidth. Comparing the amplifier specifications with Figure~\ref{fig:Noise temperature}, it is likely that in the frequency range \SIrange{4}{8}{\giga \hertz} the first amplifier is the component contributing most to the total noise temperature.
 
-Outside the $4-8$ \SI{}{\giga \hertz} frequency band, however, the noise temperature rapidly increases. This is partly due to the frequency lying outside of the bandwidth of the amplifier, in which case the amplification will be lower. However, this is not an adequate explanation for the fact that the noise temperature increases to several hundred thousand Kelvin. The reason for this unrealistic noise temperature is that in our model we did not take into account the noise added by components after the amplifier. While the gain of the amplifier decreases outside its bandwidth, the components after the amplification will still add the same amount of noise. When the gain decreases by a significant amount, the relative contribution of these post-amplification noise sources will increase. Furthermore the assumption that the noise spectrum is white is no longer correct at low frequencies, where $1/f$ noise starts to contribute.
+Outside the \SIrange{4}{8}{\giga \hertz} frequency band, however, the noise temperature rapidly increases. This is partly due to the frequency lying outside of the bandwidth of the amplifier, in which case the amplification will be lower. However, this is not an adequate explanation for the fact that the noise temperature increases to several hundred thousand Kelvin. The reason for this unrealistic noise temperature is that in our model we did not take into account the noise added by components after the amplifier. While the gain of the amplifier decreases outside its bandwidth, the components after the amplification will still add the same amount of noise. When the gain decreases by a significant amount, the relative contribution of these post-amplification noise sources will increase. Furthermore the assumption that the noise spectrum is white is no longer correct at low frequencies, where $1/f$ noise starts to contribute.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width = .6\linewidth]{Figures/noise_temperature_versus_power_detailed.png}
-    \caption{Detailed scan of noise temperature versus frequency in the range $2.6 - 2.9$ \SI{}{\giga \hertz}. The resonator with $f_0 = $\SI{2.75}{\giga \hertz} (red dot) seems to reside at a local minimum of the noise temperature.}
+    \caption{Detailed scan of noise temperature versus frequency in the range \SIrange{2.6}{2.9}{\giga \hertz}. The resonator with $f_0 = $\SI{2.75}{\giga \hertz} (red dot) seems to reside at a local minimum of the noise temperature.}
     \label{fig:noise temperature 2GHz}
 \end{figure}
 
-From Figure~\ref{fig:Noise temperature} it can be seen that the noise temperature can vary by a large amount between consecutive points. To determine whether this variation is due to a large uncertainty, or due to the noise temperature actually fluctuating strongly with varying frequency, a more detailed scan has been performed in the frequency region $2.6 - 2.9$ \SI{}{\giga \hertz}, in which one resonator has a resonance frequency. The result is shown in Figure~\ref{fig:noise temperature 2GHz}. As the curve of the detailed scan follows the curve of the coarse scan pretty closely, it can be concluded that the noise temperature of the system in fact fluctuates quite strongly with varying frequency.
+From Figure~\ref{fig:Noise temperature} it can be seen that the noise temperature can vary by a large amount between consecutive points. To determine whether this variation is due to a large uncertainty, or due to the noise temperature actually fluctuating strongly with varying frequency, a more detailed scan has been performed in the frequency region \SIrange{2.6}{2.9}{\giga \hertz}, in which one resonator has a resonance frequency. The result is shown in Figure~\ref{fig:noise temperature 2GHz}. As the curve of the detailed scan follows the curve of the coarse scan pretty closely, it can be concluded that the noise temperature of the system in fact fluctuates quite strongly with varying frequency.
 
 Another point of interest is that the resonance frequency of the resonator lies near the local minimum of the noise temperature in that region. This is quite a stroke of luck, as a slightly higher or lower frequency would have resulted in a much higher noise temperature.
 

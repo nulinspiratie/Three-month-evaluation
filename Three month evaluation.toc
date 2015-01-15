@@ -23,11 +23,11 @@
 \contentsline {section}{\numberline {2.1}Characterizing noise}{15}
 \contentsline {subsection}{\numberline {2.1.1}Circuit representations}{15}
 \contentsline {subsection}{\numberline {2.1.2}Noise power spectral density}{16}
-\contentsline {section}{\numberline {2.2}The model}{16}
-\contentsline {subsection}{\numberline {2.2.1}Noise source}{16}
-\contentsline {subsection}{\numberline {2.2.2}Amplification}{17}
+\contentsline {section}{\numberline {2.2}The model}{17}
+\contentsline {subsection}{\numberline {2.2.1}Noise source}{17}
+\contentsline {subsection}{\numberline {2.2.2}Amplification}{18}
 \contentsline {subsection}{\numberline {2.2.3}Downconversion}{18}
-\contentsline {subsection}{\numberline {2.2.4}Low-pass filtering}{18}
+\contentsline {subsection}{\numberline {2.2.4}Low-pass filtering}{19}
 \contentsline {section}{\numberline {2.3}Noise temperature}{19}
-\contentsline {section}{\numberline {2.4}Results}{19}
-\contentsline {section}{\numberline {2.5}Conclusion and future work}{20}
+\contentsline {section}{\numberline {2.4}Results}{20}
+\contentsline {section}{\numberline {2.5}Conclusion and future work}{21}
