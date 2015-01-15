@@ -240,42 +240,37 @@ One loss channel was already discussed in section~\ref{sec:Quality factor}, name
 \label{sec:TLS}
 % TODO mention that dissipation rate depends on electric field strength
 
-Two-level systems (TLS) are systems which can be in a ground state or an excited state. In some cases they can be useful. In fact a qubit itself is an example of a TLS. In other cases, however, TLS can also be a source of dissipation. Study suggests that in cQED, most TLS reside in a thin oxide layer at the metal-substrate interface and the substrate-air interface \cite{wenner2011surface}.
+Two-level systems (TLS) are systems which can be in a ground state or an excited state. In some cases they can be useful. In fact a qubit itself is an example of a TLS. In other cases, however, TLS can also be a source of dissipation such as in the case of dielectric loss \cite{martinis2014ucsb}. Study suggests that in cQED, most TLS reside in a thin oxide layer at the metal-substrate interface and the substrate-air interface \cite{wenner2011surface}.
 
-Resonators are surrounded by a large quantity of TLS, each of which has its own resonance frequency, depending on its energy landscape. When the resonance frequency of a TLS is close to that of the resonator, it can absorb a photon from the resonator, upon which it tunnels to an excited meta-stable state. TLS have a finite lifetime in their excited state, after which they decay back to their ground state.
+Resonators are surrounded by a large quantity of TLS, each of which has its own resonance frequency, depending on its energy landscape. When the resonance frequency of a TLS is close to that of the resonator, it can absorb a photon from the resonator, upon which it tunnels to an excited meta-stable state. TLS have a finite lifetime in their excited state, after which they decay back to their ground state. The rate at which a TLS absorbs a photon depends on the electric field surrounding the TLS.
 
-In the low power, low temperature regime, TLS reside mostly in their ground state, and only occasionally tunnel to the excited state, upon absorption of a photon. It is theorized that, in this regime, TLS are the main source of dissipation for resonators \cite{gao2008experimental}. At higher powers and/or temperatures, TLS will tunnel to an excited state at a higher rate. Due to their finite lifetime they become saturated at a certain point. Since the quality factor depends on the ratio between energy stored and energy dissipated, when the TLS are saturated the amount of dissipation is limited, while the energy stored can still increase. Therefore, in the low power, low temperature regime, increasing either of the two parameters results in an increase in quality factor. At a certain point, however, further increasing either of the two will not improve the quality factor. This is due to other effects dominating in these regimes.
+In the low power, low temperature regime, TLS reside mostly in their ground state, and only occasionally tunnel to the excited state, upon absorption of a photon. It is theorized that, in this regime, TLS are the main source of dissipation for resonators \cite{gao2008experimental}. At higher powers and/or temperatures, TLS will tunnel to an excited state at a higher rate. Due to their finite lifetime they become saturated at a certain point. Since the quality factor depends on the ratio between energy stored and energy dissipated, when the TLS are saturated the amount of dissipation is limited, while the energy stored can still increase. Therefore, in the low power, low temperature regime, increasing either of the two parameters results in an increase in quality factor. At a certain point, however, further increasing either of the two will not improve the quality factor. This is due to other effects dominating the dissipation rate in these regimes.
 
-\begin{itemize}
-    \item To our knowledge, dielectric loss at low temperature
-        arises from the presence of two-level states (TLS) formed
-        by random bonds that tunnel between two sites. \cite{martinis2014ucsb}
-    \item Mostly reside at surface \cite{gao2008experimental}
-    \item 1/f noise \cite{burnett2013evidence}
-    \item Dielectric materials (Table \cite{martinis2014ucsb})
-\end{itemize}
+% \begin{itemize}
+%     \item 1/f noise \cite{burnett2013evidence}
+%     \item Dielectric materials (Table \cite{martinis2014ucsb})
+% \end{itemize}
 
 
 
 \subsubsection{Quasiparticles}
 
-Another source of dissipation for resonators is due to quasiparticles being present in the superconducting layer. When a Cooper-pair is broken up, Bogoliubov quasiparticles are formed \cite[p.~16]{Barends}. These quasiparticles can have either electron-like or hole-like properties. They are a source of dissipation for resonators, since they are non-superconducting and therefore cause the surface impedance to be slightly resistive \cite[p.~18]{Mazin}.
+Another source of dissipation for resonators is due to quasiparticles being present in the superconducting layer. When a Cooper-pair is broken up, Bogoliubov quasiparticles are formed \cite[p.~16]{Barends}. Once formed, the quasiparticles have a finite lifetime, depending on the temperature of the system. These quasiparticles can have either electron-like or hole-like properties. They are a source of dissipation for resonators, since they are non-superconducting and therefore cause the surface impedance to be slightly resistive \cite[p.~18]{Mazin}.
 
-The breaking up of Cooper-pairs is due to excitations. These excitations can either be thermal, or due to photon absorption. Therefore an increase in temperature or an increase in photon density will result in a higher density of quasiparticles.
+The breaking up of Cooper-pairs is due to excitations. These excitations can either be thermal, or due to photon absorption. Therefore an increase in temperature or an increase in photon density will result in a higher density of quasiparticles. The quasiparticle density increases exponentially with increasing temperature \cite[p.~44]{Mazin}.
 
-\begin{itemize}
-    \item Quasiparticle excitation energy $E = \xi^2 + \Delta ^2$,
-        where $\xi$ is the energy of the single particle in the normal state relative to the Fermi energy \cite{Barends}
-    \item Increases with increasing frequency
-    \item Decreases exponentially as the temperature decreases \cite[p.~19?]{Mazin}
-    \item Quasiparticles are created through thermal excitation, but can also be excited by photons with $h \nu > 2 \Delta$\cite{Gao}
-    \item Quasiparticles change the surface impedance of resonators, which can be measured.
-        This technique is used to create MKID detectors \cite{Gao}
-    \item "[Surface impedance] change is caused by quasiparticles blocking
-        the Cooper pairs from occupying some of the electron states (through the exclusion principle), which
-        modifies the effective pairing energy and reduces the density of pairs."\cite[p.~3]{Mazin}
-    \item A lot of information in thesis by Lutchyn \cite{Lutchyn}
-\end{itemize}
+% \begin{itemize}
+%     \item Quasiparticle excitation energy $E = \xi^2 + \Delta ^2$,
+%         where $\xi$ is the energy of the single particle in the normal state relative to the Fermi energy \cite{Barends}
+%     \item Increases with increasing frequency
+%     \item Quasiparticles are created through thermal excitation, but can also be excited by photons with $h \nu > 2 \Delta$\cite{Gao}
+%     \item Quasiparticles change the surface impedance of resonators, which can be measured.
+%         This technique is used to create MKID detectors \cite{Gao}
+%     \item "[Surface impedance] change is caused by quasiparticles blocking
+%         the Cooper pairs from occupying some of the electron states (through the exclusion principle), which
+%         modifies the effective pairing energy and reduces the density of pairs."\cite[p.~3]{Mazin}
+%     \item A lot of information in thesis by Lutchyn \cite{Lutchyn}
+% \end{itemize}
 
 
 
@@ -427,7 +422,6 @@ If one looks at the highest temperatures, it seems that the increase in quality 
 \subsection{Temperature tracking}
 \label{resonator:results:temperature_tracking}
 % TODO
-% Find out the name of the process that occurs at 1K.
 % Make stronger statement supporting claim that quasiparticles are dominant source at higher temperatures
 % Maybe also mention the rapid shift of resonator frequency during beginning stage of cooldown
 
@@ -445,11 +439,9 @@ If one looks at the highest temperatures, it seems that the increase in quality 
     \label{fig:temperature_tracking_Qi}
 \end{figure}
 `'
-To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic ... TODO. All temperatures were measured at an input power of \SI{-113}{\dBm}, corresponding to roughly $5 \times 10^5$ photons. In Figure \ref{fig:temperature_tracking_Qi} the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
+To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic helium condensation/evaporation process. All temperatures were measured at an input power of \SI{-113}{\dBm}, corresponding to roughly $5 \times 10^5$ photons. In Figure \ref{fig:temperature_tracking_Qi} the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
 
 From Figure~\ref{fig:temperature_tracking_Qi} it seems that there is some hysteresis at high temperatures. This is likely due to the fact that the thermometer is at a different position in the fridge as the sample, and does not thermalize equally fast. There may therefore be a delay between the temperature of the thermometer, and the actual temperature of the sample.
-
-% ADD figure of resonance frequency
 
 \begin{figure}[h]
     \centering
@@ -461,8 +453,7 @@ From Figure~\ref{fig:temperature_tracking_Qi} it seems that there is some hyster
 
 Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The result from of tracking the resonance frequency of the resonator during cooldown and subsequent warm-up is shown in Figure~\ref{fig:temperature_tracking_f0}. As can be seen in both cases, the resonance frequency reaches a maximum around \SI{500}{\kelvin}.
 
-B
-e++++++++++tween the cooldown and warm-up the resonance frequency seems to have shifted by roughly \SI{500}{Hz}. As the sample was kept at \SI{15}{\milli \kelvin}, it is unlikely that this decrease in resonance frequency is due to degradation of the sample. One possible explanation is that this change in resonance frequency is due to phase noise, which is known to shift the resonance frequency of the resonator. Further measurements are, however, required to determine if this is the case.
+Between the cooldown and warm-up the resonance frequency seems to have shifted by roughly \SI{500}{Hz}. As the sample was kept at \SI{15}{\milli \kelvin}, it is unlikely that this decrease in resonance frequency is due to degradation of the sample. One possible explanation is that this change in resonance frequency is due to phase noise, which is known to shift the resonance frequency of the resonator. Further measurements are, however, required to determine if this is the case.
 
 The decrease in resonance frequency at higher temperatures can be explained by the presence of quasiparticles, which increase the kinetic inductance \cite[p.~91]{Geerlings}. The resonance frequency is inversely proportional to the square root of the total conductance \cite{barends2008contribution}, and so an increase in kinetic inductance leads to a decrease in resonance frequency. For measurements done by Barends et al. \cite{barends2008contribution}, the change in resonance frequency due to changes in the kinetic inductance seem to roughly correspond with the decrease in center frequency measured in Figure~\ref{fig:temperature_tracking_f0}.
 

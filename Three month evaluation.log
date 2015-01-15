@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.12.23)  15 JAN 2015 23:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.12.23)  15 JAN 2015 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1073,49 +1073,53 @@ LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <14.4> not available
 File: Figures/All_set4.png Graphic file (type png)
 
 <use Figures/All_set4.png>
-Package pdftex.def Info: Figures/All_set4.png used on input line 349.
+Package pdftex.def Info: Figures/All_set4.png used on input line 346.
 (pdftex.def)             Requested size: 181.18439pt x 77.76776pt.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 351.
+(Font)              scaled to size 10.07397pt on input line 348.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 351.
+(Font)              scaled to size 7.63599pt on input line 348.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 351.
+(Font)              scaled to size 5.51999pt on input line 348.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 351.
+(Font)              scaled to size 10.07397pt on input line 348.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 351.
+(Font)              scaled to size 7.63599pt on input line 348.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 351.
- [8 <./Figures/All_set4.png>]
-<Figures/resonator_amplitude.png, id=44, 433.62pt x 289.08pt>
+(Font)              scaled to size 5.51999pt on input line 348.
+
+<Figures/resonator_amplitude.png, id=40, 433.62pt x 289.08pt>
 File: Figures/resonator_amplitude.png Graphic file (type png)
 
 <use Figures/resonator_amplitude.png>
-Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 372
+Package pdftex.def Info: Figures/resonator_amplitude.png used on input line 369
 .
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
-<Figures/resonator_complex.png, id=45, 433.62pt x 289.08pt>
+<Figures/resonator_complex.png, id=41, 433.62pt x 289.08pt>
 File: Figures/resonator_complex.png Graphic file (type png)
 
 <use Figures/resonator_complex.png>
-Package pdftex.def Info: Figures/resonator_complex.png used on input line 376.
+Package pdftex.def Info: Figures/resonator_complex.png used on input line 373.
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
 
-Package caption Warning: \label without proper \caption on input line 371.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package caption Warning: \label without proper \caption on input line 368.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:resonator_amplitude' on page 9 undefined on input
- line 382.
+LaTeX Warning: Reference `fig:resonator_amplitude' on page 8 undefined on input
+ line 379.
 
+[8 <./Figures/All_set4.png>]
 <Figures/Qi_vs_n_photon.png, id=46, 433.62pt x 289.08pt>
 File: Figures/Qi_vs_n_photon.png Graphic file (type png)
 
 <use Figures/Qi_vs_n_photon.png>
-Package pdftex.def Info: Figures/Qi_vs_n_photon.png used on input line 392.
+Package pdftex.def Info: Figures/Qi_vs_n_photon.png used on input line 389.
 (pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
  [9 <./Figures/resonator_amplitude.png> <./Figures/resonator_complex.png>]
 <Figures/Qi_vs_n_photon_temperature_dependence.png, id=52, 433.62pt x 289.08pt>
@@ -1123,7 +1127,7 @@ File: Figures/Qi_vs_n_photon_temperature_dependence.png Graphic file (type png)
 
 <use Figures/Qi_vs_n_photon_temperature_dependence.png>
 Package pdftex.def Info: Figures/Qi_vs_n_photon_temperature_dependence.png used
- on input line 414.
+ on input line 411.
 (pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
  [10 <./Figures/Qi_vs_n_photon.png>]
 <Figures/Temperature tracking drop - Qi vs T.png, id=57, 433.62pt x 289.08pt>
@@ -1131,7 +1135,7 @@ File: Figures/Temperature tracking drop - Qi vs T.png Graphic file (type png)
 
 <use Figures/Temperature tracking drop - Qi vs T.png>
 Package pdftex.def Info: Figures/Temperature tracking drop - Qi vs T.png used o
-n input line 440.
+n input line 437.
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
 
 <Figures/Temperature tracking - no drop - Qi vs T.png, id=58, 433.62pt x 289.08
@@ -1140,48 +1144,52 @@ File: Figures/Temperature tracking - no drop - Qi vs T.png Graphic file (type p
 ng)
  <use Figures/Temperature tracking - no drop - Qi vs T.png>
 Package pdftex.def Info: Figures/Temperature tracking - no drop - Qi vs T.png u
-sed on input line 444.
+sed on input line 441.
 (pdftex.def)             Requested size: 221.95676pt x 147.97139pt.
- [11 <./Figures/Qi_vs_n_photon_temperature_dependence.png>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11 <./Figures/Qi_vs_n_photon_temperature_dependence.png>]
 <Figures/Temperature tracking - f0 vs T.png, id=63, 505.89pt x 361.35pt>
 File: Figures/Temperature tracking - f0 vs T.png Graphic file (type png)
 
 <use Figures/Temperature tracking - f0 vs T.png>
 Package pdftex.def Info: Figures/Temperature tracking - f0 vs T.png used on inp
-ut line 458.
+ut line 455.
+(pdftex.def)             Requested size: 317.07614pt x 226.4883pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+<Figures/Temperature increase tracking - f0 vs T with fit.png, id=64, 505.89pt 
+x 361.35pt>
+File: Figures/Temperature increase tracking - f0 vs T with fit.png Graphic file
+ (type png)
+ <use Figures/Temperature increase tracking - f0 vs T with fit.png>
+Package pdftex.def Info: Figures/Temperature increase tracking - f0 vs T with f
+it.png used on input line 470.
 (pdftex.def)             Requested size: 317.07614pt x 226.4883pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12 <./Figures/Temperature tracking drop - Qi vs T.png> <./Figures/Temperature 
-tracking - no drop - Qi vs T.png>]
-<Figures/Temperature increase tracking - f0 vs T with fit.png, id=70, 505.89pt 
-x 361.35pt>
-File: Figures/Temperature increase tracking - f0 vs T with fit.png Graphic file
- (type png)
- <use Figures/Temperature increase tracking - f0 vs T with fit.png>
-Package pdftex.def Info: Figures/Temperature increase tracking - f0 vs T with f
-it.png used on input line 473.
-(pdftex.def)             Requested size: 317.07614pt x 226.4883pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13 <./Figures/Temperature tracking - f0 vs T.png>] [14 <./Figures/Temperature 
-increase tracking - f0 vs T with fit.png>]
+tracking - no drop - Qi vs T.png>] [13 <./Figures/Temperature tracking - f0 vs 
+T.png>] [14 <./Figures/Temperature increase tracking - f0 vs T with fit.png>]
 Chapter 2.
 <Figures/thevenin.png, id=79, 495.65175pt x 345.08925pt>
 File: Figures/thevenin.png Graphic file (type png)
 
 <use Figures/thevenin.png>
-Package pdftex.def Info: Figures/thevenin.png used on input line 562.
+Package pdftex.def Info: Figures/thevenin.png used on input line 559.
 (pdftex.def)             Requested size: 194.77287pt x 135.60579pt.
 
 <Figures/norton.png, id=80, 552.8655pt x 280.6485pt>
 File: Figures/norton.png Graphic file (type png)
  <use Figures/norton.png>
-Package pdftex.def Info: Figures/norton.png used on input line 567.
+Package pdftex.def Info: Figures/norton.png used on input line 564.
 (pdftex.def)             Requested size: 221.95676pt x 112.6685pt.
 
 
@@ -1194,7 +1202,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Figures/Noise model.png Graphic file (type png)
 
 <use Figures/Noise model.png>
-Package pdftex.def Info: Figures/Noise model.png used on input line 605.
+Package pdftex.def Info: Figures/Noise model.png used on input line 602.
 (pdftex.def)             Requested size: 362.37569pt x 136.1313pt.
  [17 <./Figures/Noise model.png>] [18] [19]
 <Figures/noise_temperature_versus_power.png, id=99, 433.62pt x 289.08pt>
@@ -1202,7 +1210,7 @@ File: Figures/noise_temperature_versus_power.png Graphic file (type png)
 
 <use Figures/noise_temperature_versus_power.png>
 Package pdftex.def Info: Figures/noise_temperature_versus_power.png used on inp
-ut line 719.
+ut line 716.
 (pdftex.def)             Requested size: 317.07614pt x 211.39275pt.
  [20 <./Figures/noise_temperature_versus_power.png>]
 <Figures/noise_temperature_versus_power_detailed.png, id=104, 433.62pt x 289.08
@@ -1211,7 +1219,7 @@ File: Figures/noise_temperature_versus_power_detailed.png Graphic file (type pn
 g)
  <use Figures/noise_temperature_versus_power_detailed.png>
 Package pdftex.def Info: Figures/noise_temperature_versus_power_detailed.png us
-ed on input line 732.
+ed on input line 729.
 (pdftex.def)             Requested size: 271.7835pt x 181.19945pt.
  [21 <./Figures/noise_temperature_versus_power_detailed.png>] (./Three month ev
 aluation.bbl
@@ -1225,11 +1233,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16139 strings out of 493109
- 315230 string characters out of 6138586
- 452145 words of memory out of 5000000
- 19026 multiletter control sequences out of 15000+600000
- 192715 words of font info for 404 fonts, out of 8000000 for 9000
+ 16130 strings out of 493109
+ 315132 string characters out of 6138586
+ 453140 words of memory out of 5000000
+ 19025 multiletter control sequences out of 15000+600000
+ 192049 words of font info for 398 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,13n,54p,10428b,1104s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2014/texm
@@ -1240,7 +1248,7 @@ c/fourier/fourier-ms.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/adobe/utopia/putb8
 a.pfb><c:/texlive/2014/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb><c:/texli
 ve/2014/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on "Three month evaluation.pdf" (25 pages, 2387597 bytes).
+Output written on "Three month evaluation.pdf" (25 pages, 2386232 bytes).
 PDF statistics:
  147 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
