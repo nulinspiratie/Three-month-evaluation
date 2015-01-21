@@ -16,6 +16,7 @@
 \usepackage{siunitx}
 \usepackage[space]{grffile}
 \usepackage{amsfonts}
+
 \sisetup{range-phrase = --, range-units = single}
 \DeclareSIUnit\dBm{dBm}
 
@@ -177,7 +178,11 @@ One end is usually capacitively coupled to a feedline and has an open end, while
 % Include the fact that participation ratios are needed for adding quality factors of loss channels
 % Explain why one wants a quality factor that is as high as possible
 % Find place for equation FWHM
-One important property of a resonator is its quality factor. Generally speaking, the quality factor of a resonator determines the ratio between energy stored in a resonator and the energy leaking away from the resonator. For cQED resonators this corresponds to the rate at which photons dissipate from the resonator. A high quality factor corresponds to a low dissipation rate.
+The quality of a resonator can be quantified through its quality factor. Generally speaking, the quality factor of a resonator determines the ratio between energy stored in a resonator and the energy leaking away from the resonator. For cQED resonators this corresponds to the rate at which photons dissipate from the resonator. A high quality factor corresponds to a low dissipation rate.
+
+One reason why a high quality factor is important in the context of cQED is that a qubit can be coupled to a resonator. This qubit therefore experiences dissipation due to its coupling with the resonator. The amount of dissipation
+
+If t
 
 The quality factor can also be defined as \cite[p.~23]{Mazin}:
 
@@ -293,11 +298,15 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 
 \subsubsection{Vortices}
 
-Another
+When a sample is cooled down to a superconducting state there may still be a small, but nonnegligible magnetic field present. The presence of a magnetic field can cause vortices to appear in superconducting materials. These vortices have a non-superconducting core. Current passing through superconductive materical exerts a Lorentz force on vortices. For a resonator being driven on resonance, this AC current results in the vortices near the resonator experiencing a dissipative oscillatory motion \cite{plourde2009microwave}.
+
+It is interesting to note that the presence of vortices does not necessarily lead to a lower internal quality factor. The influence of a vortex on a resonator depends on its location. As reported by Nsanzineza et al.~\cite{nsanzineza2014trapping}, a vortex close to a current antinode of a resonator, can result in a significant loss of the quality factor. A vortex close to a current node, however, may even increase the quality factor of the resonator. They attribute this increase in quality factor to quasiparticles, which would otherwise lead to dissipation, being trapped in the vortex.
+
 
 \begin{itemize}
-    \item Trapped vortices cause parts to be non-superconducting
-    \item Combatting trapped vortices with grid-like structure
+    \item Abrikosov vortices
+    \item worse for thin films?
+    \item how does movement affect loss?
 \end{itemize}
 
 
@@ -327,6 +336,12 @@ Another technique applied to the resonators studied in this report is deep-react
 \end{enumerate}
 
 Using DRIE, nearly vertical sidewalls can be created for the substrate. The result is that the substate-air interface is removed from the regions between the CPW tracks, which are the regions where the electric field strength is high. As the dissipation due to TLS depends on the electric field strength, it is expected that DRIE will result in a lower TLS dissipation rate at this interface.
+
+\subsubsection{Magnetic shielding and vortex trapping}
+
+Vortices are created when a magnetic field is present. One method to lower the amount of vortices is to use proper magnetic shielding around the sample. Furthermore, using nonmagnetic materials also result in lower amounts of vortices being present.
+
+Even using these methods to counter the presence of magnetic fields, there may still be a small amount of vortices present in the sample, which may lead to dissipation. To counter their movement a grid-like structure can be added in the superconducting material, effectively pinning the vortices.
 
 
 

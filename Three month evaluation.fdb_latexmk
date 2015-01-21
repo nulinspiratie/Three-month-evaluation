@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex Three month evaluation"] 1421360222 "Three month evaluation.aux" "Three month evaluation.bbl" "Three month evaluation" 1421360226
-  "Three month evaluation.aux" 1421360225 10875 a63921c5d3b60aef8568c4467a439d10 ""
+["bibtex Three month evaluation"] 1421872352 "Three month evaluation.aux" "Three month evaluation.bbl" "Three month evaluation" 1421872356
+  "Three month evaluation.aux" 1421872356 11001 4df8cfa03b1a9ad0fe118b81dc9c9d87 ""
   "Three month evaluation.bcf" 0 -1 0 ""
-  "bibliography.bib" 1421357352 5272 71e700cc716e341a953f96762f7ab477 ""
+  "bibliography.bib" 1421869953 5731 2ac3b9b71dff2be528bd835967f9dc78 ""
   "c:/texlive/2014/texmf-dist/bibtex/bst/base/plain.bst" 1419355295 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
-  "Three month evaluation.bbl"
   "Three month evaluation.blg"
-["pdflatex"] 1421360222 "Three month evaluation.tex" "Three month evaluation.pdf" "Three month evaluation" 1421360226
+  "Three month evaluation.bbl"
+["pdflatex"] 1421872353 "Three month evaluation.tex" "Three month evaluation.pdf" "Three month evaluation" 1421872356
   "Figures/All_set4.png" 1420735926 2091121 526cfbbd9665871c3a44806ef994d3f3 ""
   "Figures/CPW.png" 1421253493 46220 0bf7b5ead4da3ac71b83f6e6c0c76bd6 ""
   "Figures/Noise model.png" 1421352029 32168 832441e43b86fc782881d9e728eda5b6 ""
@@ -22,10 +22,10 @@
   "Figures/resonator_amplitude.png" 1420643787 32958 c27762aaab758a8a9c3a98423d0e6057 ""
   "Figures/resonator_complex.png" 1420732120 38394 156fef40f7933f2e8a60fe24f5996d65 ""
   "Figures/thevenin.png" 1421339154 18306 ac5e9d9c5a57535dee28263871db8bac ""
-  "Three month evaluation.aux" 1421360225 10875 a63921c5d3b60aef8568c4467a439d10 ""
-  "Three month evaluation.bbl" 1421360222 3622 82ab0521e30362b4b646bcd8a62cc150 "bibtex Three month evaluation"
-  "Three month evaluation.tex" 1421360213 57175 4e2863542d21da33d55e355d9cb64060 ""
-  "Three month evaluation.toc" 1421360225 2165 3510463a91ec613f19e795fb180d10eb ""
+  "Three month evaluation.aux" 1421872356 11001 4df8cfa03b1a9ad0fe118b81dc9c9d87 ""
+  "Three month evaluation.bbl" 1421872353 3715 30e518ae005c921217c4b35b0f1afa60 "bibtex Three month evaluation"
+  "Three month evaluation.tex" 1421872344 58186 078419bcd7e0ded05e6fc5ec33a21b63 ""
+  "Three month evaluation.toc" 1421872356 2259 543f4f1ee094272cf990aa6ecc236022 ""
   "c:/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii" 1419358329 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2014/texmf-dist/tex/generic/babel-english/english.ldf" 1419354835 6963 2e0cb3d93aa64508bdb0db58ae900d97 ""
   "c:/texlive/2014/texmf-dist/tex/generic/babel/babel.def" 1419354812 49725 b40154b767b0073ee42b35911042b793 ""

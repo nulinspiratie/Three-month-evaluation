@@ -24,13 +24,6 @@ A.~Bruno, G.~de~Lange, K.~van~der Enden, S.~Asaad, N.~Langford, and L.~DiCarlo.
   by surface treatment and deep etching of silicon substrates.
 \newblock Unpublished.
 
-\bibitem{burnett2013evidence}
-J~Burnett, L~Faoro, I~Wisby, VL~Gurtovoi, AV~Chernykh, GM~Mikhailov, VA~Tulin,
-  R~Shaikhaidarov, V~Antonov, PJ~Meeson, et~al.
-\newblock Evidence for interacting two-level systems from the 1/f noise of a
-  superconducting resonator.
-\newblock {\em arXiv preprint arXiv:1311.1655}, 2013.
-
 \bibitem{denlinger1969radiation}
 EJ~Denlinger.
 \newblock Radiation from microstrip resonators (correspondence).
@@ -72,6 +65,18 @@ John~M Martinis and A~Megrant.
 Benjamin~A. Mazin.
 \newblock {\em Microwave Kinetic Inductance Detectors}.
 \newblock PhD thesis, California Institute of Technology, 2004.
+
+\bibitem{nsanzineza2014trapping}
+I~Nsanzineza and BLT Plourde.
+\newblock Trapping a single vortex and reducing quasiparticles in a
+  superconducting resonator.
+\newblock {\em arXiv preprint arXiv:1405.0256}, 2014.
+
+\bibitem{plourde2009microwave}
+Britton Plourde, C~Song, TW~Heitmann, MP~DeFeo, and Kang Yu.
+\newblock Microwave response of vortices in superconducting thin films of re
+  and al.
+\newblock 2009.
 
 \bibitem{sage2011study}
 Jeremy~M Sage, Vladimir Bolkhovsky, William~D Oliver, Benjamin Turek, and

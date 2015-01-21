@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Three month evaluation.aux
 The style file: plain.bst
 Database file #1: bibliography.bib
-You've used 15 entries,
+Warning--empty journal in plourde2009microwave
+You've used 16 entries,
             2118 wiz_defined-function locations,
-            589 strings with 6925 characters,
-and the built_in function-call counts, 5208 in all, are:
-= -- 478
-> -- 359
+            592 strings with 6950 characters,
+and the built_in function-call counts, 5264 in all, are:
+= -- 488
+> -- 342
 < -- 0
-+ -- 144
-- -- 128
-* -- 421
-:= -- 958
-add.period$ -- 45
-call.type$ -- 15
++ -- 137
+- -- 120
+* -- 410
+:= -- 966
+add.period$ -- 48
+call.type$ -- 16
 change.case$ -- 102
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 151
-empty$ -- 315
-format.name$ -- 128
-if$ -- 999
+cite$ -- 17
+duplicate$ -- 161
+empty$ -- 332
+format.name$ -- 120
+if$ -- 1016
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 11
-newline$ -- 78
-num.names$ -- 30
-pop$ -- 92
+int.to.str$ -- 16
+missing$ -- 12
+newline$ -- 83
+num.names$ -- 32
+pop$ -- 94
 preamble$ -- 1
-purify$ -- 92
+purify$ -- 91
 quote$ -- 0
-skip$ -- 99
+skip$ -- 106
 stack$ -- 0
-substring$ -- 241
+substring$ -- 246
 swap$ -- 14
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
-warning$ -- 0
-while$ -- 40
-width$ -- 17
-write$ -- 162
+type$ -- 62
+warning$ -- 1
+while$ -- 42
+width$ -- 18
+write$ -- 171
+(There was 1 warning)
