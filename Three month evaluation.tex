@@ -128,8 +128,6 @@ Because the relevant regime where resonators interact with qubits is the single-
 
 \chapter{Resonators}
 \label{chapter:Resonators}
-% TODO:
-% Mention that a resonator can be seen as an LC-circuit
 
 Possible additional topics:
 \begin{itemize}
@@ -151,8 +149,6 @@ When a signal enters a fridge it is attenuated in several stages and eventually 
 
 
 \section{Coplanar waveguide}
-% Todo:
-% Talk a little about why the geometry of a coplanar waveguide is the way it is
 
 \begin{wrapfigure}{r}{0.4\textwidth}
     \begin{center}
@@ -238,7 +234,6 @@ One loss channel was already discussed in section~\ref{sec:Quality factor}, name
 
 \subsubsection{Two-level systems}
 \label{sec:TLS}
-% TODO mention that dissipation rate depends on electric field strength
 
 Two-level systems (TLS) are systems which can be in a ground state or an excited state. In some cases they can be useful. In fact a qubit itself is an example of a TLS. In other cases, however, TLS can also be a source of dissipation such as in the case of dielectric loss \cite{martinis2014ucsb}. Study suggests that in cQED, most TLS reside in a thin oxide layer at the metal-substrate interface and the substrate-air interface \cite{wenner2011surface}.
 
@@ -298,6 +293,7 @@ Radiation loss becomes the dominant source of dissipation at high powers and/or 
 
 \subsubsection{Vortices}
 
+Another
 
 \begin{itemize}
     \item Trapped vortices cause parts to be non-superconducting
@@ -438,7 +434,7 @@ If one looks at the highest temperatures, it seems that the increase in quality 
     \caption{Internal quality factor versus temperature for the resonator with resonance frequency $f_0= $\SI{2.75}{\giga \hertz}. Quality factor was continuously measured as the sample was cooled down and warmed up four days later. Panel (a) shows the full temperature range up to the helium condensation cycle. Panel (b) shows a close-up of the region until \SI{900}{\milli \kelvin}.}
     \label{fig:temperature_tracking_Qi}
 \end{figure}
-`'
+
 To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic helium condensation/evaporation process. All temperatures were measured at an input power of \SI{-113}{\dBm}, corresponding to roughly $5 \times 10^5$ photons. In Figure \ref{fig:temperature_tracking_Qi} the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
 
 From Figure~\ref{fig:temperature_tracking_Qi} it seems that there is some hysteresis at high temperatures. This is likely due to the fact that the thermometer is at a different position in the fridge as the sample, and does not thermalize equally fast. There may therefore be a delay between the temperature of the thermometer, and the actual temperature of the sample.
