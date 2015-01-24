@@ -130,16 +130,8 @@ Because the relevant regime where resonators interact with qubits is the single-
 \chapter{Resonators}
 \label{chapter:Resonators}
 
-Possible additional topics:
-\begin{itemize}
-    \item Material (Silicon, sapphire)
-    \item Superconducting material NbTiN. Advantage is that
-    \item Asymmetry (can refer to \cite[p.~192]{Geerlings})
-    \item Lorentzian shape
-\end{itemize}
 
-
-When a signal enters a fridge it is attenuated in several stages and eventually enters the sample being measured. In the sample the signal travels through a feedline. One or more resonators can then be capacitively coupled to the feedline. Qubits can then also be capacitively coupled to the resonators, and a resonator can even be used to connect qubits, a so-called 'bus'. However in this report only discuss the resonators connected to a central feedline will be discussed.
+When a signal enters a fridge it is attenuated in several stages and eventually reaches the sample being measured. In the sample the signal travels through a feedline. One or more resonators can then be capacitively coupled to the feedline. Qubits can then also be capacitively coupled to the resonators, and a resonator can even be used to connect qubits, in which case the resonator is known as a 'bus'. However in this report only resonators connected to a central feedline will be discussed.
 
 
 
@@ -161,7 +153,7 @@ When a signal enters a fridge it is attenuated in several stages and eventually 
 
 In the context of circuit QED, one of the most common types of resonators are coplanar waveguides (CPW). Coplanar waveguides consist of a long central conducting track, with on both sides a neighbouring grounded track. The conducting track is seperated from the grounded tracks by a fixed distance.
 
-One end is usually capacitively coupled to a feedline and has an open end, while the other end can either be open or shorted. This determines whether the resonant frequencies have a node or an antinode at that end. In the case of a shorted end, the resonant frequencies have an antinode at that end, resulting in a  $1/4 - \lambda$ resonator. This means that the wavelength fundamental mode fits $1/4$ times into the resonator. In the case of an open end, the resonant frequencies have an node at that end, resulting in a $1/2 \lambda$ resonator.
+One end is usually capacitively coupled to a feedline and has an open end, while the other end can either be open or shorted. This determines whether the resonant frequencies have a node or an antinode at that end. In the case of a shorted end, the resonant frequencies have an antinode at that end, resulting in a quarter wave resonator. This means that the wavelength of the fundamental mode fits a quarter times into the resonator. In the case of an open end, the resonant frequencies have an node at that end, resulting in a half wave resonator.
 
 
 
@@ -177,26 +169,18 @@ One end is usually capacitively coupled to a feedline and has an open end, while
 % Find where it says that loss tangents can be added to each other
 % Include the fact that participation ratios are needed for adding quality factors of loss channels
 % Explain why one wants a quality factor that is as high as possible
-% Find place for equation FWHM
 The quality of a resonator can be quantified through its quality factor. Generally speaking, the quality factor of a resonator determines the ratio between energy stored in a resonator and the energy leaking away from the resonator. For cQED resonators this corresponds to the rate at which photons dissipate from the resonator. A high quality factor corresponds to a low dissipation rate.
 
-One reason why a high quality factor is important in the context of cQED is that a qubit can be coupled to a resonator. This qubit therefore experiences dissipation due to its coupling with the resonator. The amount of dissipation
-
-If t
-
-The quality factor can also be defined as \cite[p.~23]{Mazin}:
+The quality factor can also be defined in two different ways \cite[p.~23-24]{Mazin}:
 
 \begin{equation}
-    Q = \omega_0 \tau_1
+    Q = \omega_0 \tau_1 = \omega_0 / \Delta \omega
+    \label{eqn:quality factor definition}
 \end{equation}
 Here $\omega_0$ is the resonance frequency of the resonator, and $\tau_1$ is the decay time of the resonator. The decay time is the time taken by a resonator to dissipate its energy to $1/e$ of its original energy. One can see that this definition is in accordance with the first definition, as the energy is related to frequency through the Planck-Einstein relation: $E = \hbar \nu$, and therefore increases with increasing frequency.
 
-\begin{equation}
-    Q = \omega_0 / \Delta \omega
-    \label{eq:FWHM}
-\end{equation}
 
-Photons can dissipate from the resonator through its different loss channels. Each of these loss channels has a corresponding quality factor. One such loss channel is due to resonators in cQED being capacitively coupled to a feedline. The quality factor associated to this loss channel is known as the coupling quality factor $Q_c$. This coupling quality factor depends on the amount of capacitive coupling between the resonator and the feedline. It can therefore be engineered to have a certain value, depending on the amount of interaction wanted between resonator and feedline.
+Photons can dissipate from the resonator through the resonator's different loss channels. Each of these loss channels has a corresponding quality factor. One such loss channel is due to resonators in cQED being capacitively coupled to a feedline. The quality factor associated to this loss channel is known as the coupling quality factor $Q_c$. This coupling quality factor depends on the amount of capacitive coupling between the resonator and the feedline. It can therefore be engineered to have a certain value, depending on the amount of interaction wanted between resonator and feedline.
 
 The other loss channels are usually unwanted, and therefore desired to be as low as possible. These individual channels are usually lumped together, resulting in a combined quality factor, known as the intrinsic quality factor $Q_i$.
 
@@ -210,21 +194,15 @@ The total quality factor of the resonator is known as the loaded quality factor 
 From equation \ref{eq:Q_l} it can be seen that if the difference between $Q_c$ and $Q_i$ is large, then the loaded quality factor $Q_l$ will be approximately equal to the minimum of the two.
 
 
-For a $1/4 - \lambda$ resonator the amplitude of transmission has a minimum $S_{21}^{min}$, given by \cite[p.~29]{Mazin}:
+For a quarter wave resonator the amplitude of transmission has a minimum $S_{21}^{min}$, given by \cite[p.~29]{Mazin}:
 \begin{equation}
     S_{21}^{min} = \frac{Q_c}{Q_c + Q_i}
     \label{eq:S21min}
 \end{equation}
 
-With knowledge of the resonant frequency $\omega_0$, the resonant width $\Delta \omega$, and the transmitted signal at resonance $S_{21}^{min}$, it is possible through equations \ref{eq:FWHM} and \ref{eq:S21min} to determine both the coupling quality facto $Q_c$ and the intrinsic quality factor $Q_i$. Note that as equation~\ref{eq:S21min} depends on the ratio of the two quality factors,to get an accurate estimate of both quality factors, they should have a comparable value.
+With knowledge of the resonant frequency $\omega_0$, the resonant width $\Delta \omega$, and the transmitted signal at resonance $S_{21}^{min}$, it is possible through equations \ref{eqn:quality factor definition} and \ref{eq:S21min} to determine both the coupling quality factor $Q_c$ and the intrinsic quality factor $Q_i$. Note that as equation~\ref{eq:S21min} depends on the ratio of the two quality factors,to get an accurate estimate of both quality factors, they should have a comparable value.
 
-\begin{itemize}
-    \item tan delta: loss channels, sum?
-    \item Photon number dependence
-    \item nonlinear effects (can refer to \cite{abdo2006nonlinear})
-\end{itemize}
-
-
+One reason why a high quality factor is important in the context of cQED is that a qubit can be coupled to a resonator. This qubit therefore experiences dissipation due to its coupling to the resonator, known as the Purcell effect. The result of dissipation is that when the qubit is in its excited state, it will relax to its ground state. The amount of relaxation due to the Purcell effect can be quantified through its relaxation time $T_1^\text{Purcell}$. The reason a high quality factor is important is because the Purcell relaxation time is proportional to the quality factor \cite[p.~22]{Geerlings}. The Purcell relaxation time $T_1^\text{Purcell}$ places an upper limit on the relaxation time $T_1$ of a qubit. If the qubit's relaxation time $T_1$ is close to this value, the qubit is said to be Purcell limited.
 
 
 
@@ -232,7 +210,7 @@ With knowledge of the resonant frequency $\omega_0$, the resonant width $\Delta 
 
 When a resonator is being driven at its resonance frequency, it is absorbing photons from the external source. When this external driving stops, the resonator slowly loses its photons through its different loss channels.
 
-One loss channel was already discussed in section~\ref{sec:Quality factor}, namely through the coupling to the feedline. This loss channel is not unwanted, as the amount of coupling to the feedline determines how fast the resonator and feedline can interact with each other. The other loss channels, however, are unwanted. They cause dissipation of information. Some of the main causes of loss will be discussed in this section.
+One loss channel has already been discussed in section~\ref{sec:Quality factor}, namely through the coupling to the feedline. This loss channel is not unwanted, as the amount of coupling to the feedline determines how fast the resonator and feedline can interact with each other. The other loss channels, however, are unwanted. They cause dissipation of energy, and hence information. Some of the main causes of loss will be discussed in this section.
 
 
 \subsection{Causes of loss}
@@ -240,11 +218,11 @@ One loss channel was already discussed in section~\ref{sec:Quality factor}, name
 \subsubsection{Two-level systems}
 \label{sec:TLS}
 
-Two-level systems (TLS) are systems which can be in a ground state or an excited state. In some cases they can be useful. In fact a qubit itself is an example of a TLS. In other cases, however, TLS can also be a source of dissipation such as in the case of dielectric loss \cite{martinis2014ucsb}. Study suggests that in cQED, most TLS reside in a thin oxide layer at the metal-substrate interface and the substrate-air interface \cite{wenner2011surface}.
+Two-level systems (TLS) are systems which can be in a ground state or in an excited state. In some cases they can be useful. In fact a qubit itself is an example of a TLS. In other cases, however, TLS can also be a source of dissipation such as in the case of dielectric loss \cite{martinis2014ucsb}. Study suggests that in cQED, most TLS reside in a thin oxide layer at the metal-substrate interface and the substrate-air interface \cite{wenner2011surface}.
 
-Resonators are surrounded by a large quantity of TLS, each of which has its own resonance frequency, depending on its energy landscape. When the resonance frequency of a TLS is close to that of the resonator, it can absorb a photon from the resonator, upon which it tunnels to an excited meta-stable state. TLS have a finite lifetime in their excited state, after which they decay back to their ground state. The rate at which a TLS absorbs a photon depends on the electric field surrounding the TLS.
+Resonators are surrounded by a large quantity of TLS, each of which has its own resonance frequency, depending on its energy landscape. When the resonance frequency of a TLS is close to that of the resonator, it can absorb a photon from the resonator, upon which it tunnels to an excited meta-stable state. TLS have a finite lifetime in their excited state, after which they decay back to their ground state and are then again able to absorb a photon. The rate at which a TLS absorbs a photon depends on the electric field surrounding the TLS.
 
-In the low power, low temperature regime, TLS reside mostly in their ground state, and only occasionally tunnel to the excited state, upon absorption of a photon. It is theorized that, in this regime, TLS are the main source of dissipation for resonators \cite{gao2008experimental}. At higher powers and/or temperatures, TLS will tunnel to an excited state at a higher rate. Due to their finite lifetime they become saturated at a certain point. Since the quality factor depends on the ratio between energy stored and energy dissipated, when the TLS are saturated the amount of dissipation is limited, while the energy stored can still increase. Therefore, in the low power, low temperature regime, increasing either of the two parameters results in an increase in quality factor. At a certain point, however, further increasing either of the two will not improve the quality factor. This is due to other effects dominating the dissipation rate in these regimes.
+In the low power, low temperature regime, TLS reside mostly in their ground state, and only occasionally tunnel to the excited state, upon absorption of a photon. It is theorized that, in this regime, TLS are the main source of dissipation for resonators \cite{gao2008experimental}. At higher powers and/or temperatures, TLS will tunnel to an excited state at a higher rate. Due to their finite lifetime they become saturated at a certain point. Since the quality factor depends on the ratio between energy stored and energy dissipated, when the TLS are saturated the amount of dissipation is limited, while the energy stored in the resonator can still increase. Therefore, in the low power, low temperature regime, increasing either of the two parameters results in an increase in quality factor. At a certain point, however, further increasing either of the two will not improve the quality factor. This is due to other effects dominating the dissipation rate in these regimes.
 
 % \begin{itemize}
 %     \item 1/f noise \cite{burnett2013evidence}
@@ -279,20 +257,16 @@ The breaking up of Cooper-pairs is due to excitations. These excitations can eit
 
 A third source of dissipation is due to radiation from the resonator. This radiation is due to the spontaneous emission of photons.
 
-The amount of dissipation due to radition is directly related through \cite{sage2011study,Mazin}:
+The amount of dissipation due to radition is directly related to the geometry of the resonator through \cite{sage2011study,Mazin}:
 
 \begin{equation}
-    Q_{rad} = \alpha \left( \frac{L}{s + w}\right)^{n_r}
+    Q_\text{rad} = \alpha \left( \frac{L}{s + w}\right)^{n_r}
     \label{Qrad}
 \end{equation}
 
-As shown in Figure~\ref{fig:CPW}, $s$ is the distance between the conducting and grounded track, $w$ is the width of the conducting track. The parameter $\alpha$ depends on properties such as impedance and the dielectric constant of the substrate. From Formula \ref{Qrad} it is clear that a decrease of the conducting track width or the distance between tracks leads to an increase in $Q_{rad}$. However, with a decrease of either of the two parameters, the field strength close to the resonator becomes higher. If the TLS are not saturated (i.e. low power and temperature), this will increase the amount of dissipation through TLS. Therefore it is not necessarily advantageous to minimize $s$ and $w$.
+As shown in Figure~\ref{fig:CPW}, $s$ is the distance between the conducting and grounded track, $w$ is the width of the conducting track, and $L$ is the length of the resonator. The parameter $\alpha$ depends on properties such as impedance and the dielectric constant of the substrate, and $n_r$ depends on the shape of the resonator, and is equal to 2 in the case of a straight resonator. From Formula \ref{Qrad} it is clear that a decrease of the conducting track width or the distance between tracks leads to an increase in $Q_\text{rad}$. However, with a decrease of either of the two parameters, the field strength close to the resonator becomes higher. If the TLS are not saturated (i.e. low power and temperature), this will increase the amount of dissipation through TLS. Therefore it is not necessarily advantageous to minimize $s$ and $w$.
 
 Radiation loss becomes the dominant source of dissipation at high powers and/or temperatures, but otherwise usually is not the limiting factor. Since measurements relevant for quantum computing are usually operated at low power and temperature, this source of dissipation is usually less important than other sources, such as TLS dissipation.
-
-\begin{itemize}
-    \item Possible other useful sources: \cite{denlinger1969radiation} \cite{khalil2011loss}
-\end{itemize}
 
 
 
@@ -303,11 +277,11 @@ When a sample is cooled down to a superconducting state there may still be a sma
 It is interesting to note that the presence of vortices does not necessarily lead to a lower internal quality factor. The influence of a vortex on a resonator depends on its location. As reported by Nsanzineza et al.~\cite{nsanzineza2014trapping}, a vortex close to a current antinode of a resonator, can result in a significant loss of the quality factor. A vortex close to a current node, however, may even increase the quality factor of the resonator. They attribute this increase in quality factor to quasiparticles, which would otherwise lead to dissipation, being trapped in the vortex.
 
 
-\begin{itemize}
-    \item Abrikosov vortices
-    \item worse for thin films?
-    \item how does movement affect loss?
-\end{itemize}
+% \begin{itemize}
+%     \item Abrikosov vortices
+%     \item worse for thin films?
+%     \item how does movement affect loss?
+% \end{itemize}
 
 
 
@@ -341,7 +315,7 @@ Using DRIE, nearly vertical sidewalls can be created for the substrate. The resu
 
 Vortices are created when a magnetic field is present. One method to lower the amount of vortices is to use proper magnetic shielding around the sample. Furthermore, using nonmagnetic materials also result in lower amounts of vortices being present.
 
-Even using these methods to counter the presence of magnetic fields, there may still be a small amount of vortices present in the sample, which may lead to dissipation. To counter their movement a grid-like structure can be added in the superconducting material, effectively pinning the vortices.
+Even when using these methods to counter the presence of magnetic fields, there may still be a small amount of vortices present in the sample, which may lead to dissipation. To counter their movement a grid-like structure can be added in the superconducting material, effectively pinning the vortices.
 
 
 
@@ -352,15 +326,15 @@ Even using these methods to counter the presence of magnetic fields, there may s
     \begin{center}
         \includegraphics[width = .4\textwidth]{Figures/All_set4.png}
     \end{center}
-    \caption{Optical microscopy image of the sample measured in this report. The sample consists of ten $1/4 - \lambda$ resonators, with frequencies ranging between \SIrange{1}{11}{\giga \hertz}, connected to a central feedline. The resonators are made using NbTiN on a Si substrate. The sample is treated with HMDS and DRIE.}
+    \caption{Optical microscopy image of the sample measured in this report. The sample consists of ten quarter wave resonators, with frequencies ranging between \SIrange{1}{11}{\giga \hertz}, connected to a central feedline. The resonators are made using NbTiN on a Si substrate. The sample is treated with HMDS and DRIE.}
     \label{fig:set4}
 \end{wrapfigure}
 
 The fridge used in this experiment is a dilution refrigerator, made by Leiden Cryogenics. The refrigerator has a base temperature of \SI{\sim15}{\milli \kelvin}. An input signal was generated using a Rohde \& Schwarz ZVM vector network analyzer, connected to an Aeroflex 8310 step attenuator, which has an attenuation range of \SI{120}{\decibel}. The signal out of the fridge was measured using the same vector network analyzer.
 
-Using this set-up $1/4 - \lambda$ resonators, fabricated by Alessandro Bruno, were measured in a frequency range between \SIrange{1}{9}{\giga \hertz}. The sample is shown in Figure~\ref{fig:set4}. The resonators were made using NbTiN on a silicon substrate. The advantage of NbTiN is that the metal atoms are bound to nitrogen, thereby inhibiting bond formation with oxides. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
+Using this set-up, quarter wave resonators, fabricated by Alessandro Bruno, were measured in a frequency range between \SIrange{1}{9}{\giga \hertz}. The sample is shown in Figure~\ref{fig:set4}. The resonators were made using NbTiN on a silicon substrate. The advantage of NbTiN is that the metal atoms are bound to nitrogen, thereby inhibiting bond formation with oxides. In a way to minimize losses, all resonators were treated with HMDS and deep-reactive ion etching.
 
-By driving a signal through the feedline, the resulting transmitted signal $S_{21}$ can be measured. At or close to the resonance frequency of a resonator, the resonator will either cause enhanced transmission ($1/2 \lambda$ resonator), or diminished transmission ($1/4 \lambda$ resonator).
+By driving a signal through the feedline, the resulting transmitted signal $S_{21}$ can be measured. At or close to the resonance frequency of a resonator, the resonator will either cause enhanced transmission (half wave resonator), or diminished transmission (quarter wave resonator).
 
 Unless stated otherwise, all measurements were performed with the fridge at base temperature (\SI{\sim15}{\milli \kelvin}).
 
@@ -383,7 +357,7 @@ Unless stated otherwise, all measurements were performed with the fridge at base
     \label{fig:resonator}
 \end{figure}
 
- In Figure~\ref{fig:resonator} the transmission $S_{21}$ of a resonator is shown. Figure~\ref{fig:resonator_amplitude} shows the transmitted voltage $|S_{21}|$ of the resonator as a function of frequency. As one can see, the resonator has a shape similar to a Lorentzian dip. One interesting point is that the Lorentzian exhibits an asymmetry, which is often attributed to reflections in the feedline \cite[p.~192]{Geerlings}. This could be caused by impedance mismatching.
+ In Figure~\ref{fig:resonator} the transmission $S_{21}$ of a resonator is shown. Figure~\ref{fig:resonator}(a) shows the transmitted voltage $|S_{21}|$ of the resonator as a function of frequency. As one can see, the resonator has a shape similar to a Lorentzian dip. One interesting point is that the Lorentzian exhibits an asymmetry, which is often attributed to reflections in the feedline \cite[p.~192]{Geerlings}. This could be caused by impedance mismatching.
 
  % TODO
  % Say something about complex data
@@ -399,14 +373,14 @@ Unless stated otherwise, all measurements were performed with the fridge at base
 \end{figure}
 To be able to study the behaviour of the resonators, measurements were performed for several powers. Using proper calibrations for the attenuation down to the sample, the power can be converted to the input power at the sample. This value can then be converted to the mean number of photons present in the resonator \cite{DRIE}. The results are shown in Figure~\ref{fig:Qi_vs_n_photon}.
 
-As can be seen, the internal quality factor $Q_i$ of all resonators decrease with decreasing photon number. One explanation for this phenomenon is that the dissipation dissipation is mainly due to TLS. Since measurements were performed at \SI{\sim15}{mK}, the TLS are not saturated since the rate of thermal excitation is low. As discussed in section~\ref{sec:TLS}, the loss due to TLS is highest at low power, in the regime where they are not saturated. Therefore the fact that the internal quality factor $Q_i$ rises with the mean number of photons present in the resonator can be attributed to a larger amount of TLS being satured. This would suggest that, even with HMDS and DRIE treatment of the sample, the internal quality factor is still limited by TLS being present.
+As can be seen, the internal quality factor $Q_i$ of all resonators decrease with decreasing photon number. One explanation for this phenomenon is that the dissipation dissipation is mainly due to TLS. Since measurements were performed at \SI{\sim15}{mK}, the TLS are not saturated since the rate of thermal excitation is low. As discussed in section~\ref{sec:TLS}, the relative loss due to TLS is highest at low power, in the regime where they are not saturated. Therefore the fact that the internal quality factor $Q_i$ rises with the mean number of photons present in the resonator can be attributed to a larger amount of TLS being satured. This would suggest that, even with HMDS and DRIE treatment of the sample, at low power and temperature, the internal quality factor is still limited by TLS being present.
 
-The mean photon number of a resonator is inversely proportional to the square of frequency \cite{DRIE}, so for resonators with a low frequency a lower input power is required than with a high frequency. At high photon numbers this is not a concern, as the transmitted signal is high enough to be accurately measured in a short period of time. For the single-photon powers, however, which is the region of interest for quantum computation, acquiring enough signal took up to five hours for the lowest frequencies. The reason that for the resonator with a resonance frequency at \SI{1.83}{\giga \hertz} has large error bars at low powers can be partly attributed to this, but as we will see in section \ref{sec:noise_results}, the main reason is that its frequency lies outside the bandwidth of the amplifiers and circulators of the set-up.
+The mean photon number of a resonator is inversely proportional to the square of frequency \cite{DRIE}, so for resonators with a low frequency a lower input power is required than with a high frequency. At high photon numbers this is not a concern, as the transmitted signal is high enough to be accurately measured in a short period of time. For the single-photon powers, however, which is the region of interest for quantum computation, acquiring enough signal took up to five hours for the lowest frequencies. The reason that for the resonator with a resonance frequency at \SI{1.83}{\giga \hertz} has large error bars at low powers can be partly attributed to this, but as we will see in section \ref{sec:noise_results}, the main reason is that its frequency lies outside the bandwidth of the amplifiers and circulators of the set-up, resulting in a large amount of additional noise.
 
-\begin{itemize}
-    \item Quality factor depends on frequency?
-    \item One can also see that the quality factor is lower for resonators with higher resonance frequency.
-\end{itemize}
+% \begin{itemize}
+%     \item Quality factor depends on frequency?
+%     \item One can also see that the quality factor is lower for resonators with higher resonance frequency.
+% \end{itemize}
 
 
 
@@ -426,16 +400,12 @@ The results are shown in Figure~\ref{fig:Qi_vs_n_photon_temperature_dependence}.
 
 Another interesting point is that the increase in quality factor as a function of temperature is largest at low powers. This can also be explained when the limiting factor is due to TLS. With low powers, the TLS are almost exclusively excited thermally, while at higher powers, the excitation of TLS is not only due to thermal excitations, but also from photon absorption.
 
-If one looks at the highest temperatures, it seems that the increase in quality factor as a function of temperature seems to slowly approach a saturation point. One reason is that the TLS are approaching their saturation, and so increasing the temperature further will have little effect on the percentage of time that the TLS are in the excited state. As will be shown in the next section, the quality factor is close to its maximum value, and will decrease as temperature is increased further.
+If one looks at the highest temperatures, it seems that the increase in quality factor as a function of temperature seems to slowly approach a saturation point. One reason is that the TLS are approaching their saturation, and so increasing the temperature further will have little effect on the percentage of time that the TLS are in the excited state. As will be shown in the next section, at \SI{400}{\milli \kelvin} the quality factor of the resonator is close to its maximum value, and will decrease as temperature is further increased.
 
 
 
 \subsection{Temperature tracking}
 \label{resonator:results:temperature_tracking}
-% TODO
-% Make stronger statement supporting claim that quasiparticles are dominant source at higher temperatures
-% Maybe also mention the rapid shift of resonator frequency during beginning stage of cooldown
-
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.49\textwidth}
@@ -450,19 +420,19 @@ If one looks at the highest temperatures, it seems that the increase in quality 
     \label{fig:temperature_tracking_Qi}
 \end{figure}
 
-To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic helium condensation/evaporation process. All temperatures were measured at an input power of \SI{-113}{\dBm}, corresponding to roughly $5 \times 10^5$ photons. In Figure \ref{fig:temperature_tracking_Qi} the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim600}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One possibility is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
+To further investigate the temperature dependence of the resonator, a continous measurement was performed on the resonator with resonance frequency \SI{2.75}{\giga \hertz} during a cool-down and a subsequent warm-up of the fridge four days later. Measurements were performed for temperatures ranging from base temperature (\SI{15}{\milli \kelvin}) to roughly \SI{1}{\kelvin}. Above this temperature, the fridge entered a cyclic helium condensation/evaporation process. All temperatures were measured at an input power of \SI{-113}{\dBm}, corresponding to roughly $5 \times 10^5$ photons. In Figure \ref{fig:temperature_tracking_Qi} the internal quality factor versus temperature is shown during a cooldown and subsequent warm-up of the fridge. As can be seen, the quality factor reaches a maximum quality factor at a temperature of \SI{\sim400}{\milli \kelvin}. Below this temperature, the quality factor is likely limited by the presence of TLS (see sections \ref{sec:resonator:results:power_dependence} and \ref{sec:resonator:results:emperature_dependence}). Above this temperature however, the quality factor decreases, indicating that TLS are not the limiting factor anymore for $Q_i$. One likely explanation is that the main source of dissipation is now due to the presence of quasiparticles in the resonator. At even higher powers other effects, such as vortices and enhanced radiation, contribute more and more significantly to the decay of the quality factor.
 
-From Figure~\ref{fig:temperature_tracking_Qi} it seems that there is some hysteresis at high temperatures. This is likely due to the fact that the thermometer is at a different position in the fridge as the sample, and does not thermalize equally fast. There may therefore be a delay between the temperature of the thermometer, and the actual temperature of the sample.
+From Figure~\ref{fig:temperature_tracking_Qi} it seems that there is some hysteresis at high temperatures. However, this is likely due to the fact that the thermometer is at a different position in the fridge as the sample, and does not thermalize equally fast. There may therefore be a delay between the temperature of the thermometer, and the actual temperature of the sample.
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=.7\textwidth]{Figures/Temperature tracking - f0 vs T.png}
+    \includegraphics[width=.72\textwidth]{Figures/Temperature tracking - f0 vs T.png}
     \caption{Resonance frequency versus temperature during a cooldown and subsequent warm-up four days later. In the period between cooldown and warm-up the resonance frequency has shifted by \SI{\sim 500}{\hertz}, possibly due to phase noise.}
     \label{fig:temperature_tracking_f0}
 \end{figure}
 
 
-Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The result from of tracking the resonance frequency of the resonator during cooldown and subsequent warm-up is shown in Figure~\ref{fig:temperature_tracking_f0}. As can be seen in both cases, the resonance frequency reaches a maximum around \SI{500}{\kelvin}.
+Aside from the internal quality factor, another quantity of interest is the resonance frequency $f_0$ of the resonator, which also depends on the temperature. The result from of tracking the resonance frequency of the resonator during cooldown and subsequent warm-up is shown in Figure~\ref{fig:temperature_tracking_f0}. As can be seen in both cases, the resonance frequency reaches a maximum around \SI{500}{\milli \kelvin}.
 
 Between the cooldown and warm-up the resonance frequency seems to have shifted by roughly \SI{500}{Hz}. As the sample was kept at \SI{15}{\milli \kelvin}, it is unlikely that this decrease in resonance frequency is due to degradation of the sample. One possible explanation is that this change in resonance frequency is due to phase noise, which is known to shift the resonance frequency of the resonator. Further measurements are, however, required to determine if this is the case.
 
@@ -475,13 +445,7 @@ The decrease in resonance frequency at higher temperatures can be explained by t
     \label{fig:f0_vs_T_with_fit}
 \end{figure}
 
-The decrease in resonance frequency at lower temperatures can be explained due to still being present. A model is presented by Gao et al. \cite{gao2008experimental}, in which they describe the decrease in resonance frequency due to the presence of TLS. As can be seen in Figure~\ref{fig:f0_vs_T_with_fit} the model corresponds well with the data at low temperatures. At higher temperatures the model deviates from data, which may be explained by quasiparticles dominating as source of dissipation. An interesting thing to note is that an increase in resonance frequency was predicted at the lowest temperatures, but as they did not reach temperatures sufficiently low they could not confirm this effect. In Figure~\ref{fig:f0_vs_T_with_fit} however, this increase in resonance frequency is observed. This supports the claim that at low temperatures the resonator is still limited by TLS, even after treatment of HMDS and DRIE.
-
-\begin{itemize}
-    \item Info at Geerlings \cite[p.~106]{Geerlings}. Seems to say that resonance frequency depends on kinetic inductance, but also on TLS
-    \item Mention that resonance frequency also depends on TLS
-    \item At higher temperatures kinetic inductance takes over: \cite{barends2008contribution}, \cite[ch.~3]{Gao}
-\end{itemize}
+The decrease in resonance frequency at lower temperatures can be explained due to TLS still being present. A model is presented by Gao et al. \cite{gao2008experimental}, in which they describe the decrease in resonance frequency due to the presence of TLS. As can be seen in Figure~\ref{fig:f0_vs_T_with_fit} the model corresponds well with the data at low temperatures. At higher temperatures the model deviates from data, which may be explained by quasiparticles dominating as source of dissipation. An interesting thing to note is that an increase in resonance frequency was predicted at the lowest temperatures, but as they did not reach temperatures sufficiently low they could not confirm this effect. In Figure~\ref{fig:f0_vs_T_with_fit} however, this increase in resonance frequency is observed. This supports the claim that at low temperatures the resonator is still limited by TLS, even after treatment of HMDS and DRIE.
 
 
 
@@ -540,8 +504,6 @@ The next step is to perform the same treatments (HMDS and DRIE) on transmon qubi
 
 
 \chapter{Noise}
-% TODO: p~256 of electric noise book (deals with amplifier circuits)
-
 % TODO: Left to find out:
 % Is the power to V_in conversion correct?
 
@@ -579,7 +541,7 @@ Assuming the signal to be at a fixed frequency $\omega$ and amplitude $A$, the c
     \text{v}(t) = \text{v}_\text{signal}(t) + \text{v}_\text{noise}(t) = A \cos{\omega t} + \vn(t)
 \end{equation}
 
-The mean value of the noise voltage $\overline{\vn}$ is equal to zero. The amount of noise can be quantified by the root-mean square noise voltage $\vrms$:
+Note that the mean value of the noise voltage $\overline{\vn}$ is equal to zero. The amount of noise can be quantified by the root-mean square noise voltage $\vrms$:
 \begin{equation}
     \vrms = \sqrt{\overline{\text{v}^2} - \overline{\text{v}}^2} = \sqrt{\vsq}
     \label{eqn:v_rms}
@@ -587,7 +549,7 @@ The mean value of the noise voltage $\overline{\vn}$ is equal to zero. The amoun
 
 \subsection{Noise power spectral density}
 
-One way of quantifying the noise of the system is through the noise power spectral density $S(f)$, which is the distribution of noise per unit bandwidth as a function of frequency. For the Th\'evenin representation, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. It is then given by:
+One way of quantifying the noise of the system is through the noise power spectral density $S(f)$, which is the distribution of noise power per unit bandwidth as a function of frequency. For the Th\'evenin representation, the noise spectral density is defined in terms of voltage. When the only noise in the system is white noise, the spectral density is independent of frequency. It is then given by:
 
 \begin{equation}
     S = \frac{\vsq}{\Delta f}
@@ -663,7 +625,7 @@ During amplification not only the signal is amplified with gain G: the noise is 
     \label{eqn:noise power spectral density amplification}
 \end{equation}
 
-Note that the gain $G$ is squared, since the noise power spectral density depends quadratically on the root-mean square noise voltage. (TODO improve sentence)
+Note that in Equation~\ref{eqn:noise power spectral density amplification}, the gain $G$ is squared. This is due to the fact that the noise power spectral density depends quadratically on the root-mean square noise voltage (Equation~\ref{eqn:noise spectral density definition}).
 
 In our actual set-up the amplification occurs in multiple stages. Aside from amplifying the signal and its noise, at each stage additional noise, originating from the amplifier itself, is added as well. This added noise is then also amplified in the next amplification stage.   Therefore it is always best to have the amplifier with highest gain and lowest noise temperature as the first amplifier in the chain. For more information see Friis formula \cite[p.~103]{vasilescu2006electronic}.
 
@@ -671,7 +633,7 @@ In our actual set-up the amplification occurs in multiple stages. Aside from amp
 
 \subsection{Downconversion}
 
-After amplification the frequency $\omega$ of the signal is still in the GHz range. In homodyne or heterodyne detection the signal is downconverted to DC (homodyne) or to a lower frequency (heterodyne), such that it can be measured more easily. To downconvert the signal, it is mixed in a mixer with a local oscillator (LO) signal having the same frequency $\omega$ (homodyne) or a slightly higher frequency $\omega + \Delta \omega$ (heterodyne). The mixer effectively multiplies the two signals (TODO: mention why amplitude of LO signal is unimportant). If the signal exiting the amplifier is given by $\text{v}(t) = A\cos \omega t$, then, ignoring a possible phase difference, the signal at the output of the mixer is given by:
+After amplification the frequency $\omega$ of the signal is still in the GHz range. In homodyne or heterodyne detection the signal is downconverted to DC (homodyne) or to a lower frequency (heterodyne), such that it can be measured more easily. To downconvert the signal, it is mixed in a mixer with a local oscillator (LO) signal having the same frequency $\omega$ (homodyne) or a slightly higher frequency $\omega + \Delta \omega$ (heterodyne). The mixer effectively multiplies the two signals. If the signal exiting the amplifier is given by $\text{v}(t) = A\cos \omega t$, then, ignoring a possible phase difference, the signal at the output of the mixer is given by:
 
 \begin{align}
     \text{v}(t) \cdot \cos{\omega t}& = A \cos{\omega t} \cdot \cos{(\omega + \Delta \omega ) t} \notag\\
@@ -679,7 +641,7 @@ After amplification the frequency $\omega$ of the signal is still in the GHz ran
         \label{eqn:mixer}
 \end{align}
 
-As can be seen from Equation~\ref{eqn:mixer}, the output signal contains both the sum and the difference of the two signals. However, as the sum of both frequencies is in the GHz range, it can be filtered out using a low-pass filter, leaving only the downconverted signal, which is the result of the difference between the two frequencies. Note that the amplitude of the signal is reduced by a factor two. The noise amplitude is also reduced by a factor 2. Furthermore, in the case of a homodyne set-up, the difference signal is simply a DC signal ($\Delta \omega = 0$), while in the case of heterodyne the signal still contains a slow frequency $\Delta \omega$. For simplification we assume our set-up to be a homodyne set-up.
+As can be seen from Equation~\ref{eqn:mixer}, the output signal contains both the sum and the difference of the two signals. However, as the sum of both frequencies is in the GHz range, it can be filtered out using a low-pass filter, leaving only the downconverted signal, which is the result of the difference between the two frequencies. Note that the amplitude of the signal is reduced by a factor two. The noise amplitude is also reduced by a factor 2. Furthermore, in the case of a homodyne set-up, the difference signal is simply a DC signal ($\Delta \omega = 0$), while in the case of heterodyne the signal still contains a slow frequency $\Delta \omega$. For simplification we assume our set-up to be a homodyne set-up, although the result is similar in the case of a heterodyne set-up.
 
 \subsection{Low-pass filtering}
 
@@ -694,20 +656,20 @@ The frequency above which a low-pass filter will filter out the signal is define
 
 \section{Noise temperature}
 
-In the previous sections the influence of each of the components on the signal and on the noise has been analyzed. Using this information it is possible to determine the signal-to-noise ratio (SNR). The signal-to-noise ratio is the ratio between the average power of the signal and the average power of the noise, and is a measure for how well a signal can be separated from the noise.
-
+In the previous sections the influence of each of the components on the signal and on the noise has been analyzed. Using this information it is possible to determine the signal-to-noise ratio (SNR), which is the ratio between the average power of the signal and the average power of the noise. The SNR is a measure for how well a signal can be separated from the noise, and is given by:
 
 \begin{align}
-    \text{SNR} = \frac{\overline{\vout}^2}{\vsq} = & \frac{1/4 \;G^2 \; \overline{\vin}^2}{1/4 \; \Sout \; \Delta f}\notag\\
-        = & \frac{G^2 \; \overline{\vin}^2}{G^2 \; \Sin \;\frac{\pi}{2}\;f_\text{c}}\notag\\
-        = & \frac{\overline{\vin}^2}{2\;\pi \; k_B \; T \; R \; f_\text{c}}
+    \text{SNR} = \frac{\overline{\vout}^2}{\vsq} = & \frac{1/4 \;G^2 \; \overline{\vin}^2}{ \Sout \; \Delta f}\notag\\
+        = & \frac{1/4 \; G^2 \; \overline{\vin}^2}{G^2 \; \Sin \;\frac{\pi}{2}\;f_\text{c}}\notag\\
+        = & \frac{\overline{\vin}^2}{2 \; \pi \; k_B \; T \; R \; f_\text{c}}
     \label{eqn:SNR}
 \end{align}
 
-Note that the factors $1/4$ are due to the amplitude being lowered by a factor of $2$ due to mixing. Equation~\ref{eqn:SNR} can be rewritten such that we have an expression for the noise temperature of the system:
+% TODO: factor 1/4 for both signal and noise?
+Note that the factor $1/4$ is because the amplitude is lowered by a factor of $2$ due to mixing. Equation~\ref{eqn:SNR} can be rewritten such that we have an expression for the noise temperature of the system:
 
 \begin{equation}
-    T =\frac{\overline{\vin}^2}{2\; \pi \; k_B \; R \; f_\text{c} \; \text{SNR}}
+    T =\frac{\overline{\vin}^2}{2 \; \pi \; k_B \; R \; f_\text{c} \; \text{SNR}}
     \label{eqn:noise temperature}
 \end{equation}
 
@@ -717,11 +679,11 @@ Note that the factors $1/4$ are due to the amplitude being lowered by a factor o
 \begin{figure}[h]
     \centering
     \includegraphics[width = .7 \linewidth]{Figures/noise_temperature_versus_power.png}
-    \caption{Noise temperature versus frequency. The noise temperature has been calculated for $160$ frequencies in the range \SIrange{1}{9}{\giga \hertz}. For each frequency $2001$ points were measured, from which the signal, noise, SNR, and noise temperature was determined. Measurements were performed at an input power of \SI{-113}{\dBm} and an IF bandwidth of $f_\text{c} = $\SI{300}{\hertz}.}
+    \caption{Noise temperature versus frequency. The noise temperature has been calculated for $160$ frequencies in the range \SIrange{1}{9}{\giga \hertz}. For each frequency $2001$ points were measured, from which the signal, noise, SNR, and noise temperature was determined. Measurements were performed at an input power of \SI{-113}{\dBm} and an IF bandwidth of $\Delta f = $\SI{300}{\hertz}.}
     \label{fig:Noise temperature}
 \end{figure}
 
-Using the Rhode \& Schwarz ZVM vector network analyzer, The transmission has been measured for $160$ equidistant frequencies in the range \SIrange{1}{9}{\giga \hertz}. For each frequency a total of $2001$ points was measured with an IF bandwidth $\Delta f = $ \SI{300}{\hertz}.From these measurements the signal-to-noise ratio has been determined for each frequency. With knowledge of the SNR, the noise temperature has then been determined as a function of frequency using Equation~\ref{eqn:noise temperature} . The result is shown in Figure~\ref{fig:Noise temperature}.
+Using the Rhode \& Schwarz ZVM vector network analyzer, The transmission has been measured for $160$ equidistant frequencies in the range \SIrange{1}{9}{\giga \hertz}. For each frequency a total of $2001$ points was measured with an IF bandwidth $\Delta f = $ \SI{300}{\hertz}. From these measurements the signal-to-noise ratio has been determined for each frequency. With knowledge of the SNR, the noise temperature has then been determined as a function of frequency using Equation~\ref{eqn:noise temperature} . The result is shown in Figure~\ref{fig:Noise temperature}.
 
 From Figure~\ref{fig:Noise temperature} it is clear that the noise temperature is highly temperature-dependent. In the frequency range \SIrange{4}{8}{\giga \hertz} the noise temperature is quite low, never reaching above \SI{10}{\kelvin}. This is exactly the bandwidth of the cryogenic low-noise amplifier by Low Noise Factory, which is the first amplifier in the amplification chain. From the specifications of the amplifier, the noise temperature of the amplifier has been calculated at an ambient temperature of \SI{8}{\kelvin}, and equals roughly \SI{4}{\kelvin} for the entire bandwidth. Comparing the amplifier specifications with Figure~\ref{fig:Noise temperature}, it is likely that in the frequency range \SIrange{4}{8}{\giga \hertz} the first amplifier is the component contributing most to the total noise temperature.
 
@@ -744,7 +706,7 @@ Another point of interest is that the resonance frequency of the resonator lies 
 
 The noise temperature gives us an estimate of the noise added to the system. It has been shown that the noise temperature can fluctuate strongly with varying frequency. In the model used to estimate the noise temperature it has been shown that outside the bandwidth of the amplifier the model breaks down. At this point the noise added by the components after the amplification, and indeed even the amplifiers themselves, needs to be taken into account to obtain accurate estimates of the noise temperature.
 
-However, even outside of the bandwidth of the amplifier, there are frequency regions in which the noise temperature may still be acceptable. It is therefore a good idea to initially perform measurements of the noise temperature of the set-up. This will give an indication of the signal-to-noise ratio, from which accurate estimates can be made as to what the integration times for measurements should be.
+However, even outside of the bandwidth of the amplifier, there are frequency regions in which the noise temperature may still be acceptable. It is therefore a good idea to initially perform measurements of the noise temperature of the set-up. This will give an indication of the signal-to-noise ratio, from which accurate estimates can be made as to what the amount of measurement time is needed to obtain a desired SNR.
 
 The noise temperature measurements were performed using the Rhode \& Schwarz ZVM vector network analyzer. It would be interesting to see how other measurement set-ups would compare to the vector network analyzer. One interesting candidate would be a heterodyne detector. However, as the vector network analyzer can also measure phase, a fair comparison would also require the heterodyne detector to be able to measure the phase. This heterodyne detector is currently being set up, and will hopefully soon yield interesting results.
 

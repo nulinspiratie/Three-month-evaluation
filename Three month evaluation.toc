@@ -1,34 +1,34 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Resonators}{3}
 \contentsline {section}{\numberline {1.1}Coplanar waveguide}{3}
-\contentsline {section}{\numberline {1.2}Quality factor}{4}
+\contentsline {section}{\numberline {1.2}Quality factor}{3}
 \contentsline {section}{\numberline {1.3}Losses}{5}
 \contentsline {subsection}{\numberline {1.3.1}Causes of loss}{5}
 \contentsline {subsubsection}{\numberline {1.3.1.1}Two-level systems}{5}
 \contentsline {subsubsection}{\numberline {1.3.1.2}Quasiparticles}{6}
 \contentsline {subsubsection}{\numberline {1.3.1.3}Radiation}{6}
-\contentsline {subsubsection}{\numberline {1.3.1.4}Vortices}{7}
+\contentsline {subsubsection}{\numberline {1.3.1.4}Vortices}{6}
 \contentsline {subsection}{\numberline {1.3.2}Minimizing losses}{7}
 \contentsline {subsubsection}{\numberline {1.3.2.1}Surface treatment}{7}
 \contentsline {subsubsection}{\numberline {1.3.2.2}Infrared shielding}{7}
-\contentsline {subsubsection}{\numberline {1.3.2.3}Deep-reactive ion etching}{8}
+\contentsline {subsubsection}{\numberline {1.3.2.3}Deep-reactive ion etching}{7}
 \contentsline {subsubsection}{\numberline {1.3.2.4}Magnetic shielding and vortex trapping}{8}
 \contentsline {section}{\numberline {1.4}Experimental set-up}{8}
 \contentsline {section}{\numberline {1.5}Results and discussion}{9}
 \contentsline {subsection}{\numberline {1.5.1}Resonator measurement}{9}
 \contentsline {subsection}{\numberline {1.5.2}Power dependence}{9}
-\contentsline {subsection}{\numberline {1.5.3}Temperature dependence}{11}
-\contentsline {subsection}{\numberline {1.5.4}Temperature tracking}{12}
+\contentsline {subsection}{\numberline {1.5.3}Temperature dependence}{10}
+\contentsline {subsection}{\numberline {1.5.4}Temperature tracking}{11}
 \contentsline {section}{\numberline {1.6}Conclusion and future work}{14}
-\contentsline {chapter}{\numberline {2}Noise}{16}
-\contentsline {section}{\numberline {2.1}Characterizing noise}{16}
-\contentsline {subsection}{\numberline {2.1.1}Circuit representations}{16}
-\contentsline {subsection}{\numberline {2.1.2}Noise power spectral density}{17}
-\contentsline {section}{\numberline {2.2}The model}{18}
-\contentsline {subsection}{\numberline {2.2.1}Noise source}{18}
-\contentsline {subsection}{\numberline {2.2.2}Amplification}{19}
-\contentsline {subsection}{\numberline {2.2.3}Downconversion}{19}
-\contentsline {subsection}{\numberline {2.2.4}Low-pass filtering}{20}
-\contentsline {section}{\numberline {2.3}Noise temperature}{20}
-\contentsline {section}{\numberline {2.4}Results}{21}
-\contentsline {section}{\numberline {2.5}Conclusion and future work}{22}
+\contentsline {chapter}{\numberline {2}Noise}{15}
+\contentsline {section}{\numberline {2.1}Characterizing noise}{15}
+\contentsline {subsection}{\numberline {2.1.1}Circuit representations}{15}
+\contentsline {subsection}{\numberline {2.1.2}Noise power spectral density}{16}
+\contentsline {section}{\numberline {2.2}The model}{17}
+\contentsline {subsection}{\numberline {2.2.1}Noise source}{17}
+\contentsline {subsection}{\numberline {2.2.2}Amplification}{18}
+\contentsline {subsection}{\numberline {2.2.3}Downconversion}{18}
+\contentsline {subsection}{\numberline {2.2.4}Low-pass filtering}{19}
+\contentsline {section}{\numberline {2.3}Noise temperature}{19}
+\contentsline {section}{\numberline {2.4}Results}{20}
+\contentsline {section}{\numberline {2.5}Conclusion and future work}{21}

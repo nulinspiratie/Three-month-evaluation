@@ -1,11 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{abdo2006nonlinear}
-Baleegh Abdo, Eran Segev, Oleg Shtempluck, and Eyal Buks.
-\newblock Nonlinear dynamics in the resonance line shape of nbn superconducting
-  resonators.
-\newblock {\em Physical Review B}, 73(13):134513, 2006.
-
 \bibitem{barends2008contribution}
 R~Barends, HL~Hortensius, T~Zijlstra, JJA Baselmans, SJC Yates, JR~Gao, and
   TM~Klapwijk.
@@ -24,17 +18,6 @@ A.~Bruno, G.~de~Lange, K.~van~der Enden, S.~Asaad, N.~Langford, and L.~DiCarlo.
   by surface treatment and deep etching of silicon substrates.
 \newblock Unpublished.
 
-\bibitem{denlinger1969radiation}
-EJ~Denlinger.
-\newblock Radiation from microstrip resonators (correspondence).
-\newblock {\em Microwave Theory and Techniques, IEEE Transactions on},
-  17(4):235--236, 1969.
-
-\bibitem{Gao}
-Jiansong Gao.
-\newblock {\em The Physics of Superconducting Microwave Resonators}.
-\newblock PhD thesis, California Institute of Technology, 2008.
-
 \bibitem{gao2008experimental}
 Jiansong Gao, Miguel Daal, Anastasios Vayonakis, Shwetank Kumar, Jonas
   Zmuidzinas, Bernard Sadoulet, Benjamin~A Mazin, Peter~K Day, and Henry~G
@@ -47,13 +30,6 @@ Jiansong Gao, Miguel Daal, Anastasios Vayonakis, Shwetank Kumar, Jonas
 Kurtis~L. Geerlings.
 \newblock {\em Improving Coherence of Superconducting Qubits and Resonators}.
 \newblock PhD thesis, Yale University, 2013.
-
-\bibitem{khalil2011loss}
-Moe~S Khalil, FC~Wellstood, and Kevin~D Osborn.
-\newblock Loss dependence on geometry and applied power in superconducting
-  coplanar resonators.
-\newblock {\em Applied Superconductivity, IEEE Transactions on},
-  21(3):879--882, 2011.
 
 \bibitem{martinis2014ucsb}
 John~M Martinis and A~Megrant.
